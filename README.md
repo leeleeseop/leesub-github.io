@@ -9,6 +9,7 @@
 > aa990724@naver.com
 
 # Profile                           
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
   <div>
     <h3>경력 (총 1년 2개월)</h3>
     <ul>
@@ -22,3 +23,4 @@
       <li>○○대학교 디자인학과 졸업</li>
     </ul>
   </div>
+</div>
