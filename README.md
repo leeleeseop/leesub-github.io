@@ -7,5 +7,4 @@
   | aa990724@naver.com
 
   <h1>Profile</h1>
-  <hr/>
 </div>
