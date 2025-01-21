@@ -91,4 +91,13 @@
         heigth: auto;
         board-bottom: 1px solid #ddd;
     }
+
+    .portfolio{
+        margin-left: 300px;
+        margin-top: 130px;
+    }
+
+    .projects{
+        flex-wrap: wrap;
+    }
 </style>
