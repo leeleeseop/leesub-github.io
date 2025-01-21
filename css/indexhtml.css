@@ -85,4 +85,10 @@
     .Study-category-list li:hover a {
         color: #333;
     }
+
+    .project-card img{
+        width: 100%
+        heigth: auto;
+        board-bottom: 1px solid #ddd;
+    }
 </style>
