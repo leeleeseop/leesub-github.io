@@ -69,7 +69,7 @@
         background-color: #f3f3f3;
         border: 1px solid #ddd;
         
-        transform: translateX(5px);
+        transform: translateX(1px);
     }
 
     .Study-category-list li a {
