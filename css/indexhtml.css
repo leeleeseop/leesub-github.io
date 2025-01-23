@@ -86,6 +86,16 @@
         color: #333;
     }
 
+    .project-card{
+        display: flex;
+        gap: 20px;
+    }
+
+    .project-card a {
+        text-decoration: nonoe;
+        
+    }
+
     .project-card img{
         width: 300px;
         heigth: auto;
