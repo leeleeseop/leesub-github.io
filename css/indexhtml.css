@@ -107,4 +107,9 @@
     .projects{
         flex-wrap: wrap;
     }
+
+    .icon{
+        width: 24px;
+        height: 24px;
+    }
 </style>
