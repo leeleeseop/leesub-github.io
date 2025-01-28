@@ -106,6 +106,7 @@
 
     .projects{
         flex-wrap: wrap;
+        margin-top: 5px;
     }
 
     .icon{
