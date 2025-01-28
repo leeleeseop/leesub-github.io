@@ -110,6 +110,7 @@
 
     .icon{
         width: 24px;
-        height: 24px;
+        height: auto;
+        margin-right: 10px;
     }
 </style>
