@@ -109,9 +109,7 @@
     }
 
     .icon{
-        max-width: 30px; 
-        max-height: 30px;
-        width: auto;
+        width: 30px;
         height: auto;
         margin-right: 10px;
     }
