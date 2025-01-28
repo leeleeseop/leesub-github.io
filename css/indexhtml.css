@@ -99,14 +99,13 @@
 
     .portfolio{
         margin-left: 300px;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-bottom: 50px;
         
     }
 
     .projects{
         flex-wrap: wrap;
-        margin-top: 5px;
     }
 
     .icon{
