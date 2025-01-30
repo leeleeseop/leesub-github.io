@@ -10,6 +10,11 @@
       align-items: center;
       text-align: center;
   }
+
+  .project-title {
+    display: block;
+    margin: 0 auto;
+  }
   
   .header img {
       display: block;
