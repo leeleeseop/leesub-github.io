@@ -80,11 +80,45 @@
       <hr>
 
       <h3>4. 장바구니 담기</h3>
-      <img src="../../image/projects/세덱스 장바구니 담기.png"/>
-      <li><b>장바구니 메뉴에서 상품 번호와 상품 수량을 입력하면, 장바구니에 상품을 등록할 수 있도록 개발했습니다.</b></li>
+        <img src="../../image/projects/세덱스 장바구니 담기.png"/>
+          <li><b>장바구니 메뉴에서 상품 번호와 상품 수량을 입력하면, 장바구니에 상품을 등록할 수 있도록 개발했습니다.</b></li>
       <hr>
+      
+      <h1>핵심코드</h1>
+      <hr>
+      <h2>1. 장바구니 리스트</h2>
+      <h3>CartList Controller</h3>
+        <img src="../../image/projects/세덱스CartList Controller.png"/>
+          <li><b>위 코드는 장바구니 리스트를 출력하고, 구매 여부를 확인하는 기능을 담당합니다</b></li>
+            <details>
+              <summary>장바구니 리스트 출력</summary>
+                <li>CartListService를 실행하여 현재 록인한 회원의 장바구니 리스트를 가져옵니다.</li>
+                <li>결과 리스트를 cartList 변수에 저장합니다.</li>
+                <li>CartPritn 클래스를 사용하여 장바구니 리스트를 출력합니다.</li>
+            </details>
+           
+            <details>
+              <summary>장바구니 상태 확인</summary>
+                <li>장바구니가 비어 있을 경우, “장바구니가 비어 있습니다”라는 메시지를 출력합니다.</li>
+                <li>장바구니에 상품이 있을 경우, 구매 여부를 묻습니다.</li>
+            </details>
+
+            <details open>
+              <summary>구매 여부 확인</summary>
+              <ul>
+                  <li>사용자가 ‘y’를 선택하면
+                      <ol>
+                          <li>현재 로그인한 회원의 번호를 가져옵니다.</li>
+                          <li><b>연락처, 배송지, 요청사항</b>을 입력받습니다.</li>
+                          <li><b>입력받은 연락처, 배송지, 요청사항</b>을 배열에 저장한 후 주문을 처리합니다.</li>
+                      </ol>
+                  </li>
+              </ul>
+        </details>
+            
+    
+    
     </div>
-  
   </div>
 </body>
 </html>
