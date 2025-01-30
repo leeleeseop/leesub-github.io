@@ -12,10 +12,9 @@
   }
 
   .project-title {
-    display: block;
-    margin: 0 auto;
-    align-items: center;
-    text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 60%;
   }
   
   .header img {
