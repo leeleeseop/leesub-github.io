@@ -27,4 +27,9 @@
       margin: 0 auto;
       width: 60%;
   }
+
+  .Document img {
+    width: 200px;
+    hight: 200px;
+  }
 </style>
