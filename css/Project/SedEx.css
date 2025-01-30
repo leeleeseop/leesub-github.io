@@ -32,4 +32,10 @@
     width: 500px;
     hight: 500px;
   }
+
+  .Main {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+  }
 </style>
