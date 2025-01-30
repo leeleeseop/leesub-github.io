@@ -164,7 +164,25 @@
           <li>각 장바구니 항목의 합계 금액(vo.getSum)을 더해서 총금액을 계산합니다.</li>
         </ul>
       </details>
-              
+
+      <h3>Cart Print</h3>
+      <img src="../../image/projects/세덱스 Cart DAO.png"/>
+      <li><b>위 코드는 리스트의 항목을 출력하고  각 상품의 합계 금액을 계산하여 총액을 출력합니다.</b></li>
+      <details>
+        <summary>리스트 초기화</summary>
+        <ul>
+          <li>List<CartVO> list = new ArrayList<CartVO>()를 통해 장바구니(CartVO)의 리스트를 만듭니다.</li>
+        </ul>
+      </details>
+      
+      <details>
+        <summary>SQL 문 준비</summary>
+        <ul>
+          <li>pstmt = con.prepareStatement(LIST)로 장바구니 리스트를 가져오는 SQL쿼리(LIST)를 실행할 준비를 합니다.</li>
+          <li>pstmt.setLong(1, Main.login.getMemberNo());를 통해 로그인한 사용자의 회원번호를 SQL쿼리에 넣습니다.</li>
+        </ul>
+      </details>
+    
     </div>
   </div>
 </body>
