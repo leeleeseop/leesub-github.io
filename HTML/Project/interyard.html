@@ -346,17 +346,20 @@
       <img src="../../image/projects/interYard/인터야드 중고장터 등록(핵심코드).png"/>
       <h3>usedgoods writeForm.do Controller</h3>
       <img src="../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1.png"/>
-      <li><b>위 코드는 상품 등록 하기 위해 사용자가  /usedgoods/writeForm.do URL을 요청하면 해당 요청을 받아 상품 등록을 위한 폼 페이지로 이동합니다.</b></li>
+      <li>위 코드는 상품 등록 하기 위해 사용자가 <code>/usedgoods/writeForm.do</code> URL을 요청하면 해당 요청을 받아 상품 등록을 위한 폼 페이지로 이동합니다.</li>
       <img src="../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1-2.png"/>
-      <li><b>위 코드는 사용자가 상품 등록 폼에서 제출한 데이터를 처리하여 서버에 저장하고 등록 성공 메시지를 전송한 후 리스트 페이지로 리다이렉트합니다.</b></li>
+      <li>위 코드는 사용자가 상품 등록 폼에서 제출한 데이터를 처리하여 서버에 저장하고 등록 성공 메시지를 전송한 후 리스트 페이지로 리다이렉트합니다.</li>
+      
       <details>
-          <summary><b>이미지 업로드 처리</b></summary>
+          <summary><strong>이미지 업로드 처리</strong></summary>
           <ul>
-              <li><code>MultipartRequest multi = new MultipartRequest(request, realSavePath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());</code></li>
-              <li><b>MultipartRequest</b>를 사용하여 이미지 파일 업로드를 처리합니다. 사용자가 업로드한 이미지를 서버의 특정 경로에 저장하면 업로드한 파일의 경로와 파일명을 가져옵니다.</li>
-              <li><b>realSavePath:</b> 실제 파일을 저장할 경로</li>
-              <li><b>sizeLimit:</b> 업로드 가능한 파일의 최대 크기</li>
-              <li><b>DefaultFileRenamePolicy:</b> 동일한 파일명이 존재할 경우 자동으로 파일명을 변경</li>
+              <li>
+                  <code>MultipartRequest multi = new MultipartRequest(request, realSavePath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());</code>
+              </li>
+              <li><strong>MultipartRequest</strong>를 사용하여 이미지 파일 업로드를 처리합니다. 사용자가 업로드한 이미지를 서버의 특정 경로에 저장하면 업로드한 파일의 경로와 파일명을 가져옵니다.</li>
+              <li><strong>realSavePath:</strong> 실제 파일을 저장할 경로</li>
+              <li><strong>sizeLimit:</strong> 업로드 가능한 파일의 최대 크기</li>
+              <li><strong>DefaultFileRenamePolicy:</strong> 동일한 파일명이 존재할 경우 자동으로 파일명을 변경</li>
           </ul>
       </details>
     
