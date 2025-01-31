@@ -294,9 +294,9 @@
         <summary><b>리스트 메서드</b></summary>
         <ul>
           <li><b>con = DB.getConnection();:</b>데이터베이스에 연결을 설정합니다.</li>
-          <li><b>pstmt = con.prepareStatement(getListSQL(pageObject));:</b>getListSQL() 메서드를 호출해 검색 조건과 페이징이 적용된 SQL 쿼리를 생성합니다.</li>\
+          <li><b>pstmt = con.prepareStatement(getListSQL(pageObject));:</b>getListSQL() 메서드를 호출해 검색 조건과 페이징이 적용된 SQL 쿼리를 생성합니다.</li>
           <b> 
-            pstmt.setLong(++idx, pageObject.getStartRow()); <br>
+            pstmt.setLong(++idx, pageObject.getStartRow());<br>
             pstmt.setLong(++idx, pageObject.getEndRow());
           </b>
           <li>페이징 처리를 위해 시작 행과 끝 행을 설정하여, 특정 페이지의 데이터만 조회합니다.</li>
@@ -351,10 +351,10 @@
       <li><b>위 코드는 사용자가 상품 등록 폼에서 제출한 데이터를 처리하여 서버에 저장하고 등록 성공 메시지를 전송한 후 리스트 페이지로 리다이렉트합니다.</b></li>
       <details>
         <summary><b>이미지 업로드 처리</b></summary>
-        <ul>
           <b>MultipartRequest multi = new MultipartRequest<br>
              (request, realSavePath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());
           </b>
+        <ul>
           <li><b>MultipartRequest</b>를 사용하여 이미지 파일 업로드를 처리합니다. 시용자가 업로드한 이미지를 서버의 특정 경로에 저장하면 업로드한 파일의 경로와 파일명을 가져옵니다.</li>
           <li><b>realSavePath:</b>실제 파일을 저장할 경로</li>
           <li><b>sizeLimit:</b>업로드 가능한 파일의 최대 크기</li>
