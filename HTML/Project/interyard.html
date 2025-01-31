@@ -232,16 +232,71 @@
           <li><b>취소</b>(Close Modal)</li>
         </ul>
       </details>  
+      <hr>
+
+      <h1>핵심 코드</h1>
+      <hr>
+      <h3>1.중고장터 리스트</h3>
+      <img src="../../image/projects/interYard/인터야드 중고장터 댓글 삭제.png"/>
+      <h3>usedgoods List.do Controller</h3>
+      <img src="../../image/projects/interYard/인터야드 usedgoods List.do Controller(핵심코드).png"/>
+      <li>위 코드는 중고장터 리스트 페이지를 처리하는 부분으로 사용자가<b>/usedgoods/list.do</b>요청을 보내면 중고 상품 리스트를 불러와 목록을  출력하는 역할을 합니다.</li>
+      <details>
+        <summary><b>페이지 당 항목 수 설정</b></summary>
+        <ul>
+          <b>if(strPerPageNum == null) pageObject.setPerPageNum(6);</b>
+          <li>parPageNum이 null 이면 기본적으로 한 페이지에 6개의 항목이 표시 되도록 설정합니다.</li>
+        </ul>
+      </details>  
+      <details>
+        <summary><b>리스트 데이터 가져오기</b></summary>
+        <ul>
+          <b>result = Execute.execute(UsedGoodsInit.get(uri), pageObject);</b>
+          <li><b>Execute.execute()</b>를 통해 중고 장터의 상품 리스트 데이터를 가져옵니다.</li>
+        </ul>
+      </details> 
+      <details>
+        <summary><b>리스트와 페이지 정보 설정</b></summary>
+        <ul>
+          <b>request.setAttribute(”list”, result);<br>
+             request.setAttribute(”pageObject”, pageObject);</b>
+          <li>result 와 pageObejct를 request에 저장하고 JSP에 접근할 수 있도록 설정합니다.</li>
+        </ul>
+      </details>     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+      <h3>usedgoods List DAO</h3>
+      <img src="../../image/projects/interYard/인터야드 usedgoods List DAO(핵심코드).png"/>
+      <li><b>LIST는 중고 상품 리스트를 조회하는 SQL 쿼리이며, getListSQL 메서드는 페이징과 검색 조건을 반영한 쿼리를 생성해 데이터를 가져옵니다. list 메서드는 데이터베이스에서 중고 상품 리스트를 조회해 반환합니다.</b></li>
+      <details>
+        <summary><b>final String LIST</b></summary>
+          <ul>
+            <li>이 문자열은 중고 상품 목록을 가져오는 SQL 쿼리의 기본 형식을 정의합니다.</li>
+            <li>각 상품의 상품번호(ugno), 제목(title), 아이디(id), 가격(price), 작성일(writeDate), 이미지(image) 등의 정보를 조회하는 SQL 쿼리입니다.</li>
+            <li>from & where 절
+              <ul>
+                <li>데이터를 두 개의 테이블인 usedgoods 테이블(u)과 member 테이블(m)에서 가져옵니다. usedgoods 테이블(u)에서 중고 상품 정보를 가져오고, member 테이블(m) id를 조인합니다.</li>
+                <li>where 1=1 은 항상 참인 조건으로, 나중에 필요한 조건을 쉽게 추가하기 위해 사용됩니다.</li>
+              <ul>
+            </li>
+          </ul>
+      </details>
+      <details>
+        <summary><b>getListSQL</b></summary>
+        <ul>
+          <li><b>기본쿼리: LIST</b>라는 변수를 사용해 상품번호, 제목, 아이디, 가격, 작성일 이미지를 조회하는 기본 쿼리를 구성합니다.</li>
+          <li><b>검색 조건 추가: getSearch(pageObject, false)</b>메서드를 통해 검색 조건을 추가합니다.</li>
+          <li><b>m.id = u.id 조건: member</b>테이블의 회원 아이디와 usedgoods 테이블의 아이디가 일치하는지를 확인하는 부분입니다.</li>
+          <li><b>order by ugno desc:</b>상품 번호(ugno)를 기준으로 내림차순으로 정렬하여 최신 상품이 가장 먼저 나오도록 합니다.</li>
+          <li><b>rnum between ? and ?:</b>페이징 처리를 위한 코드로, 각 페이지에서 보여줄 데이터의 시작 행과 끝 행을 지정합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>리스트 메서드</b></summary>
+        <ul>
+          <li><b>con = DB.getConnection();:</b>데이터베이스에 연결을 설정합니다.</li>
+          <li><b>pstmt = con.prepareStatement(getListSQL(pageObject));:</b>getListSQL() 메서드를 호출해 검색 조건과 페이징이 적용된 SQL 쿼리를 생성합니다.</li>
+        </ul>
+      </details>
     
     
     
