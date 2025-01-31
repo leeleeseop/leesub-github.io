@@ -32,20 +32,24 @@
         <li><b>개발도구:</b>Oracle SQL Developer</li>
         <li><b>템플릿 엔진:</b>JSP</li>
     </div>
+
     
     <div class="Document">
       <h1>문서작업</h1>
       <h3>요구사항 정의서</h3>
       <img src="../../image/projects/interYard/인터야드 요구사항 정의서1.png" style="display: block; margin-bottom: 20px;"/>
       <img src="../../image/projects/interYard/인터야드 요구사항 정의서2.png" style="display: block;/>
+      
       <h3>테이블 정의서</h3>
       <img src="../../image/projects/interYard/인터야드 테이블 정의서1.png" style="display: block; margin-bottom: 20px;"/>
       <img src="../../image/projects/interYard/인터야드 테이블 정의서2.png" style="display: block;/>
+        
       <h3>Flow Diagram</h3>
       <p>1.중고장터</p>
       <img src="../../image/projects/interYard/인터야드 다이어그램1.jpg"/>
       <p>1.댓글</p>
       <img src="../../image/projects/interYard/인터야드 다이어그램2.jpg"/>
+      
       <h3>메뉴흐름도</h3>
       <p>1.중고장터</p>
       <img src="../../image/projects/interYard/인터야드 메뉴흐름도1.jpg"/>
@@ -53,8 +57,290 @@
       <img src="../../image/projects/interYard/인터야드 메뉴흐름도2.jpg"/>
     </div>
 
+    
     <div class="Main">
+      <h1>중고장터 & 댓글 프로젝트 화면</h1>
+      <hr>
+      <h3>1.중고장터 리스트</h3>
+      <img src="../../image/projects/interYard/인터야드 중고 장터 댓글 리스트.png"/>
+      <li><b>중고 상품의 리스트로 사용자들이 올린 상품을 보여주기 위해 개발했습니다.</b></li>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>상품 이미지:</b>중고 상품의 이미지</li>
+          <li><b>상품명:</b>중고 상품의 이름</li>
+          <li><b>상품 가격:</b>중고 상품의 가격</li>
+          <li><b>등록일:</b>상품이 등록된 날짜</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>입력 데이터</b></summary>
+        <ul>
+          <li><b>검색:</b>찾고 싶은 상품명을 입력하는 기능</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>등록</b>(WriteForm.do)</li>
+        </ul>
+      </details>
+      <hr>
+      
+      <h3>2.중고장터 상품 상세보기</h3>
+      <img src="../../image/projects/interYard/인터야드 중고장터 상품 상세보기.png"/>
+      <li><b>중고 상품의 상세 정보를 볼 수 있으며, ‘메시지 버튼’을 통해 판매자와 대화 페이지로 이동할 수 있도록 개발했습니다.</b></li>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>상품 이미지:</b>중고 상품의 이미지</li>
+          <li><b>상품명:</b>중고 상품의 이름</li>
+          <li><b>상품 내용:</b>중고 상품의 대한 내용</li>
+          <li><b>가격:</b>중고 상품의 가격</li>
+          <li><b>상품 상태:</b>상품이 판매 중일 경우 '판매중', 판매 완료일 경우 '판매완료'</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>메시지</b>(Message WriteForm.do)</li>
+          <li><b>수정</b>(UsedGoods UpdateForm.do)</li>
+          <li><b>삭제</b>(UsedGoods Delete.do)</li>
+          <li><b>리스트</b>(UsedGoods list.do)</li>
+        </ul>
+      </details>
+      <hr>
+      
+      <h3>3.중고상품 등록</h3>
+      <img src="../../image/projects/interYard/인터야드 중고상품 등록.png"/>
+      <li><b>사용자가 상품등록 에서 데이터를 입력하고 등록버튼을 클릭하면 리스트 반영 될수있도록 개발했습니다.</b></li>
+      <details>
+        <summary><b>입력 데이터</b></summary>
+        <ul>
+          <li><b>상품명:</b>상품명을 입력할수있는 기능</li>
+          <li><b>상품내용:</b>상품에 대한 정보를 입력할수있는 기능</li>
+          <li><b>가격:</b>상품의 가격을 입력할수있는 기능</li>
+          <li><b>상품이미지:</b>상품의 이미지를 업로드 할수있는 기능</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>등록</b>(UsedGoods Write.do)</li>
+          <li><b>다시입력</b>(UsedGoods WriteForm.do)</li>
+          <li><b>취소</b>(UsedGoods listd.do)</li>
+        </ul>
+      </details>
+      <hr>
+      
+      <h3>4. 중고상품 수정</h3>
+      <img src="../../image/projects/interYard/인터야드 중고상품 수정.png"/>
+      <li><b>사용자가 상품수정에서 데이터를 수정할 수 있도록 개발했습니다.</b></li>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>상품 번호: </b>해당 상품의 번호</li>
+          <li><b>상품명:</b>중고 상품의 이름</li>
+          <li><b>상품 설명:</b>상품의 상세 정보</li>
+          <li><b>가격:</b>중고 상품의 가격</li>
+          <li><b>상품 상태:</b>상품의 상태 (판매중, 판매완료)</li>
+        </ul>
+      </details>      
+      <details>
+        <summary><b>입력 데이터</b></summary>
+        <ul>
+          <li><b>상품명:</b>상품명을 수정할 수 있는 기능</li>
+          <li><b>상품설명:</b>상품 설명을 수정할 수 있는 기능</li>
+          <li><b>가격:</b>가격을 입력하여 수정하는 기능</li>
+          <li><b>상품상태:</b>"판매중", "판매완료" 상태를 변경하는 기능</li>
+          <li><b>이미지 변경:</b>새로운 사진으로 바꾸는 기능</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>수정</b>(UsedGoods Update.do)</li>
+          <li><b>다시입력</b>(UsedGoods Update.do)</li>
+          <li><b>취소</b>(UsedGoods list.do)</li>
+        </ul>
+      </details>
+      <hr>
+      
+      <h3>5.중고장터 상품 삭제</h3>
+      <img src="../../image/projects/interYard/인터야드 중고장터 상품 삭제.png"/>
+      <li><b>상세보기에서 삭제 버튼을 클릭하면 리스트로 돌아가며 상품은 삭제되고, "상품이 삭제되었습니다"라는 문구가 표시되도록 개발했습니다.</b></li>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>Close</b>(Close Modal)</li>
+        </ul>
+      </details>
+      <hr>
+      
+      <h3>6.중고 장터 댓글 리스트</h3>
+      <img src="../../image/projects/interYard/인터야드 중고 장터 댓글 리스트.png"/>
+      <li><b>상품상세보기 밑에 댓글 리스트가 있으며 다른 사용자들의 댓글을 볼 수 있도록 개발했습니다.</b></li>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>작성자 ID:</b>댓글 작성자의 아이디</li>
+          <li><b>작성일:</b>댓글이 작성된 날짜</li>
+          <li><b>댓글 내용:</b>사용자가 남긴 댓글 내용</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>등록</b>(reply WriteForm.do)</li>
+          <li><b>수정</b>(reply UpdateForm.do)</li>
+          <li><b>삭제</b>(reply Delete.do)</li>
+        </ul>
+      </details>
+      <hr>
+      
+      <h3>7.중고장터 댓글 등록</h3>
+      <img src="../../image/projects/interYard/인터야드 중고장터 댓글 등록.png"/>
+      <li><b>모달 창에서 댓글 내용을 수정할 수 있으며 수정 버튼을 클릭하면 수정 처리가 될 수 있도록 개발했습니다.</b></li>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>댓글 내용: </b>사용자가 작성한 댓글내용</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>입력 데이터</b></summary>
+        <ul>
+          <li><b>댓글 내용: </b>댓글 내용을 수정 할 수있는 입력 기능</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>수정</b>(Reply Update.do)</li>
+          <li><b>취소</b>(Close Modal)</li>
+        </ul>
+      </details>
+      <hr>
+      
+      <h3>8.중고장터 댓글 삭제</h3>
+      <img src="../../image/projects/interYard/인터야드 중고장터 댓글 삭제.png"/>
+      <li><b>댓글 삭제 여부를 확인하는 모달 창을 통해, 삭제 버튼을 클릭하면 리스트에서 댓글이 삭제됩니다.</b></li>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>삭제</b>(Reply Delete.do)</li>
+          <li><b>취소</b>(Close Modal)</li>
+        </ul>
+      </details>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <a href="https://leeleeseop.github.io/leesub-blog.github.io/">Back to Home</a>
 </body>
 </html>
