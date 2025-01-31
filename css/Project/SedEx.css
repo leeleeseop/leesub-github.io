@@ -38,4 +38,9 @@
     margin: 0 auto;
     width: 60%;
   }
+
+  .Main img{
+    width: 560px;
+    hight: 560px;
+  }
 </style>
