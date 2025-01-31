@@ -400,20 +400,20 @@
       <h1>핵심코드</h1>
       <hr>
       <h2>1.캐스팅 오류</h2>
-      <img src="../../image/projects/SedEx/세덱스 캐스팅 오류1.png"/>   
-      <img src="../../image/projects/SedEx/세덱스 캐스팅 오류2.png"/>
+      <img src="../../image/projects/SedEx/세덱스 캐스팅 오류1.png" style="display: block; margin-bottom: 20px;"/>   
+      <img src="../../image/projects/SedEx/세덱스 캐스팅 오류2.png" style="display: block;/>
       <li><b>오류 설명:</b>CartVO 객체를 Long 타입으로 잘못 캐스팅 해서 발생한 캐스팅 오류입니다.</li>
       <li><b>오류 발견:</b>선택 삭제에서 장바구니 번호를 입력 후 발견했습니다.</li>  
       <img src="../../image/projects/SedEx/세덱스 캐스팅 오류3.png"/>
       <li><b>오류 해결 : result = Execute.execute(new CartDeleteService(), vo)에 vo.getCartCode</b>추가하여 오류를 수정하였습니다.</li>
       
       <h2>2.리스트 오류</h2>
-      <img src="../../image/projects/SedEx/세덱스 리스트 오류1.png"/>   
-      <img src="../../image/projects/SedEx/세덱스 리스트 오류2.png"/>
+      <img src="../../image/projects/SedEx/세덱스 리스트 오류1.png" style="display: block; margin-bottom: 20px;"/>   
+      <img src="../../image/projects/SedEx/세덱스 리스트 오류2.png" style="display: block;/>
       <li><b>오류 설명:</b>cartVo vo = new cartVO가 while문 밖에 있어 가지고 오류가 발생했습니다.</li>
       <li><b>오류 발견:</b>각각 다른 4개의 상품과 수량을 넣었지만 리스트에서는 데이터들이 다 똑같이 나왔습니다..</li>  
-      <img src="../../image/projects/SedEx/세덱스 리스트 오류3.png"/>
-      <img src="../../image/projects/SedEx/세덱스 리스트 오류4.png"/>
+      <img src="../../image/projects/SedEx/세덱스 리스트 오류3.png" style="display: block; margin-bottom: 20px;"/>
+      <img src="../../image/projects/SedEx/세덱스 리스트 오류4.png" style="display: block;/>
       <li><b>오류 해결 : 오류 해결 : while문 밖에 있던 cartVO vo = new cartVO를 whle문 안으로 넣어 오류를 해결했습니다.</li> 
                 
     </div>
