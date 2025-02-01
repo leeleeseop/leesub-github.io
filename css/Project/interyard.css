@@ -28,8 +28,8 @@
   .Introduction ul{
     position: relative;
     top: -5px;
+    right: 10px;
     list-style-position: inside;
-    right: 5px;
   }
   
   .header img {
