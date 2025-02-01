@@ -1,9 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var images = document.querySelectorAll("img");
+const modal = document.querySelector(".modal");
+const img = document.querySelector(".img");
+const modal_img = document.querySelector(".modal_content");
+const span = document.querySelector(".close");
 
-  images.forEach(function(image) {
-    image.addEventListener("dblclick", function() {
-      image.classList.toggle("enlarged");
-    });
-  });
+img.addEventListener('click', ()=>{
+  modalDisplay("block");
+  modal_img.src = img.src;
 });
+span.addEventListener('click', ()=>{
+  modalDisplay("none");
+});
+modal.addEventListener('click', ()=>{
+  modalDisplay("none");
+});
+function modalDisplay(text){
+  modal.style.display = text;
+}
