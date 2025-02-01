@@ -1,5 +1,3 @@
-/**
- * 
    const clickimg = document.getElementById("clickimg")
    const modal = document.getElementById("modal")
    const modalImg = document.getElementById("modalImg")
@@ -14,4 +12,3 @@
    modal.addEventListener("click", function() {
      modal.style.display = "none";
    });
- */
