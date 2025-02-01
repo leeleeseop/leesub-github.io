@@ -316,249 +316,37 @@
           <li><b>return list;</b>: 중고 상품 데이터가 담긴 리스트 반환</li>
         </ul>
       </details>
-    
       <h3>usedgoods List HTML</h3>
       <img src="../../image/projects/interYard/인터야드 usedgoods List HTML(핵심코드).png"/>
-      <li><b>위 코드는 상품 목록을 카드 형식으로 동적으로 출력하는 기능을 담당합니다. c:forEach 태그를 사용하여 서버에서 받아온 각 상품의 이미지, 제목, 가격, 등록일 등 정보를 화면에 표시합니다.</b></li>
+      <li><b>
+             위 코드는 상품 목록을 카드 형식으로 동적으로 출력하는 기능을 담당합니다.<br>
+             c:forEach 태그를 사용하여 서버에서 받아온 각 상품의 이미지, 제목, 가격, 등록일 등 정보를 화면에 표시합니다.
+      </b></li>
       <details>
-        <summary><b>상품 데이터 출력</b></summary>
+        <summary>상품 데이터 출력</summary>
         <ul>
-          <li><b>items="${list}”</b>는 서버에서 전달된 상품 목록을 받아 반복 처리합니다.</li>
+          <li>(items="${list}”) 는 서버에서 전달된 상품 목록을 받아 반복 처리합니다.</li>
           <li>상품 목록에서 이미지(vo.image), 제목(vo.title), 가격(vo.price), 등록일(vo.writeDate) 등의 데이터를 화면에 동적으로 출력합니다.</li>
         </ul>
       </details>
       <details>
-        <summary><b>상품 카드 구성</b></summary>
+        <summary>상품 카드 구성</summary>
         <ul>
-          <li>각 상품은 product-item 클래스를 가진 카드 형식으로 디자인되어 있으며 상품 이미지, 제목, 가격 등을 포함하여 그리드 형식으로 화면에 표시됩니다.</li>
-          <b><!--<img class="card-img-top"src="${pageContext.request.contextPath}${vo.image}"alt="image">--></b>
-          <li>카드 상단에는 상품의 이미지가 img 태그로 출력됩니다.</li>
-          <li>${pageContext.request.contextPath} 는 이미지의 경로로 사용됩니다.</li>
-          <li>상품 제목과 가격은 card-body 내부에 표시되며, 제목은 <strong> 태그로, 가격은 태그로 출력됩니다.</li>
-          <li><!--<h5><fmt:formatNumber value="${vo.price}" pattern="#,###"/>원</h5>-->
+          <li><p>
+            각 상품은 (product-item) 클래스를 가진 카드 형식으로 디자인되어 있으며
+            상품 이미지, 제목, 가격 등을 포함하여 그리드 형식으로 화면에 표시됩니다.
+          </p></li>
+          <!-- <img class="card-img-top"src="${pageContext.request.contextPath}${vo.image}"alt="image"> -->
+          <li>카드 상단에는 상품의 이미지가 img태그로 출력됩니다.</li>
+          <li>(${pageContext.request.contextPath})는 이미지의 경로로 사용됩니다.</li>
+          <li>상품 제목과 가격은 card-body 내부에 표시되며, 제목은(strong) 가격은(h5)태그로 출력됩니다.</li>
+          <li><code><h5><fmt:formatNumber value="${vo.price}" pattern="#,###"/>원</h5></code>
             <ul>
               <li>상품의 가격을 출력하는 부분입니다. fmt:formatNumber 태그를 사용하여 가격을 천 단위로 구분하여 보기 쉽게 출력합니다.</li>
             </ul>
           </li>
         </ul>
-      </details>    
-      <hr>
-      
-      <h3>2.중고장터 등록</h3>
-      <img src="../../image/projects/interYard/인터야드 중고장터 등록(핵심코드).png"/>
-      <h3>usedgoods writeForm.do Controller</h3>
-      <img src="../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1.png"/>
-      <li>위 코드는 상품 등록 하기 위해 사용자가 <code>/usedgoods/writeForm.do</code> URL을 요청하면 해당 요청을 받아 상품 등록을 위한 폼 페이지로 이동합니다.</li>
-      <img src="../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1-2.png"/>
-      <li>위 코드는 사용자가 상품 등록 폼에서 제출한 데이터를 처리하여 서버에 저장하고 등록 성공 메시지를 전송한 후 리스트 페이지로 리다이렉트합니다.</li>
-      <details>
-          <summary><strong>이미지 업로드 처리</strong></summary>
-          <ul>
-              <li>
-                  <code>MultipartRequest multi = new MultipartRequest(request, realSavePath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());</code>
-              </li>
-              <li><strong>MultipartRequest</strong>를 사용하여 이미지 파일 업로드를 처리합니다. 사용자가 업로드한 이미지를 서버의 특정 경로에 저장하면 업로드한 파일의 경로와 파일명을 가져옵니다.</li>
-              <li><strong>realSavePath:</strong> 실제 파일을 저장할 경로</li>
-              <li><strong>sizeLimit:</strong> 업로드 가능한 파일의 최대 크기</li>
-              <li><strong>DefaultFileRenamePolicy:</strong> 동일한 파일명이 존재할 경우 자동으로 파일명을 변경</li>
-          </ul>
       </details>
-      <details>
-          <summary><strong>일반 데이터 수집</strong></summary>
-          <ul>
-            <li>multi.getParameter()를 사용하여 사용자가 폼에 입력한 (제목, 내용, 가격, 이미지 등) 데이터를 서버에서 수집합니다.</li>
-            <code>
-                  String title = multi.getParameter("title");<br>
-                  String content = multi.getParameter("content");<br>
-                  String image = multi.getFilesystemName("imageFile");<br>
-                  Long price = Long.parseLong(multi.getParameter("price"));
-            </code>
-            <li>이미지 경로는 imagePath 변수에 저장하여 DB에 저장할 때 사용합니다.
-                <ul>
-                  <li>String imagePath = savePath + "/" + image;</li>
-                </ul>
-            </li>
-            </ul>
-      </details>
-      <details>
-        <summary><strong>VO에 데이터 저장</strong></summary>
-        <ul>
-          <li>사용자가 입력한 데이터를 <b>UsedGoodsVO</b> 객체에 저장합니다.</li>
-          <code>
-            UsedGoodsVO vo = new UsedGoodsVO();<br>
-            vo.setTitle(title);<br>
-            vo.setContent(content);<br>
-            vo.setId(id);<br>
-            vo.setPrice(price);<br>
-            vo.setImage(imagePath);
-          </code>
-        </ul>
-      </details>
-      <details>
-        <summary><strong>상품 등록 서비스 호출</strong></summary>
-        <ul>
-          <li>Execute.execute() 메서드를 호출하여 UsedGoodsVO에 저장된 데이터를 데이터베이스에 저장합니다.</li>
-          <code>
-            Execute.execute(UsedGoodsInit.get(uri), vo);
-          </code>
-        </ul>
-      </details>
-      <h3>usedgoods write DAO</h3>
-      <img src="../../image/projects/interYard/인터야드usedgoods write DAO(핵심코드)1.png"/>
-      <li>위 코드는 중고상품 데이터를 데이터베이스에 삽입하기 위해 작성된 쿼리로 사용자가 입력한 상품 정보를 데이터베이스의 usedgoods 테블에 저장합니다.</li>
-      <details>
-        <summary><b>final String WRITE = “ insert into usedgoods</b></summary>
-        <ul>
-          <li>WRITE는 SQL INSERT 문을 문자열로 정의 하는 변수이며 usedgoods 테이블에 데이터를 삽입하며 insert into 구문은 SQL에서 새로운 레코드를 데이터베이스에 추가합니다 .</li>
-        </ul>
-      </details>
-      <details>
-        <summary><b>“ ( ugno, title, content, id, image, price) “</b></summary>
-        <ul>
-          <li>이 코드는 등록에서 데이터를 삽입할때 해당 컬럼들에 값을 저장합니다.</li>
-          <li><b>ugno:</b>중고상품 번호(Primary Key)</li>
-          <li><b>title:</b>상품 제목(Primary Key)</li>
-          <li><b>content:</b>상품설(Primary Key)</li>
-          <li><b>id:</b>사용자 ID(Primary Key)</li>
-          <li><b>image:</b>상품 이미지(Primary Key)</li>
-          <li><b>price: </b>상품 가격(Primary Key)</li>
-        </ul>
-      </details>    
-      <details>
-        <summary><b>values(usedgoods_seq.nextval, ?, ?, ?, ?, ?)</b></summary>
-        <ul>
-          <li><code>usedgoods_seq.nextval</code>상품번호를 자동으로 생성하는 기능을 담당합니다.</li>
-          <li><code>?, ?, ?, ?, ?</code>상품제목, 상품설명, ID, 상품이미지, 상품가격)을 입력해야 할 파라미터 개수 입니다.</li>
-        </ul>
-        <img src="../../image/projects/interYard/인터야드usedgoods write DAO(핵심코드)1-2.png"/>
-        <li><b>위 코드는 사용자가 입력한 중고 상품 정보를 데이터베이스에 등록하는 기능을 수행하고<br> 
-                UsedGoodsVO 에 담긴 데이터를 사용해 데이터베이스에 삽입하고 셩공 여부를 반환합니다.
-        </b></li>
-        <details>
-          <summary><b>public int write(UsedGoodsVO vo) throws Exception</b></summary>
-          <ul>
-            <li>이 메서드는 (UsedGoodsVO) 에 매개변수로 받아서 상품 데이터를 데이터베이스에 등록 합니다.</li>
-          </ul>
-        </details>       
-        <details>
-          <summary><b>pstmt.setString(1, vo.getTitle()); 등</b></summary>
-          <ul>
-            <li>vo 에서 제목, 내용, 이미지, 가격 데이터를 가져와 각각의 물음표(?)에 값을 바인딩합니다.</li>
-          </ul>
-        </details>               
-        <h3>usedgoods write DAO</h3>
-        <img src="../../image/projects/interYard/인터야드usedgoods writeForm HTML핵심코드).png"/>    
-        <li><b>위 코드는 상품명,  상품내용, 가격,  이미지 파일을 필수로 입력해야하는 코드입니다.</b></li>   
-        <details>
-          <summary><b>상품명 입력</b></summary>
-          <ul>
-            <li>상품명은 입력란에 아무것도 입력되지 않았을때 “상품명을 입력해주세요” 안내가 문구가<br>
-                뜨며 최소 1자에서 최대 20자까지 허용되고 필수로 입력해야하는 필수 항목입니다.
-            </li>
-          </ul>
-        </details>         
-        <details>
-          <summary><b>상품내용 입력</b></summary>
-          <ul>
-            <li><p>상품내용을 입력하지 않았을 경우 “ 상품내용을 입력해주세요”라는 안내 문구가 나오는 
-                    필수 항목이며 상품상세내용의 최대 글자 수 는 100글자 제한 과 글자수 표시로 얼마나 작성했는지 보여줍니다.
-            </p></li>
-          </ul>
-        </details>     
-        <details>
-          <summary><b>가격 입력</b></summary>
-          <ul>
-            <li><p>사용자가 가격을 입력할 때 oninput="formatPrice(this)" 로 인해 천 단위 콤마를 추가하며 
-                    입력하지 않았을때는 가격을 입력하세요 라는 안내문구가 뜹니다.
-            </p></li>
-          </ul>
-        </details>      
-        <details>
-          <summary><b>이미지 첨부</b></summary>
-          <ul>
-            <li><p>type=”file” : 파일을 업로드 하기 위한 필드입니다</p></li>
-          </ul>
-        </details>     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <a href="https://leeleeseop.github.io/leesub-blog.github.io/">Back to Home</a>
 </body>
 </html>
