@@ -84,4 +84,10 @@
 .modal.active {
     display: flex;
 }
+
+.project{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
 </style>
