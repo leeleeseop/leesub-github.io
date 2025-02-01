@@ -45,7 +45,7 @@
 
 .Document img {
   width: 500px;
-  height: 500px;
+  hight: 500px;
 }
 
 .Main {
@@ -56,7 +56,7 @@
 
 .Main img{
   width: 560px;
-  height: 560px;
+  hight: 560px;
 }
 
 /* 모달(이미지 확대) 스타일 */
