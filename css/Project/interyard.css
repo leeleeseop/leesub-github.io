@@ -1,10 +1,9 @@
 @charset "UTF-8";
-
 .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 요소 왼쪽 정렬 */
-    text-align: center; /* 제목만 중앙 정렬 */
+    align-items: center;
+    text-align: center;
 }
 
 .project-title {
@@ -19,13 +18,13 @@
 
 .Introduction li {
     margin-bottom: 5px;
-}
+  }
 
-.Introduction ul {
-    position: relative;
-    top: -5px;
-    list-style-position: inside;
-    text-align: left; /* 목록 왼쪽 정렬 */
+.Introduction ul{
+  position: relative;
+  top: -5px;
+  right: 25px;
+  list-style-position: inside;
 }
 
 .header img {
@@ -37,22 +36,20 @@
     display: block;
     margin: 0 auto;
     width: 60%;
-    max-width: 800px; /* 너무 좁아지는 것 방지 */
-    text-align: left; /* 문서 내용 왼쪽 정렬 */
 }
 
 .Document img {
-    width: 500px;
-    height: 500px; /* 수정: hight → height */
+  width: 500px;
+  hight: 500px;
 }
 
 .Main {
-    display: block;
-    margin: 0 auto;
-    width: 60%;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
 }
 
-.Main img {
-    width: 560px;
-    height: 560px; /* 수정: hight → height */
+.Main img{
+  width: 560px;
+  hight: 560px;
 }
