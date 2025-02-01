@@ -33,20 +33,14 @@
   hight: 500px;
 }
 
-.Main {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
-}
-
-.Main img{
-  width: 560px;
-  hight: 560px;
-}
-
 .project{
   display: block;
   margin: 0 auto;
   width: 60%;
+}
+
+.project img {
+  width: 560px;
+  hight: 560px;
 }
 </style>
