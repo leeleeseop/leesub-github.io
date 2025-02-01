@@ -22,7 +22,7 @@
     margin: 0 auto;
 }
 
-.Introduction, .Document, .project{
+.Introduction, .Document{
     display: block;
     margin: 0 auto;
     width: 60%;
@@ -31,6 +31,12 @@
 .Document img {
   width: 500px;
   hight: 500px;
+}
+
+.project{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
 }
 
 .project img {
