@@ -93,6 +93,6 @@
 
 .project img {
   width: 560px;
-  height: 560px;
+  height: auto;
 }
 </style>
