@@ -95,4 +95,8 @@
   width: 560px;
   height: auto;
 }
+
+hr{
+ gap: 10px;
+}
 </style>
