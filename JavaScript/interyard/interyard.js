@@ -9,7 +9,7 @@
      modal.style.display = "flex";
    });
 
-   // 이미지 클릭시 모달 열기
+   // 모달 클릭 시 모달 닫기
    modal.addEventListener("click", function() {
      modal.style.display = "none";
    });
