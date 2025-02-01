@@ -237,7 +237,7 @@
       <h1>핵심 코드</h1>
       <hr>
       <h3>1.중고장터 리스트</h3>
-      <img src="../../image/projects/interYard/인터야드 중고장터 댓글 삭제.png"/>
+      <img src="../../image/projects/interYard/인터야드 중고장터 리스트.png"/>
       <h3>usedgoods List.do Controller</h3>
       <img src="../../image/projects/interYard/인터야드 usedgoods List.do Controller(핵심코드).png"/>
       <li>위 코드는 중고장터 리스트 페이지를 처리하는 부분으로 사용자가<b>/usedgoods/list.do</b>요청을 보내면 중고 상품 리스트를 불러와 목록을  출력하는 역할을 합니다.</li>
@@ -342,7 +342,7 @@
       </details>    
       <hr>
       
-      <h3>2.중고장터 등</h3>
+      <h3>2.중고장터 등록</h3>
       <img src="../../image/projects/interYard/인터야드 중고장터 등록(핵심코드).png"/>
       <h3>usedgoods writeForm.do Controller</h3>
       <img src="../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1.png"/>
@@ -361,16 +361,122 @@
               <li><strong>DefaultFileRenamePolicy:</strong> 동일한 파일명이 존재할 경우 자동으로 파일명을 변경</li>
           </ul>
       </details>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+      <details>
+          <summary><strong>일반 데이터 수집</strong></summary>
+          <ul>
+            <li>multi.getParameter()를 사용하여 사용자가 폼에 입력한 (제목, 내용, 가격, 이미지 등) 데이터를 서버에서 수집합니다.</li>
+            <code>
+                  String title = multi.getParameter("title");<br>
+                  String content = multi.getParameter("content");<br>
+                  String image = multi.getFilesystemName("imageFile");<br>
+                  Long price = Long.parseLong(multi.getParameter("price"));
+            </code>
+            <li>이미지 경로는 imagePath 변수에 저장하여 DB에 저장할 때 사용합니다.
+                <ul>
+                  <li>String imagePath = savePath + "/" + image;</li>
+                </ul>
+            </li>
+            </ul>
+      </details>
+      <details>
+        <summary><strong>VO에 데이터 저장</strong></summary>
+        <ul>
+          <li>사용자가 입력한 데이터를 <b>UsedGoodsVO</b> 객체에 저장합니다.</li>
+          <code>
+            UsedGoodsVO vo = new UsedGoodsVO();<br>
+            vo.setTitle(title);<br>
+            vo.setContent(content);<br>
+            vo.setId(id);<br>
+            vo.setPrice(price);<br>
+            vo.setImage(imagePath);
+          </code>
+        </ul>
+      </details>
+      <details>
+        <summary><strong>상품 등록 서비스 호출</strong></summary>
+        <ul>
+          <li>Execute.execute() 메서드를 호출하여 UsedGoodsVO에 저장된 데이터를 데이터베이스에 저장합니다.</li>
+          <code>
+            Execute.execute(UsedGoodsInit.get(uri), vo);
+          </code>
+        </ul>
+      </details>
+      <h3>usedgoods write DAO</h3>
+      <img src="../../image/projects/interYard/인터야드usedgoods write DAO(핵심코드)1.png"/>
+      <li>위 코드는 중고상품 데이터를 데이터베이스에 삽입하기 위해 작성된 쿼리로 사용자가 입력한 상품 정보를 데이터베이스의 usedgoods 테블에 저장합니다.</li>
+      <details>
+        <summary><b>final String WRITE = “ insert into usedgoods</b></summary>
+        <ul>
+          <li>WRITE는 SQL INSERT 문을 문자열로 정의 하는 변수이며 usedgoods 테이블에 데이터를 삽입하며 insert into 구문은 SQL에서 새로운 레코드를 데이터베이스에 추가합니다 .</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>“ ( ugno, title, content, id, image, price) “</b></summary>
+        <ul>
+          <li>이 코드는 등록에서 데이터를 삽입할때 해당 컬럼들에 값을 저장합니다.</li>
+          <li><b>ugno:</b>중고상품 번호(Primary Key)</li>
+          <li><b>title:</b>상품 제목(Primary Key)</li>
+          <li><b>content:</b>상품설(Primary Key)</li>
+          <li><b>id:</b>사용자 ID(Primary Key)</li>
+          <li><b>image:</b>상품 이미지(Primary Key)</li>
+          <li><b>price: </b>상품 가격(Primary Key)</li>
+        </ul>
+      </details>    
+      <details>
+        <summary><b>values(usedgoods_seq.nextval, ?, ?, ?, ?, ?)</b></summary>
+        <ul>
+          <li><code>usedgoods_seq.nextval</code>상품번호를 자동으로 생성하는 기능을 담당합니다.</li>
+          <li><code>?, ?, ?, ?, ?</code>상품제목, 상품설명, ID, 상품이미지, 상품가격)을 입력해야 할 파라미터 개수 입니다.</li>
+        </ul>
+        <img src="../../image/projects/interYard/인터야드usedgoods write DAO(핵심코드)1-2.png"/>
+        <li><b>위 코드는 사용자가 입력한 중고 상품 정보를 데이터베이스에 등록하는 기능을 수행하고<br> 
+                UsedGoodsVO 에 담긴 데이터를 사용해 데이터베이스에 삽입하고 셩공 여부를 반환합니다.
+        </b></li>
+        <details>
+          <summary><b>public int write(UsedGoodsVO vo) throws Exception</b></summary>
+          <ul>
+            <li>이 메서드는 (UsedGoodsVO) 에 매개변수로 받아서 상품 데이터를 데이터베이스에 등록 합니다.</li>
+          </ul>
+        </details>       
+        <details>
+          <summary><b>pstmt.setString(1, vo.getTitle()); 등</b></summary>
+          <ul>
+            <li>vo 에서 제목, 내용, 이미지, 가격 데이터를 가져와 각각의 물음표(?)에 값을 바인딩합니다.</li>
+          </ul>
+        </details>               
+        <h3>usedgoods write DAO</h3>
+        <img src="../../image/projects/interYard/인터야드usedgoods writeForm HTML핵심코드).png"/>    
+        <li><b>위 코드는 상품명,  상품내용, 가격,  이미지 파일을 필수로 입력해야하는 코드입니다.</b></li>   
+        <details>
+          <summary><b>상품명 입력</b></summary>
+          <ul>
+            <li>상품명은 입력란에 아무것도 입력되지 않았을때 “상품명을 입력해주세요” 안내가 문구가<br>
+                뜨며 최소 1자에서 최대 20자까지 허용되고 필수로 입력해야하는 필수 항목입니다.
+            </li>
+          </ul>
+        </details>         
+        <details>
+          <summary><b>상품내용 입력</b></summary>
+          <ul>
+            <li><p>상품내용을 입력하지 않았을 경우 “ 상품내용을 입력해주세요”라는 안내 문구가 나오는 
+                    필수 항목이며 상품상세내용의 최대 글자 수 는 100글자 제한 과 글자수 표시로 얼마나 작성했는지 보여줍니다.
+            </p></li>
+          </ul>
+        </details>     
+        <details>
+          <summary><b>가격 입력</b></summary>
+          <ul>
+            <li><p>사용자가 가격을 입력할 때 oninput="formatPrice(this)" 로 인해 천 단위 콤마를 추가하며 
+                    입력하지 않았을때는 가격을 입력하세요 라는 안내문구가 뜹니다.
+            </p></li>
+          </ul>
+        </details>      
+        <details>
+          <summary><b>이미지 첨부</b></summary>
+          <ul>
+            <li><p>type=”file” : 파일을 업로드 하기 위한 필드입니다</p></li>
+          </ul>
+        </details>     
     
     
     
