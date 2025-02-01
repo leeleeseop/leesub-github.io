@@ -24,6 +24,14 @@
   li {
       margin-bottom: 5px;
     }
+
+  .Introduction ul{
+    position: relative;
+    top: -5px;
+    list-style-position: inside;
+    padding-left: 0; 
+    margin-top: 0; 
+  }
   
   .header img {
       display: block;
