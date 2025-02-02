@@ -531,10 +531,8 @@
       <li>위 코드는 상품명, 상품내용, 가격, 이미지 파일을 필수로 입력해야하는 코드입니다.</li>
       <details>
         <summary><b>상품명 입력</b></summary>
-        <ul>
-          <li>상품명은 입력란에 아무것도 입력되지 않았을때 “상품명을 입력해주세요” 안내가 문구가 
-              뜨며 최소 1자에서 최대 20자까지 허용되고 필수로 입력해야하는 필수 항목입니다.</li>
-        </ul>
+        <ul><li>상품명은 입력란에 아무것도 입력되지 않았을때 “상품명을 입력해주세요” 안내가 문구가 
+              뜨며 최소 1자에서 최대 20자까지 허용되고 필수로 입력해야하는 필수 항목입니다.</li></ul>
       </details> 
       <details>
         <summary><b>상품내용 입력</b></summary>
@@ -559,67 +557,110 @@
       <h3>usedgoods writeForm Script</h3>              
       <img src="../../../image/projects/interYard/인터야드 usedgoods writeForm Script (핵심코드).png" class="zoomable"/>
       <ul>
-        <li>위 코드는 가격 입력 필드의 형식을 조정하고 댓글 입력 시 글자 수를 실시간으로 제한 및 표시 하는 JavaScript 및 jQuery 입니다.</li>
+        <li><b>위 코드는 가격 입력 필드의 형식을 조정하고 댓글 입력 시 글자 수를 실시간으로 제한 및 표시 하는 JavaScript 및 jQuery 입니다.</b></li>
       </ul>
       <details>
-        <summary><b>가격 포맷팅</b></summary>
-        <ul>
-          <pre>
-            <code>
-              <span style="color: blue;">function</span> <span style="color: red;">formatPrice</span>(input){
-                <span style="color: blue;">let</span> value = input.value.<span style="color: red;">replace</span>(<span style="color: Orange;">/[^0-9]/g</span>, '');
-    
-                <span style="color: blue;">if</span> (value) {
-                  value = <span style="color: red;">parseInt</span>(value, 10).<span style="color: red;">toLocaleString</span>(<span style="color: green;">'ko-KR'</span>);
-                }
-                input.value = value;
-              }
-            </code>
-          </pre>
-          <li><b>숫자만 입력받기:</b> 사용자가 가격 입력 필드에 값을 입력할 때 <b>숫자 이외의 문자를 제거</b>합니다.</li>
-          <li><b>천 단위 콤마 추가:</b> 입력된 숫자에 한국 식 천 단위 콤마를 자동으로 추가합니다.</li>
-          <li><b>포맷된 값 다시 삽입 :</b> 천 단위 콤마가 생기면 그걸 다시 input에 넣어 사용자가 바로 확인 할 수 있게 만듭니다.</li>
-        </ul>
+        <summary><b>String content = request.getParameter("content");</b></summary>
+        <ul><li>사용자가 입력한 댓글 내용을 content에 저장합니다.</li></ul>
       </details>
       <details>
-        <summary><b>콤마 제거</b></summary>
-        <ul>
-          <pre>
-            <code>
-              <span style="color: blue;">function</span> <span style="color: red;">formatPrice</span>(){
-                <span style="color: blue;">let</span> priceField = document.<span style="color: red;">getElementById</span>(<span style="color: green;">price</span>);
-                priceField.value = priceField.value.<span style="color: red;">replace</span>(<span style="color: green;">/,/g</span>, '');
-              }
-            </code>
-          </pre>
-          <li><b>가격 필드에서 콤마 제거:</b> 데이터를 서버에 전송 전에 콤마를 제거 하여 정확한 숫자 값만 서버로 전송할 수 있도록 합니다.</li>
-        </ul>
+        <summary><b>ReplyVO 생성 및 저장</b></summary>
+        <ul><li>댓글의 상품번호(Ugno), 댓글내용(Content), ID를 저장하기 위해 ReplyVO를 생성하고 vo에 담습니다.</li></ul>
       </details>
       <details>
-        <summary><b>콤마 제거</b></summary>
+        <summary><b>리다이렉트</b></summary>
+        <ul><li>댓글등록이 완료 후 댓글번호와 페이지번호 등의 정보를 포함하여 view로 이동합니다 .</li></ul>
+      </details>   
+
+      <h3>reply Write DAO</h3>              
+      <img src="../../../image/projects/interYard/인터야드 reply Write DAO(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>이 메서드는 댓글을 데이터베이스에 등록하며 데이터베이스에 저장이되고 반환하는 역할을 합니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>SQL 데이터 세팅</b></summary>
         <ul>
           <pre>
             <code>
-              $(function () {
-                  document.getElementById('content').addEventListener('input', function (event) {
-                      var content = event.target.value;
-                      var charCount = document.getElementById('charCount');
-                      var contentError = document.getElementById('contentError');
-                      
-                      charCount.textContent = content.length + "/100"; // 글자 수 표시
-              
-                      if (content.length > 100) {
-                          contentError.style.display = 'block'; // 글자 수 초과 시 오류 메시지 표시
-                      } else {
-                          contentError.style.display = 'none'; // 글자 수 초과하지 않으면 오류 메시지 숨김
-                      }
-                  });
-              });
+              pstmt = con.prepareStatement(WRITE);
+              pstmt.setLong(1, vo.getUgno());
+              pstmt.setString(2, vo.getContent());
+              pstmt.setString(3, vo.getId());
             </code>
           </pre>
-          <li><b>가격 필드에서 콤마 제거:</b> 데이터를 서버에 전송 전에 콤마를 제거 하여 정확한 숫자 값만 서버로 전송할 수 있도록 합니다.</li>
-        </ul>
-      </details>               
+          <li>pstmt : SQL 쿼리를 실행할 prepareStatement 객체를 생성합니다.</li>
+          <li>pstmt.setLong(1, vo.getUgno()) : 중고상품 번호 (ugno)를 첫 번째 파라미터로 입력합니다.</li>
+          <li>pstmt.setString(2, vo.getContent()) : 댓글내용 (content)을 두 번째 파라미터로 입력합니다.</li>
+          <li>pstmt.setString(3, vo.getId()) :  작성자ID를 세 번째 파라미터로 입력합니다.</li>
+      </details>
+      <details>
+        <summary><b>SQL 실행 및 결과</b></summary>
+        <ul>
+          <pre>
+            <code>
+              result = pstmt.executeUpdate();
+              System.out.println("*** 댓글 등록이 완료 되었습니다.");
+            </code>
+          </pre>
+          <li><b>executeUpdate():</b> 댓글을 데이터베이스에 삽입하는 SQL쿼리를 실행합니다.</li>
+          <li><b>등록 완료 메시지:</b> 댓글이 성공적으로 등록되면 “ 댓글 등록이 완료 되었습니다. “라는 메시지가 출력됩니다.</li>
+      </details>
+
+      <h3>reply Write JavaScript (JSP)</h3>              
+      <img src="../../../image/projects/interYard/인터야드 reply Write JavaScript (JSP)(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>이 코드는 댓글 등록을 위한 모달 창을 보여주는 기능을 처리하는 JavaScript 및 jQuery 스크립트입니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>폼 필드</b></summary>
+        <ul>
+          <pre>
+            <code>
+              $("#replyForm").find(".form-group").show();
+              $("#replyForm").find(".form-group>input, .form-group>textarea").val("");
+            </code>
+          </pre>
+          <li>ReplyForm 아이디를 가진 폼에서 input 및 textarea 필드를 찾아서 모두 보이게 설정합니다.</li>
+          <li>val(””) : 입력된 값들을 초기화하여 댓글을 새로 작성할 수 있도록 이전 입력된 데이터를 모두 지웁니다.</li>
+      </details>
+
+      <h3>reply html (JSP)</h3>              
+      <img src="../../../image/projects/interYard/인터야드 reply html (JSP)(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>위 코드는 댓글을 등록, 수정, 삭제하기 위한 모달 창을 제공하며 각 상황에 맞는 입력 필드와  버튼이 구현되었습니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>댓글 입력 폼(form id="replyForm")</b></summary>
+        <ul>
+          <li>id=”replyForm” : 댓글 등록, 수정, 삭제 시 데이터를 서버로 전송하는 폼 태그입니다.</li>
+          <li>method=”post” 와 action=”reply/write.do : 댓글번호(rno)를 저장하는 숨겨진 필드입니다.</li>
+      </details>
+      <details>
+        <summary><b>Modal body</b></summary>
+        <ul>
+          <pre>
+            <code>
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="form-group" id="contentDiv">
+                  <label for="content">댓글작성</label>
+                  <textarea class="form-control" rows="3" id="content" name="content"  
+                     title="댓글을 입력해주세요." placeholder="댓글을 입력해주세요()." 
+                     maxlength="100"></textarea>
+                    <div id="charCount">0/100</div>
+                    <div id="contentError" style="color: red; display: none;">
+                    댓글은 최대 100글자까지 입력할 수 있습니다.</div>
+                </div>
+  				    </div>
+            </code>
+          </pre>
+          <li><b>(<textarea class="form-control" id="content" name="content" maxlength="100">)</b><br>
+          <b>댓글 작성 필드:</b> 사용자는 최대 100글자 까지 댓글을 작성하는 입력 필드입니다.</li>
+          <li><b>(<div id="charCount">0/100</div>)</b><br>
+          <b>글자 수 카운터:</b> 사용자가 댓글 입력 시 글자 수가 실시간으로 표시 해줍니다.</li>
+          <li><b>(<div id="contentError" style="color: red; display: none;">)</b><br>
+          <b>글자 수 오류 메시지:</b> 댓글이 100글자를 초과하면 오류메시지가 표시됩니다.</li>            
+      </details>              
     </div>
   </div>
              
