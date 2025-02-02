@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SedEx</title>
+  <link rel="stylesheet" href="../../css/Project/SedEx.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="project-title">세덱스(SedEex)팀 프로젝트</h1>
+      <img src="../../image/projects/SedEx/backgroundSedEx.png"/>
+    </div>
+
+    <div class="Introduction">
+      <h3>요약</h3>
+      <ul>
+        <li>세덱스(SedEx)라는 스포츠 용품 쇼핑몰에서 장바구니 백엔드 개발을 담당하게 되었습니다.</li>
+      </ul>
+      
+      <h3>역할</h3>
+      <ul>
+        <li>프로젝트 팀 인원5명</li>
+        <li>역할: 팀장</li>
+        <li>담당: 장바구니</li>
+      </ul>
+      
+      <h3>시기</h3>
+      <ul>
+        <li>프로젝트 진행 기간 ( 2024.05.17 ~ 2024.05.28 )</li>
+      </ul> 
+
+      <h3>도구 및 기술</h3>
+      <ul>
+        <li><strong>DBMS:</strong> Oracle11g xe</li>
+        <li><strong>개발언어:</strong> AVA(JDK17)</li>
+        <li><strong>개발도구:</strong> Oracle SQL Developer</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="Document">
+      <h1>📄문서작업</h1>
+      <h3>요구사항 정의서</h3>
+      <img src="../../../image/projects/SedEx/세덱스 요구사항 정의서.png" style="display: block; margin-bottom: 20px;" class="zoomable"/>
+
+      <h3>테이블 정의서</h3>
+      <img src="../../../image/projects/SedEx/세덱스 테이블정의서.png" class="zoomable"/>
+
+      <h3>Flow Diagram</h3>
+      <img src="../../../image/projects/SedEx/세덱스 다이어그램.jpg" class="zoomable"/>
+    </div>
+
+    <hr>
+
+    <div class="project">
+      <h1>💻프로젝트 화면</h1>
+      <h3>0.장바구니 메뉴</h3>
+      <img src="../../../image/projects/SedEx/세덱스 장바구니메뉴.png" class="zoomable"/>
+      <ul>
+        <li><b>장바구니의 기능구현으로 장바구니의 메뉴를 선택해서 들어갑니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>메뉴출력</b></summary>
+        <ul>
+          <li>System.out.print("| 1.리스트 | 2.수정 | 3.삭제 | 4.담기 | 0.이전메뉴 |");</li>
+          <ol start="1">
+            <li><b>리스트:</b> 사용자가 장바구니에 추가한 상품을 볼수있습니다.</li>
+            <li><b>수정:</b> 장바구니에 있는 상품의 수량을 수정할 수 있습니다.</li>
+            <li><b>삭제:</b> 장바구니에 있는 상품을 삭제 할 수 있습니다.</li>
+            <li><b>담기:</b> 장바구니에서 상품을 담을 수 있습니다.</li>
+          </ol>
+        </ul>
+      </details>
+
+      <hr>
+
+      <h3>1.장바구니 리스트</h3>
+      <img src="../../../image/projects/SedEx/세덱스 장바구니 리스트.png" class="zoomable"/>
+      <li><b>장바구니의 리스트로 ( 장바구니 번호, 회원번호, 상품코드, 상품명, 상품수량, 상품가격, 합계 )를 
+        보여주며 장바구나의 총금액 과 구매 여부를 묻도록 개발했습니다.</b></li>
+
+      <hr>
+
+      <h3>2.장바구니 수정</h3>
+      <img src="../../../image/projects/SedEx/세덱스 장바구니 수정.png" style="display: block; margin-bottom: 20px;" class="zoomable"/>
+      <img src="../../../image/projects/SedEx/세덱스 장바구니 수정2.png" class="zoomable"/>
+      <p><b>장바구니 수정에서는 장바구니 번호를 입력하고 수량을 수정 할 수 있습니다 그리고 수정 후 
+        수정완료 나 수정취소를 입력하면 장바구니 메뉴로 돌아가지만 수정완료는 수량이 수정이되면 장바구니 메뉴로 돌아갑니다.</b></p>      
+    </div>
+  </div>
+</body>
+</html>
