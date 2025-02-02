@@ -353,8 +353,14 @@
       <details>
         <summary><b>리스트 메서드</b></summary>
         <ul>
-        <code><span style="color: red;">con = DB.getConnection();</span></code>: 데이터베이스에 연결을 설정합니다.
-        <code><span style="color: red;">pstmt = con.prepareStatement(getListSQL(pageObject));</span></code>: getListSQL() 메서드를 호출해 검색 조건과 페이징이 적용된 SQL 쿼리를 생성합니다.
+        <li><code><span style="color: red;">con = DB.getConnection();</span></code>: 데이터베이스에 연결을 설정합니다.</li>
+        <li><code><span style="color: red;">pstmt = con.prepareStatement(getListSQL(pageObject));</span></code>: getListSQL() 메서드를 호출해 검색 조건과 페이징이 적용된 SQL 쿼리를 생성합니다.</li>
+        <pre>
+          <code>
+            pstmt.<span style="color: red;">setLong</span>(++idx, pageObject.<span style="color: red;">getStartRow</span>());
+            pstmt.<span style="color: red;">setLong</span>(++idx, pageObject.<span style="color: red;">getEndRow</span>());
+          </code>
+        </pre>
         </ul>
       </details>              
     </div>
