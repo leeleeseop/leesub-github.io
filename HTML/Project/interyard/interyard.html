@@ -361,6 +361,21 @@
             pstmt.<span style="color: red;">setLong</span>(++idx, pageObject.<span style="color: red;">getEndRow</span>());
           </code>
         </pre>
+        <li>페이징 처리를 위해 시작 행과 끝 행을 설정하여, 특정 페이지의 데이터만 조회합니다.</li>
+        <li><code><span style="color: red;">rs = pstmt.executeQuery();</span></code>: SQL 쿼리를 실행합니다.</li>
+        <li><code><span style="color: red;">UsedGoodsVO vo = new UsedGoodsVO();</span></code>: 중고 상품의 각 행을 저장할 UsedGoodsVO 객체를 생성합니다.
+          <ul>
+            <li><code><span style="color: red;">vo.setUgno(rs.getLong("ugno"))</span></code>: 상품번호</li>
+            <li><code><span style="color: red;">vo.setTitle(rs.getString("title")</span></code>: 상품 제목</li>
+            <li><code><span style="color: red;">vo.setId(rs.getString("id"))</span></code>: 작성자 ID</li>
+            <li><code><span style="color: red;">vo.setPrice(rs.getLong("price"))</span></code>: 상품 가격</li>
+            <li><code><span style="color: red;">vo.setWriteDate(rs.getString("writeDate"))</span></code>: 상품 작성일</li>
+            <li><code><span style="color: red;">vo.setImage(rs.getString("image"))</span></code>: 상품 이미지</li>
+            <li><code><span style="color: red;">list.add(vo);</span></code>: 에 담습니다.</li>
+          </ul>
+        </li>
+        <li><code><span style="color: red;">DB.close(con, pstmt, rs);</span></code>: 데이터베이스 연결 종료</li>
+        <li><code><span style="color: red;">return list;</span></code>: 중고 상품 데이터가 담긴 리스트 반환</li>
         </ul>
       </details>              
     </div>
