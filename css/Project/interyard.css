@@ -123,4 +123,7 @@ pre {
 code {
     color: #d63384; /* 키워드 강조 색상 */
 }
-</style>
+
+body {
+  margin-bottom: 50px; /* 원하는 공간 크기로 조정 */
+}
