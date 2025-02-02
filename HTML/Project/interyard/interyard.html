@@ -409,10 +409,10 @@
             </pre>
           <li>카드 상단에는 상품의 이미지가 img 태그로 출력됩니다.</li>
           <li><code><span style="color: red;">${pageContext.request.contextPath}</span></code>는 이미지의 경로로 사용됩니다.</li>
-          <li>상품 제목과 가격은 card-body 내부에 표시되며, 제목은 &lt;<strong>&gt; 태그로, 가격은 &lt;<h5>&gt; 태그로 출력됩니다.</li>
+          <li>상품 제목과 가격은 card-body 내부에 표시되며, 제목은<strong>과 가격은<h5> 태그로 출력됩니다.</li>
           <li> 
             <pre>
-                <code><span style="color: red;">&lt;<h5><fmt:formatNumber value="${vo.price}" pattern="#,###"/>원</h5>&gt;</span></code>
+                <code><span style="color: red;">&lt;<h5>&gt;&lt;<fmt:formatNumber value="${vo.price}"&gt; &lt;pattern="#,###"/>&gt;원&lt;</h5>&gt;</span></code>
             </pre>
             <ul>
               <li>상품의 가격을 출력하는 부분입니다. fmt:formatNumber 태그를 사용하여 가격을 천 단위로 구분하여 보기 쉽게 출력합니다.</li>
