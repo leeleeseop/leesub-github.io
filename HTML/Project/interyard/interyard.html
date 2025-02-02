@@ -318,10 +318,10 @@
       <img src="../../../image/projects/interYard/인터야드 usedgoods List DAO(핵심코드).png" class="zoomable"/>
       <ul>
         <li>
-          <p><b>
+          <b>
             LIST는 중고 상품 리스트를 조회하는 SQL 쿼리이며, getListSQL 메서드는 페이징과 검색 조건을 반영한 쿼리를 생성해 데이터를 가져옵니다. 
             list 메서드는 데이터베이스에서 중고 상품 리스트를 조회해 반환합니다.
-          </p></b>
+          </b>
         </li>
       </ul> 
       <details>
@@ -349,7 +349,14 @@
           <li><b>order by ugno desc :</b> 상품 번호(ugno)를 기준으로 내림차순으로 정렬하여 최신 상품이 가장 먼저 나오도록 합니다.</li>
           <li><b>rnum between ? and ? : </b> 페이징 처리를 위한 코드로, 각 페이지에서 보여줄 데이터의 시작 행과 끝 행을 지정합니다.</li>
         </ul>
-      </details>               
+      </details>
+      <details>
+        <summary><b>리스트 메서드</b></summary>
+        <ul>
+        <code><span style="color: red;">con = DB.getConnection();</span></code>: 데이터베이스에 연결을 설정합니다.
+        <code><span style="color: red;">pstmt = con.prepareStatement(getListSQL(pageObject));</span></code>: getListSQL() 메서드를 호출해 검색 조건과 페이징이 적용된 SQL 쿼리를 생성합니다.
+        </ul>
+      </details>              
     </div>
   </div>
 
