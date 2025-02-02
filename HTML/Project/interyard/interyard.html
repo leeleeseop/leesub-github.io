@@ -412,7 +412,7 @@
           <li>상품 제목과 가격은 card-body 내부에 표시되며, 제목은 &lt;<strong>&gt; 태그로, 가격은 &lt;<h5>&gt; 태그로 출력됩니다.</li>
           <li> 
             <pre>
-                <code><span style="color: red;"><h5><fmt:formatNumber value="${vo.price}" pattern="#,###"/>원</h5></span></code>
+                <code><span style="color: red;">&lt;<h5><fmt:formatNumber value="${vo.price}" pattern="#,###"/>원</h5>&gt;</span></code>
             </pre>
             <ul>
               <li>상품의 가격을 출력하는 부분입니다. fmt:formatNumber 태그를 사용하여 가격을 천 단위로 구분하여 보기 쉽게 출력합니다.</li>
