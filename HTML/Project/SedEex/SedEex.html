@@ -87,8 +87,71 @@
       <h3>2.장바구니 수정</h3>
       <img src="../../../image/projects/SedEx/세덱스 장바구니 수정.png" style="display: block; margin-bottom: 20px;" class="zoomable"/>
       <img src="../../../image/projects/SedEx/세덱스 장바구니 수정2.png" class="zoomable"/>
-      <p><b>장바구니 수정에서는 장바구니 번호를 입력하고 수량을 수정 할 수 있습니다 그리고 수정 후 
-        수정완료 나 수정취소를 입력하면 장바구니 메뉴로 돌아가지만 수정완료는 수량이 수정이되면 장바구니 메뉴로 돌아갑니다.</b></p>      
+      <li><b>장바구니 수정에서는 장바구니 번호를 입력하고 수량을 수정 할 수 있습니다 그리고 수정 후 
+        수정완료 나 수정취소를 입력하면 장바구니 메뉴로 돌아가지만 수정완료는 수량이 수정이되면 장바구니 메뉴로 돌아갑니다.</b></li>
+
+      <hr>
+      
+      <h3>3.장바구니 삭제</h3>
+      <img src="../../../image/projects/SedEx/세덱스 장바구니 삭제 1.png" style="display: block; margin-bottom: 20px;" class="zoomable"/>
+      <img src="../../../image/projects/SedEx/세덱스 장바구니 삭제 2.png" style="display: block; margin-bottom: 20px;" class="zoomable"/>
+      <img src="../../../image/projects/SedEx/세덱스 장바구니 삭제 3.png" class="zoomable"/>
+      <li><b>장바구니 삭제에서는 “ 선택삭제” 와 “전체삭제”를 할수있도록 만들었습니다.</b></li>
+      <li><b>선택삭제:</b> 장바구니 번호를 입력하면 해당번호 만 삭제 할 수 있습니다.</li>
+      <li><b>전체삭제:</b> 장바구니 번호를 입력하지 않고 장바구니에 있는 모든 상품을 삭제 할 수 있습니다.</li>
+
+      <hr>
+
+      <h3>4.장바구니 담기</h3>
+      <img src="../../../image/projects/SedEx/세덱스 장바구니 담기.png" class="zoomable"/>
+      <li><b>장바구니에서 상품을 추가 할 수 있도록 상품 리스트를 불러와 상품코드와 상품수량을 입력 하면 
+            장바구니에 상품을 등록 할 수 있도록 개발 했습니다.</b></li>
+    </div>
+
+    <hr>
+
+    <div class="core-code">
+      <h1>🔑핵심코드</h1>
+      <h2>1.장바구니 리스트</h2>
+      <h3>CartList Controller</h3>
+      <img src="../../../image/projects/SedEx/세덱스CartList Controller.png" class="zoomable"/>
+      <li><b>위 코드는 장바구니 리스트를 출력하고, 구매 여부를 확인하는 기능을 담당합니다.</b></li>
+      <details>
+        <summary><b>장바구니 리스트 출력</b></summary>
+        <ul>
+          <li>CartListService를 실행하여 현재 록인한 회원의 장바구니 리스트를 가져옵니다.</li>
+          <li>결과 리스트를 cartList 변수에 저장합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>장바구니 상태 확인</b></summary>
+        <ul>
+          <li>장바구니가 비어 있을 경우, “장바구니가 비어 있습니다” 라는 메시지를 출력합니다.</li>
+          <li>장바구니에 상품이 있을 경우, 구매 여부를 묻습니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>구매 여부 확인</b></summary>
+        <ul>
+          <li>사용자가 y를 선택하면
+            <ul>
+              <li>현재 로그인한 회원의 번호를 가져옵니다.</li>
+              <li><b>연락처, 배송지, 요청사항</b>을 입력받습니다.</li>
+              <li>입력받은 연락처, 배송지, 요청사항을 배열에 저장한 후 주문을 처리합니다.</li>
+            </ul>
+          </li>
+          <li>사용자가 n을 선택하면
+            <ul>
+              <li> 구매가 취소되었다는 메시지를 출력합니다.
+            </ul>
+          </li>
+          <li>잘못된 입력할 경우 
+            <ul>
+              <li>잘못된 입력입니다 라는 메시지를 출력합니다.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>     
     </div>
   </div>
   <!-- 모달(확대된 이미지) -->
