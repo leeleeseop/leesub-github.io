@@ -318,7 +318,23 @@
           LIST는 중고 상품 리스트를 조회하는 SQL 쿼리이며, getListSQL 메서드는 페이징과 검색 조건을 반영한 쿼리를 생성해 데이터를 가져옵니다. 
           list 메서드는 데이터베이스에서 중고 상품 리스트를 조회해 반환합니다.
         </b></li>
-      </ul>      
+      </ul> 
+      <details>
+        <summary><b>final String LIST</b></summary>
+        <ul>
+          <li>이 문자열은 중고 상품 목록을 가져오는 SQL 쿼리의 기본 형식을 정의합니다.</li>
+          <li>각 상품의 상품번호(ugno), 제목(title), 아이디(id), 가격(price), 작성일(writeDate), 이미지(image) 등의 정보를 조회하는 SQL 쿼리입니다.</li>
+          <li>from & where 절
+            <ul>
+              <li>
+                데이터를 두 개의 테이블인 usedgoods 테이블(u)과 member 테이블(m)에서 가져옵니다. 
+                usedgoods 테이블(u)에서 중고 상품 정보를 가져오고, member 테이블(m) id를 조인합니다.
+              </li>
+              <li>where 1=1 은 항상 참인 조건으로, 나중에 필요한 조건을 쉽게 추가하기 위해 사용됩니다.</li>
+            <ul>
+          </li>
+        </ul>
+      </details>      
     </div>
   </div>
 
