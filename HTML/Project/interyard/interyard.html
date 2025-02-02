@@ -272,8 +272,23 @@
 
     <div class="core-code">
       <h1>🔑핵심코드</h1>
-      <h3>1.중고장터 리스트</h3>
+      <h2>1.중고장터 리스트</h2>
       <img src="../../../image/projects/interYard/인터야드 중고장터 리스트(핵심코드).png" class="zoomable"/>
+      <h3>usedgoods List.do Controller</h3>
+      <img src="../../../image/projects/interYard/인터야드 usedgoods List.do Controller(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>
+                위 코드는 중고장터 리스트 페이지를 처리하는 부분으로 사용자가 /usedgoods/list.do 
+                요청을 보내면 중고 상품 리스트를 불러와 목록을  출력하는 역할을 합니다.
+        </b></li>
+      </ul>
+      <details>
+        <summary><b>페이지 당 항목 수 설정</b></summary>
+        <ul>
+          &lt;if(strPerPageNum == null) pageObject.setPerPageNum(6);&gt;
+          <li>parPageNum이 null 이면 기본적으로 한 페이지에 6개의 항목이 표시 되도록 설정합니다.</li>
+        </ul>
+      </details>     
     </div>
   </div>
 
