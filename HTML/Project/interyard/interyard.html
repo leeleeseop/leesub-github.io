@@ -576,8 +576,50 @@
               }
             </code>
           </pre>
+          <li><b>숫자만 입력받기:</b> 사용자가 가격 입력 필드에 값을 입력할 때 <b>숫자 이외의 문자를 제거</b>합니다.</li>
+          <li><b>천 단위 콤마 추가:</b> 입력된 숫자에 한국 식 천 단위 콤마를 자동으로 추가합니다.</li>
+          <li><b>포맷된 값 다시 삽입 :</b> 천 단위 콤마가 생기면 그걸 다시 input에 넣어 사용자가 바로 확인 할 수 있게 만듭니다.</li>
         </ul>
-      </details>        
+      </details>
+      <details>
+        <summary><b>콤마 제거</b></summary>
+        <ul>
+          <pre>
+            <code>
+              <span style="color: blue;">function</span> <span style="color: red;">formatPrice</span>(){
+                <span style="color: blue;">let</span> priceField = document.<span style="color: red;">getElementById</span>(<span style="color: green;">price</span>);
+                priceField.value = priceField.value.<span style="color: red;">replace</span>(<span style="color: green;">/,/g</span>, '');
+              }
+            </code>
+          </pre>
+          <li><b>가격 필드에서 콤마 제거:</b> 데이터를 서버에 전송 전에 콤마를 제거 하여 정확한 숫자 값만 서버로 전송할 수 있도록 합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>콤마 제거</b></summary>
+        <ul>
+          <pre>
+            <code>
+              $(function () {
+                  document.getElementById('content').addEventListener('input', function (event) {
+                      var content = event.target.value;
+                      var charCount = document.getElementById('charCount');
+                      var contentError = document.getElementById('contentError');
+                      
+                      charCount.textContent = content.length + "/100"; // 글자 수 표시
+              
+                      if (content.length > 100) {
+                          contentError.style.display = 'block'; // 글자 수 초과 시 오류 메시지 표시
+                      } else {
+                          contentError.style.display = 'none'; // 글자 수 초과하지 않으면 오류 메시지 숨김
+                      }
+                  });
+              });
+            </code>
+          </pre>
+          <li><b>가격 필드에서 콤마 제거:</b> 데이터를 서버에 전송 전에 콤마를 제거 하여 정확한 숫자 값만 서버로 전송할 수 있도록 합니다.</li>
+        </ul>
+      </details>               
     </div>
   </div>
              
