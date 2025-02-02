@@ -404,7 +404,7 @@
           <li>각 상품은 product-item 클래스를 가진 카드 형식으로 디자인되어 있으며 상품 이미지, 제목, 가격 등을 포함하여 그리드 형식으로 화면에 표시됩니다.</li>
             <pre>
               <code>
-                <code><span style="color: red;"><img class="card-img-top"src="${pageContext.request.contextPath}${vo.image}"alt="image"></span></code>
+                <code><span style="color: red;">img class="card-img-top"src="${pageContext.request.contextPath}${vo.image}"alt="image"</span></code>
               </code>
             </pre>
           <li>카드 상단에는 상품의 이미지가 img 태그로 출력됩니다.</li>
@@ -412,9 +412,7 @@
           <li>상품 제목과 가격은 card-body 내부에 표시되며, 제목은 &lt;<strong>&gt; 태그로, 가격은 &lt;<h5>&gt; 태그로 출력됩니다.</li>
           <li> 
             <pre>
-              <code>
                 <code><span style="color: red;"><h5><fmt:formatNumber value="${vo.price}" pattern="#,###"/>원</h5></span></code>
-              </code>
             </pre>
             <ul>
               <li>상품의 가격을 출력하는 부분입니다. fmt:formatNumber 태그를 사용하여 가격을 천 단위로 구분하여 보기 쉽게 출력합니다.</li>
