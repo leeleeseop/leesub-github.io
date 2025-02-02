@@ -96,6 +96,17 @@
   height: auto;
 }
 
+.core-code{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.core-code img {
+  width: 560px;
+  height: auto;
+}
+
 hr{
  gap: 10px;
 }
