@@ -4,6 +4,19 @@
 @charset "UTF-8";
 
 <style type="text/css">
+pre {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 16px;
+    font-family: "Courier New", monospace;
+}
+
+code {
+    color: #d63384; /* 키워드 강조 색상 */
+}
+
 .container {
     display: flex;
     flex-direction: column;
