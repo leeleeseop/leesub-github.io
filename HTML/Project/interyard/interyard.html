@@ -420,7 +420,7 @@
       <h2>2.중고장터 등록</h2>
       <img src="../../../image/projects/interYard/인터야드 중고장터 등록(핵심코드).png" class="zoomable"/>
       <h3>usedgoods writeForm.do Controller</h3>
-      <img src="../../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드).png" class="zoomable"/>
+      <img src="../../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1.png" class="zoomable"/>
       <li><b>위 코드는 상품 등록 하기 위해 사용자가  /usedgoods/writeForm.do URL을 요청하면 해당 요청을 받아 상품 등록을 위한 폼 페이지로 이동합니다.</b></li>
       <img src="../../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1-2.png" class="zoomable"/>
       <li><b>위 코드는 사용자가 상품 등록 폼에서 제출한 데이터를 처리하여 서버에 저장하고 등록 성공 메시지를 전송한 후 리스트 페이지로 리다이렉트합니다.</b></li>
@@ -429,12 +429,34 @@
         <ul>
           <pre>
             <code>
-              MultipartRequest multi =<span style="color: blue;">new</span><span style="color: red;">MultipartRequest</span>
-              (request, realSavePath, sizeLimit,<span style="color: green;">"utf-8",</span><span style="color: blue;">new</span><span style="color: red;">DefaultFileRenamePolicy()</span>);
+              MultipartRequest multi =<span style="color: blue;">new</span> <span style="color: red;">MultipartRequest</span>
+              (request, realSavePath, sizeLimit,<span style="color: green;">"utf-8",</span> <span style="color: blue;">new</span><span style="color: red;">DefaultFileRenamePolicy()</span>);
             </code>
           </pre>
+          <li><b>MultipartRequest</b>를 사용하여 이미지 파일 업로드를 처리합니다. 시용자가 업로드한 이미지를 서버의 특정 경로에 저장하면 업로드한 파일의 경로와 파일명을 가져옵니다.</li>
+          <li><b>realSavePath:</b> 실제 파일을 저장할 경로</li>
+          <li><b>sizeLimit:</b> 업로드 가능한 파일의 최대 크기</li>
+          <li><b>DefaultFileRenamePolicy:</b> 동일한 파일명이 존재할 경우 자동으로 파일명을 변경</li>
         </ul>
-      </details>              
+      </details>
+      <details>
+        <summary><b>일반 데이터 수집</b></summary>
+        <ul>
+          <li>multi.getParameter()를 사용하여 사용자가 폼에 입력한 (제목, 내용, 가격, 이미지 등) 데이터를 서버에서 수집합니다.</li>
+          <pre>
+            <code>
+              String title = multi.<span style="color: red;">getParameter</span>(<span style="color: green;">"title"</span>);
+              String content = multi.<span style="color: red;">getParameter</span>(<span style="color: green;">"content"</span>);
+              String image = multi.<span style="color: red;">getFilesystemName</span>(<span style="color: green;">"imageFile"</span>);
+              Long price = Long.<span style="color: red;">parseLong</span>(multi.<span style="color: red;">getParameter</span>(<span style="color: green;">"price"</span>);
+            </code>
+          </pre>
+          <li><b>MultipartRequest</b>를 사용하여 이미지 파일 업로드를 처리합니다. 시용자가 업로드한 이미지를 서버의 특정 경로에 저장하면 업로드한 파일의 경로와 파일명을 가져옵니다.</li>
+          <li><b>realSavePath:</b> 실제 파일을 저장할 경로</li>
+          <li><b>sizeLimit:</b> 업로드 가능한 파일의 최대 크기</li>
+          <li><b>DefaultFileRenamePolicy:</b> 동일한 파일명이 존재할 경우 자동으로 파일명을 변경</li>
+        </ul>
+      </details>
               
     </div>
   </div>
