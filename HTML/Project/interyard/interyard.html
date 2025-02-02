@@ -377,9 +377,47 @@
         <li><code><span style="color: red;">DB.close(con, pstmt, rs);</span></code>: 데이터베이스 연결 종료</li>
         <li><code><span style="color: red;">return list;</span></code>: 중고 상품 데이터가 담긴 리스트 반환</li>
         </ul>
-      </details>              
+      </details> 
+
+      <hr>
+
+      <h3>usedgoods List HTML</h3>
+      <img src="../../../image/projects/interYard/인터야드 usedgoods List HTML(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li>
+          <b>
+            위 코드는 상품 목록을 카드 형식으로 동적으로 출력하는 기능을 담당합니다. 
+            c:forEach 태그를 사용하여 서버에서 받아온 각 상품의 이미지, 제목, 가격, 등록일 등 정보를 화면에 표시합니다.
+          </b>
+        </li>
+      </ul> 
+      <details>
+        <summary><b>상품 데이터 출력</b></summary>
+        <ul>
+          <li><code><span style="color: red;">items="${list}”</span></code>는 서버에서 전달된 상품 목록을 받아 반복 처리합니다.</li>
+          <li>상품 목록에서 이미지(vo.image), 제목(vo.title), 가격(vo.price), 등록일(vo.writeDate) 등의 데이터를 화면에 동적으로 출력합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>상품 카드 구성</b></summary>
+        <ul>
+          <li>각 상품은 product-item 클래스를 가진 카드 형식으로 디자인되어 있으며 상품 이미지, 제목, 가격 등을 포함하여 그리드 형식으로 화면에 표시됩니다.</li>
+          <code><span style="color: red;"><img class="card-img-top"src="${pageContext.request.contextPath}${vo.image}"alt="image"></span></code>
+          <li>카드 상단에는 상품의 이미지가 img 태그로 출력됩니다.</li>
+          <li><code><span style="color: red;">${pageContext.request.contextPath}</span></code>는 이미지의 경로로 사용됩니다.</li>
+          <li>상품 제목과 가격은 card-body 내부에 표시되며, 제목은 &lt;<strong>&gt; 태그로, 가격은 &lt;<h5>&gt; 태그로 출력됩니다.</li>
+          <li> 
+            <code><span style="color: red;"><h5><fmt:formatNumber value="${vo.price}" pattern="#,###"/>원</h5></span></code>
+            <ul>
+              <li>상품의 가격을 출력하는 부분입니다. fmt:formatNumber 태그를 사용하여 가격을 천 단위로 구분하여 보기 쉽게 출력합니다.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>               
     </div>
   </div>
+
+  <hr>
 
 
 
