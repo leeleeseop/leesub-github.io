@@ -662,35 +662,30 @@
           <b>글자 수 오류 메시지:</b> 댓글이 100글자를 초과하면 오류메시지가 표시됩니다.</li>            
       </details>              
     </div>
-  </div>
-             
-              
-              
-              
-              
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
+    <hr>
+            
+    <div class="Document">
+      <h1>🔧오류해결</h1>
+      <h2>리스트에서 상세페이지 넘어갈 때 오류</h2>
+      <img src="../../../image/projects/interYard/인터야드 리스트에서 상세페이지 넘어갈 때 오류 1.png" style="display: block; margin-bottom: 20px;" class="zoomable"/ >
+      <img src="../../../image/projects/interYard/인터야드 리스트에서 상세페이지 넘어갈 때 오류 2.png" class="zoomable"/ >
+      <b>오류 설명:</b> 자바스크립트 변수가 ugno변수를 사용하려고 하지만 ugno가 정의되지 않아서 생긴 오류입니다.
+      <b>오류 발생:</b> 리스트에서 상세페이지로 넘어갈때  ReferenceError가 발생했다는걸 발견했습니다.
+      <img src="../../../image/projects/interYard/인터야드 리스트에서 상세페이지 넘어갈 때 오류 3.png" class="zoomable"/ > 
+      <b>오류해결:</b> ungo를 지우고 no로 수정하여 오류를 해결했습니다.
+      
+      <hr>
+      
+      <h2>Oracle SQL 구문 오류</h2>
+      <img src="../../../image/projects/interYard/인터야드 Oracle SQL 구문 오류 1.png" style="display: block; margin-bottom: 20px;" class="zoomable"/ >
+      <img src="../../../image/projects/interYard/인터야드 Oracle SQL 구문 오류 2.png" class="zoomable"/ >
+      <b>오류 설명:</b> SQL 쿼리에서 writeDate 필드를 변환할 때 괄호 안에 적절한 변환 함수 (to_char)를 사용하지 않아 오류가 발생했습니다.
+      <b>오류 발생:</b> 리스트 아니면 메인화면으로 들어갈때 ORA-00907: missing right parenthesis 이라는 오류가 발생했습니다.
+      <img src="../../../image/projects/interYard/인터야드 Oracle SQL 구문 오류 3.png" class="zoomable"/ > 
+      <b>오류해결:</b> 괄호 내에 날짜 변환을 위한 함수가 필요했지만 함수 없이 괄호만 사용했기 떄문에 to_char()를 사용해 날짜를 변환하니 오류가 해결했습니다.     
+    </div>
+  </div>        
   <!-- 모달(확대된 이미지) -->
   <div class="modal" id="imageModal">
     <img id="modalImg">
