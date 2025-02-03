@@ -3,6 +3,7 @@
 */
 @charset "UTF-8";
 
+<style type="text/css">
 .container {
     display: flex;
     flex-direction: column;
@@ -137,3 +138,4 @@ body {
   width: 560px;
   height: auto;
 }
+</style>
