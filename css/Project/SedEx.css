@@ -127,4 +127,15 @@ code {
 body {
   margin-bottom: 50px; /* 원하는 공간 크기로 조정 */
 }
+
+.Error Resolution{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.Error Resolution img{
+  width: 560px;
+  height: auto;
+}
 </style>
