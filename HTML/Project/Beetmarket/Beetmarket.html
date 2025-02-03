@@ -639,9 +639,273 @@
     </details>
             
     <hr>
-            
+
+    <h2>2.리뷰 등록</h2>
+    <img src="../../../image/projects/beetmarket/비트마켓 리뷰 등록 (핵심코드).png" class="zoomable"/>
+    <h3>Review List SQL 쿼리</h3>
+    <img src="../../../image/projects/beetmarket/비트마켓 Review Write Controller 4 (핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>위 코드는 리뷰를 작성하려고 폼 페이지로 이동시켜는 역할을 합니다.</b></li>
+      </ul>
+      <img src="../../../image/projects/beetmarket/비트마켓 Review Write Controller 5 (핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>위 코드는 사용자가 작성한 리뷰를 서버에 저장하고 이미지 파일 과 함께 리뷰 데이터를 데이터베이스에 등록하는 역활로 등록 후 상품 상세 페이지로 리다이렉트 됩니다.</b></li>
+      </ul>
+      <details>
+      <summary><b>대표 이미지 처리</b></summary>
+        <pre>
+          <code>
+            vo.setReviewImage(FileUtil.upload(path, reviewFile, request));
+          </code>
+        </pre>
+      <ul>
+        <li>사용자가 업로드한 리뷰 이미지 파일을 서버에 업로드하고 그 파일 경로를 리뷰 객체에 설정합니다.</li>
+        <li><b>FileUtil.upload():</b> 파일을 업로드하는 유틸리티 메서드로 파일을 저장할 경로(path) 와 파일정보(reviewFile)를 받아 처리합니다.</li>
+      </ul>
+    </details>
+    <details>
+      <summary><b>상품 번호 조회 및 설정</b></summary>
+        <pre>
+          <code>
+            Long goodsNo = service.getGoodsNoByOrderNo(vo.getOrderNo());
+            vo.setGoodsNo(goodsNo);
+          </code>
+        </pre>
+      <ul>
+        <li>주문 번호(OrderNo)를 기반으로 상품번호(goodsNo)를 조회합니다.</li>
+        <li><b>getGoodsNoByOrderNo:</b> 주문번호에 해당하는 상품번호를 조회하여 리뷰 어느 상품에 대한 것이지 식별할 수 있습니다.</li>
+      </ul>
+    </details>
+    <details>
+      <summary><b>리뷰 데이터 저장</b></summary>
+        <pre>
+          <code>
+            service.write(vo);
+          </code>
+        </pre>
+      <ul>
+        <li>주문 번호(OrderNo)를 기반으로 상품번호(goodsNo)를 조회합니다.</li>
+        <li><b>service.write(vo):</b> ReviewVO객체에 담긴 리뷰내용, 사용자ID, 상품번호, 이미지 정보 등 데이터베이스에 저장합니다.</li>
+      </ul>
+    </details>
+    <h3>Review Write SQL 쿼리</h3>
+    <img src="../../../image/projects/beetmarket/비트마켓 Review Write SQL 쿼리 6(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li>
+          <b>위 쿼리는 리뷰를 데이터베이스 등록하는 SQL쿼리로 리뷰 데이터를 review 테이블에 삽입하는 역할로 리뷰번호 생성부터 리뷰내용을 데이터베이스에 저장합니다.</b>
+        </li>
+      </ul>
+    <details>
+      <summary><b>리뷰 번호 생성</b></summary>
+      <pre>
+        <code>
+          <selectKey keyProperty="reviewNo" resultType="Long" order="BEFORE">
+            select review_seq.nextval from dual
+          </selectKey>
+        </code>
+      </pre>
+      <ul>
+        <li><b><selectKey>:</b>리뷰 번호를 사전에 생성하기 위해 사용됩니다.</li>
+        <li><b>keyProperty="reviewNo":</b>생성된 리뷰 번호는 reivewNo 프로퍼티에 저장됩니다.</li>
+        <li><b>resultType="Long":</b>생성된 리뷰 번호는 Long 타입입니다.</li>
+        <li><b>order="BEFORE":</b>리뷰 번호는 데이터베이스에 삽입하기 전에 생성됩니다.</li>
+        <li><b>select review_seq.nextval from dual:</b>다음 리뷰 번호를 자동으로 생성하며 더미 테이블로 시퀀스를 가져올 때 사용됩니다.</li> 
+      </ul>
+    </details>
+    <details>
+      <summary><b>리뷰 삽입 쿼리</b></summary>
+      <ul>
+        <li><b>reviewNo:</b> 리뷰번호 (자동 생성된 값)</li>
+        <li><b>reviewContent:</b> 리뷰내용 (사용자가 작성한 리뷰 텍스트)</li>
+        <li><b>reviewImage:</b> 리뷰이미지 (리뷰와 함께 업로드된 이미지 파일)</li>
+        <li><b>starscore:</b> 별점 점수(사용자가 입력한 별점)</li>
+        <li><b>orderNo:</b> 주문 번호 (해당 리뷰가 작성된 주문 정보)</li> 
+      </ul>
+    </details>
+
+    <h3>Review Write JavaScript</h3>
+    <img src="../../../image/projects/beetmarket/비트마켓 Review Write JavaScript 7(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li>
+          <b>위 스크립트는 리뷰 작성 모달 창을 열고 선택한 주문 정보를 모달에 표시하며, 이미지 미리보기 기능을 제공합니다.</b>
+        </li>
+      <ul>
+      <details>
+        <summary><b>리뷰 작성 모달 열기 ($(:”.reviewBtn”).click)</b></summary>
+        <ul>
+          <li><b>클릭 이벤트:.reviewBtn</b>클래스를 가진 버튼을 클릭하면 리뷰 작성 모달이 열립니다.</li>
+          <li><b>주문 정보 가져오기</b>
+            <ul>
+              <li><b>$(this).closest(".orderListltem"):</b> 클릭한 버튼이 주문항목(.orderListltem)를 찾습니다.</li>
+            </ul>
+          </li>
+          <li>주문정보
+          <ul>
+            <li><b>orderNo:</b> 주문항목에서 주문 번호를 가져옵니다.</li>
+            <li><b>goodsName:</b> 주문 항목에서 상품 이름을 가져옵니다.</li>
+            <li><b>optionName:</b> 주문 항목에서 상품 옵션명을 가져옵니다.</li>
+            <li><b>amount:</b> 주문 항목에서 수량을 가져옵니다.</li>
+          </ul>
+          </li>
+          <li>모달 창에 값 설정
+          <ul>
+            <li><b>주문번호, 상품명, 옵션명, 수량</b>을 모달창에 해당 필드에 표시하도록 값을 가져옵니다.</li>
+          </ul>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>이미지 미리보기 (previewImage)</b></summary>
+        <ul>
+          <li><b>파일 선택 이벤트:</b> 파일이 선택되면 previewImage 호출됩니다.</li>
+          <li><b>FileReader 사용:</b> 선택한 파일을 읽어 이미지를 미리보기로 표시합니다.
+            <ul>
+              <li><b>event.target.files[0]:</b> 선택된 파일을 가져옵니다.</li>
+              <li><b>reader.onload:</b> 파일이 성공적으로 읽혀을 때 이미지 미리보기 가 표시됩니다.</li>
+            </ul>
+          </li>
+          <li>오류처리
+          <ul>
+            <li><b>reader.onerror:</b> 파일을 읽는 중 오류가 발생하면 경고 메시지를 표시합니다.</li>
+          </ul>
+          </li>
+        </ul>
+      </details>
+
+      <h3>Review Write HTML(JSP)</h3>
+      <img src="../../../image/projects/beetmarket/비트마켓 Review Write JavaScript 8(핵심코드).png" class="zoomable"/>
+        <ul>
+          <li>
+            <b>위 코드는 리뷰 작성 모달 창에서 상품정보, 별점, 리뷰내용, 이미지를 작성할 수 있도록 구성 되었습니다.</b>
+          </li>
+        <ul>
+        <details>
+        <summary><b>상품 정보 표시</b></summary>
+        <ul>
+          <li>JavaScript의 jQuery를 사용하여 사용자가 리뷰 버튼을 클릭할 때마다 해당 <b>.orderListItem</b>이라는 부모 클래스에서 <b>주문번호, 상품명, 옵션명, 수량</b>
+          정보를 동적으로 가져옵니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>별점 입력</b></summary>
+        <ul>
+          <li>별점은 필수 항목이므로 사용자는 별점(1~5)점 중 하나를 선택하여 상품에 대한 만족도를 평가할 수 있습니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>리뷰 내용 입력</b></summary>
+        <ul>
+          <li>리뷰 내용을 작성하는 텍스트 필드가 제공되며 필수 입력 항목입니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>리뷰 이미지 업로드 및 미리보기</b></summary>
+        <ul>
+          <li>사용자는 리뷰에 이미지를 업로드 할 수 있으며 업로드 된 이미지를 미리보기 표시 할수있습니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>주문 번호 입력</b></summary>
+        <ul>
+          <li>해당 리뷰가 어떤 주문과 연결되었는지 서버에 전달하며 <b>hidden input</b>필드를 사용하여 주문번호는 숨겼습니다.</li>
+        </ul>
+      </details>
+
+      <hr>
+
+      <h2>3.상품 Q&A 질문 등록</h2>
+      <h3>GoodsQ&A Write Controller</h3>
+      <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write Controller 9(핵심코드).png" class="zoomable"/>
+        <ul>
+          <li>
+            <b>위 코드는 상품Q&A를 등록한 데이터를 JSON 형태로 사용자에게 응답하는 기능을 처리합니다.</b>
+          </li>
+        <ul>
+        <details>
+        <summary><b>사용자 ID설정</b></summary>
+        <ul>
+          <li><b>vo.setId(LoginUtil.getId(session);</b>을 사용해 현재 로그인한 사용자의 ID를 Goods_QnaVO 객체에 저장합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>Q&A등록 처리</b></summary>
+        <ul>
+          <li><b>service.write(vo)</b>에서 VO를 서비스로 전달해 데이터를 데이터베이스에 저장합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>JSON 응답 생성</b></summary>
+        <ul>
+          <li>등록이 완료되면 성공 상태와 메시지 그리고 해당 Q&A가 어떤 상품(goodsNo)과 연결 되어있는지 추가 하며 JSON형식의 응답을 사용자에게 반환합니다.</li>
+        </ul>
+      </details>
+
+      <h3>GoodsQ&A Write SQL 쿼리</h3>
+      <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Wrtie SQL 쿼리 10(핵심코드).png" class="zoomable"/>
+        <ul>
+          <li>
+            <b>위 코드는 상품문의를 데이터베이에 등록하는 SQL쿼리로 상품 Q&A데이터를 goods_qna테이블에 삽입하는 역할을 합니다.</b>
+          </li>
+        <ul>
+        <details>
+          <summary><b>상품 Q&A번호 생성</b></summary>
+          <pre>
+            <code>
+              <selectKey keyProperty="goodsQNA" resultType="Long" order="BEFORE">
+                select goods_qna_seq.nextval from dual
+              </selectKey>
+            </code>
+          </pre>
+          <ul>
+            <li><b><slelctKey>:</b> Q&A번호를 자동으로 생성 시퀀스goods_qna_seq를 사용해 새로운 상품 Q&A번호를 생성합니다.</li>
+            <li><b>keyProperty="goodsQNA":</b> 자동으로 생성된 상품 Q&A 번호는 goodsQNA 속성에 저장됩니다.</li>
+            <li><b>resultType="Long":</b> 생성된 Q&A번호는 Long 타입입니다.</li>
+            <li><b>order="BEFORE":</b> 번호가 데이터베이스 삽입되게 전에 생성합니다.</li>
+            <li><b>select goods_qna_seq.nextval from dual:</b> Oracle 시퀀스(goods_qna_seq)를 사용해여 새로운 Q&A번호를 생성합니다.</li>
+          </ul>
+        </details>
+        <details>
+          <summary><b>Q&A 데이터 삽입 쿼리</b></summary>
+          <ul>
+            <li>insert into goods_qna: goods_qna 테이블에 새로운 상품 Q&A 데이터를 삽입합니다.</li>
+            <li> 삽입할 컬럼
+              <ul>
+                <li><b>goodsQNA:</b> 상품Q&A번호 (자동 생성된 값)</li>
+                <li><b>goodsNo:</b> 상품 번호 (어떤 상품에 대한 Q&A인지 식별하기 위한 번호)</li>
+                <li><b>question:</b> 사용자가 작성한 질문 내용</li>
+                <li><b>id:</b> 질문을 작성한 사용자 ID</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+
+        <h3>GoodsQ&A Write JavaScript</h3>
+        <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write JavaScript 11(핵심코드).png" class="zoomable"/>
+          <ul>
+            <li>
+              <b>위 코드는 모달창에서 질문을 등록하는 기능으로 등록버튼을 클릭했을 때 AJAX요청을 통해 서버로 질문 데이터를 전송하고 서버의 응답에 따라 화면을 갱신합니다.</b>
+            </li>
+          <ul>
+          <details>
+            <summary><b>상품번호 확인</b></summary>
+            <pre>
+              <code>
+                
+              </code>
+            </pre>
+            <ul>
+              <li>insert into goods_qna: goods_qna 테이블에 새로운 상품 Q&A 데이터를 삽입합니다.</li>
+              <li> 삽입할 컬럼
+                <ul>
+                  <li><b>goodsQNA:</b> 상품Q&A번호 (자동 생성된 값)</li>
+                  <li><b>goodsNo:</b> 상품 번호 (어떤 상품에 대한 Q&A인지 식별하기 위한 번호)</li>
+                  <li><b>question:</b> 사용자가 작성한 질문 내용</li>
+                  <li><b>id:</b> 질문을 작성한 사용자 ID</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
     </div>
-    
   </div>
 </body>
 </html>
