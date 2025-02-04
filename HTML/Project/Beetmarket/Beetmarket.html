@@ -775,9 +775,7 @@
       <h3>Review Write HTML(JSP)</h3>
       <img src="../../../image/projects/beetmarket/비트마켓 Review Write JavaScript 8(핵심코드).png" class="zoomable"/>
         <ul>
-          <li>
-            <b>위 코드는 리뷰 작성 모달 창에서 상품정보, 별점, 리뷰내용, 이미지를 작성할 수 있도록 구성 되었습니다.</b>
-          </li>
+          <li><b>위 코드는 리뷰 작성 모달 창에서 상품정보, 별점, 리뷰내용, 이미지를 작성할 수 있도록 구성 되었습니다.</b></li>
         <ul>
         <details>
         <summary><b>상품 정보 표시</b></summary>
@@ -817,9 +815,7 @@
       <h3>GoodsQ&A Write Controller</h3>
       <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write Controller 9(핵심코드).png" class="zoomable"/>
         <ul>
-          <li>
-            <b>위 코드는 상품Q&A를 등록한 데이터를 JSON 형태로 사용자에게 응답하는 기능을 처리합니다.</b>
-          </li>
+          <li><b>위 코드는 상품Q&A를 등록한 데이터를 JSON 형태로 사용자에게 응답하는 기능을 처리합니다.</b></li>
         <ul>
         <details>
         <summary><b>사용자 ID설정</b></summary>
@@ -843,9 +839,7 @@
       <h3>GoodsQ&A Write SQL 쿼리</h3>
       <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Wrtie SQL 쿼리 10(핵심코드).png" class="zoomable"/>
         <ul>
-          <li>
-            <b>위 코드는 상품문의를 데이터베이에 등록하는 SQL쿼리로 상품 Q&A데이터를 goods_qna테이블에 삽입하는 역할을 합니다.</b>
-          </li>
+          <li><b>위 코드는 상품문의를 데이터베이에 등록하는 SQL쿼리로 상품 Q&A데이터를 goods_qna테이블에 삽입하는 역할을 합니다.</b></li>
         <ul>
         <details>
           <summary><b>상품 Q&A번호 생성</b></summary>
@@ -882,30 +876,275 @@
         <h3>GoodsQ&A Write JavaScript</h3>
         <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write JavaScript 11(핵심코드).png" class="zoomable"/>
           <ul>
-            <li>
-              <b>위 코드는 모달창에서 질문을 등록하는 기능으로 등록버튼을 클릭했을 때 AJAX요청을 통해 서버로 질문 데이터를 전송하고 서버의 응답에 따라 화면을 갱신합니다.</b>
-            </li>
+            <li><b>위 스크립트는 리뷰 작성 모달 창을 열고 선택한 주문 정보를 모달에 표시하며, 이미지 미리보기 기능을 제공합니다.</b></li>
           <ul>
           <details>
-            <summary><b>상품번호 확인</b></summary>
+            <summary><b>리뷰 작성 모달 열기 ($(:”.reviewBtn”).click)</b></summary>
+            <ul>
+              <li><b>클릭 이벤트:.reviewBtn </b>클래스를 가진 버튼을 클릭하면 리뷰 작성 모달이 열립니다.</li>
+              <li> 주문 정보 가져오기
+                <ul>
+                  <li><b>goodsQNA:</b> 클릭한 버튼이 주문 항목(.orderListItem)를 찾습니다.(/li>
+                  <li><b>goodsNo:</b> 상품 번호 (어떤 상품에 대한 Q&A인지 식별하기 위한 번호)</li>
+                  <li><b>question:</b> 사용자가 작성한 질문 내용</li>
+                  <li><b>id:</b> 질문을 작성한 사용자 ID</li>
+                </ul>
+              </li>
+              <li> 주문 정보
+                <ul>
+                  <li><b>orderNo:</b> 주문항목에서 주문 번호를 가져옵니다.(/li>
+                  <li><b>goodsName:</b> 주문 항목에서 상품 이름을 가져옵니다.</li>
+                  <li><b>optionName:</b> 주문 항목에서 상품 옵션명을 가져옵니다.</li>
+                  <li><b>amount:</b> 주문 항목에서 수량을 가져옵니다.</li>
+                </ul>
+              </li>
+              <li> 모달 창에 값 설정
+                <ul>
+                  <li><b>주문번호, 상품명, 옵션명, 수량</b>을 모달창에 해당 필드에 표시하도록 값을 가져옵니다.(/li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary><b>이미지 미리보기 (previewImage)</b></summary>
+            <ul>
+              <li><b>파일 선택 이벤트 : 파일이 선택되면 previewImage 호출됩니다.</li>
+              <li>FileReader 사용 : 선택한 파일을 읽어 이미지를 미리보기로 표시합니다.
+                <ul>
+                  <li><b>event.target.files[0]:</b> 선택된 파일을 가져옵니다.(/li>
+                  <li><b>reader.onload:</b> 파일이 성곡적으로 읽혔을 때 이미지 미리보기 가 표시됩니다.</li>
+                </ul>
+              </li>
+              <li>오류 처리
+                <ul>
+                  <li><b>reader.onerror:</b> 파일을 읽는 중 오류가 발생하면 경고 메시지를 표시합니다.(/li>
+                </ul>
+              </li>
+            </ul>
+         </details>
+
+        <h3>Review Write HTML(JSP)</h3>
+        <img src="../../../image/projects/beetmarket/비트마켓 Review Write HTML(JSP) 12(핵심코드).png" class="zoomable"/>
+          <ul>
+            <li><b>위 코드는 리뷰 작성 모달 창에서 상품 정보, 별점, 리뷰 내용, 이미지를 작성할 수 있도록 구성 되었습니다.</b></li>
+          <ul>
+          <details>
+            <summary><b>상품 정보 표시</b></summary>
+            <ul>
+              <li><b>JavaScript의 jQuery를 사용하여 사용자가 리뷰 버튼을 클릭할 때마다 해당 <b.orderListItem></b>이라는 부모 클래스에서 <b>주문 번호, 상품명, 옵션명, 수량</b> 정보를 동적으로 가져옵니다.</li>
+            </ul>
+          </details>
+          <details>
+            <summary><b>별점 입력</b></summary>
+            <ul>
+              <li>별점은 필수 항목이므로 사용자는 별점(1~5)점 중 하나를 선택하여 상품에 대한 만족도를 평가할 수 있습니다.</li>
+            </ul>
+          </details>
+          <details>
+            <summary><b>리뷰 내용 입력</b></summary>
+            <ul>
+              <li>리뷰 내용을 작성하는 텍스트 필드가 제공되며 필수 입력 항목입니다.</li>
+            </ul>
+          </details>
+          <details>
+            <summary><b>리뷰 이미지 업로드 및 미리보기</b></summary>
+            <ul>
+              <li>사용자는 리뷰에 이미지를 업로드 할 수 있으며 업로드 된 이미지를 미리보기 표시 할수있습니다.</li>
+            </ul>
+          </details>
+          <details>
+            <summary><b>주문 번호 입력</b></summary>
+            <ul>
+              <li>해당 리뷰가 어떤 주문과 연결되었는지 서버에 전달하며 hidden input필드를 사용하여 주문번호는 숨겼습니다.</li>
+            </ul>
+          </details>
+
+          <hr>
+
+        <h2>3.상품 Q&A 질문 등록</h2>
+        <img src="../../../image/projects/beetmarket/비트마켓 3.상품 Q&A 질문 등록 (핵심코드).png" class="zoomable"/>            
+        <h3>GoodsQ&A Write Controller</h3>
+        <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write Controller 9(핵심코드).png" class="zoomable"/>
+          <ul>
+            <li><b>위 코드는 상품Q&A를 등록한 데이터를 JSON 형태로 사용자에게 응답하는 기능을 처리합니다.</b></li>
+          <ul>
+          <details>
+            <summary><b>사용자 ID 설정</b></summary>
+            <ul>
+              <li><b>vo.setId(LoginUtil.getId(session);</b>을 사용해 현재 로그인한 사용자의 ID를 Goods_QnaVO 객체에 저장합니다.</li>
+            </ul>
+          </details>
+          <details>
+            <summary><b>Q&A등록 처리</b></summary>
+            <ul>
+              <li><b>service.write(vo)</b>에서 VO를 서비스로 전달해 데이터를 데이터베이스에 저장합니다.</li>
+            </ul>
+          </details>
+          <details>
+            <summary><b>JSON 응답 생성</b></summary>
+            <ul>
+              <li>등록이 완료되면 성공 상태와 메시지 그리고 해당 Q&A가 어떤 상품(goodsNo)과 연결 되어있는지 추가 하며 JSON형식의 응답을 사용자에게 반환합니다.</li>
+            </ul>
+          </details>
+
+        <h3>GoodsQ&A Write SQL 쿼리</h3>
+        <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Wrtie SQL 쿼리 10(핵심코드).png" class="zoomable"/>
+          <ul>
+            <li><b>위 코드는 상품문의를 데이터베이스에 등록하는 SQL쿼리로 상품Q&A데이터를 goods_qna 테이블에 삽입하는 역할을 합니다.</b></li>
+          <ul>
+          <details>
+            <summary><b>상품 Q&A 번호 생성</b></summary>
             <pre>
               <code>
-                
+                <selectKey keyProperty="goodsQNA" resultType="Long" order="BEFORE">
+                  select goods_qna_seq.nextval from dual
+                </selectKey>
               </code>
             </pre>
             <ul>
+              <li><b><selectKey>:</b>Q&A번호를 자동으로 생성 시퀀스goods_qna_seq를 사용해 새로운 상품 Q&A번호를 생성합니다.</li>
+              <li><b>keyProperty="goodsQNA":</b>자동으로 생성된 상품 Q&A 번호는 goodsQNA 속성에 저장됩니다.</li>
+              <li><b>resultType="Long":</b>생성된 Q&A번호는 Long 타입입니다.</li>
+              <li><b>order="BEFORE":</b>번호가 데이터베이스 삽입되게 전에 생성합니다.</li>
+              <li><b>select goods_qna_seq.nextval from dual:</b>Oracle 시퀀스(goods_qna_seq)를 사용해여 새로운 Q&A번호를 생성합니다.</li>
+            </ul>
+          </details>
+          <details>
+            <summary><b>Q&A 데이터 삽입 쿼리</b></summary>
+            <ul>
               <li>insert into goods_qna: goods_qna 테이블에 새로운 상품 Q&A 데이터를 삽입합니다.</li>
-              <li> 삽입할 컬럼
+              <li><b>삽입할 컬럼</b>
                 <ul>
-                  <li><b>goodsQNA:</b> 상품Q&A번호 (자동 생성된 값)</li>
+                  <li><b>goodsQNA:</b> 상품 Q&A 번호 (자동 생성된 값)</li>
                   <li><b>goodsNo:</b> 상품 번호 (어떤 상품에 대한 Q&A인지 식별하기 위한 번호)</li>
                   <li><b>question:</b> 사용자가 작성한 질문 내용</li>
                   <li><b>id:</b> 질문을 작성한 사용자 ID</li>
                 </ul>
               </li>
             </ul>
+          </details> 
+
+        <h3>GoodsQ&A Write JavaScript</h3>
+        <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write JavaScript 11(핵심코드).png" class="zoomable"/>
+          <ul>
+            <li><b>위 스크립트는 모달창에서 질문을 등록하는 기능으로 등록버튼을 클릭했을 때 AJAX 요청을 통해 서버로 질문 데이터를 전송하고 서버의 응답에 따라 화면을 갱신합니다.</b></li>
+          <ul>
+          <details>
+            <summary><b>상품번호 확인</b></summary>
+            <pre>
+              <code>
+                var goodsno = $(&quot;#GQ_WriteModal&quot;).val();
+            
+                if (!goodsno) {
+                    alert(&quot;상품 번호(goodsno)가 정의되지 않았습니다.&quot;);
+                    return;
+                }
+              </code>
+            </pre>
+            <ul>
+              <li>상품번호는 모달 창의 숨겨진 필드에서 가져옵니다.</li>
+              <li><b>keyProperty="goodsQNA":</b>자동으로 생성된 상품 Q&A 번호는 goodsQNA 속성에 저장됩니다.</li>
+              <li>상품번호가 없으면 알림을 띄웁니다.</li>
+            </ul>
           </details>
+          <details>
+            <summary><b>질문 내용 확인</b></summary>
+             <pre>
+              <code>
+                var question = $(&quot;#goods_Qnaquestion&quot;).val();
+            
+                if (!question.trim()) {
+                    alert(&quot;질문 내용을 입력해주세요.&quot;);
+                    return;
+                }
+              </code>
+            </pre>
+            <ul>
+              <li>질문 내용을 입력하지 않은 경우 경고 메시지를 표시합니다.</li>
+              <li><b>.trim():</b> 입력된 값의 앞뒤 공백을 제거하여 내용이 비어 있는지 확인합니다.</li> 
+            </ul>
+          </details> 
+          <details>
+            <summary><b>질문 데이터 생성</b></summary>
+             <pre>
+              <code>
+                let goodsQna = {
+                    goodsNo: parseInt(goodsno), // 상품 번호를 숫자로 변환
+                    question: question
+                };
+              </code>
+            </pre>
+            <ul>
+              <li><b>상품 번호와 질문 내용</b>을 포함한 <b>Q&A 데이터를 객체로 구성</b>합니다.</li>
+              <li>goodsNo는 숫자형으로 변환하여 저장합니다.</li> 
+            </ul>
+          </details>
+          <details>
+            <summary><b>AJAX요청</b></summary>
+            <ul>
+              <li><b>$.ajax():</b> AJAX 요청을 통해 서버에 상품 Q&A 데이터를 전송합니다.
+              <ul>
+                <li>type: "POST" "HTTP POST" 방식으로 데이터를 전송합니다.</li>
+                <li><b>url:"/goods_qna/write.do": </b> 서버의 /goods_qna/write.do 경로로 데이터를 전송합니다.</li>
+                <li><b>data:JSON.stringify(goodsQna): </b> Q&A 데이터 객체를 JSON 형식으로 변환하여 서버에 전송합니다.</li>
+                <li><b>contentType:"application/json": </b> 전송하는 데이터가 JSON 형식임을 서버에 알립니다.</li>
+                <li><b>dataType:"json": </b> 서버로부터의 응답을 JSON 형식으로 처리합니다.</li>
+              </ul>
+              </li>
+              <li><b>성공 콜백(success)
+                <ul>
+                  <li>서버로부터 응답이 성공적이면 모달 창을 닫고 <b>($("#GQWModal").modal("hide")), Q&A 리스트를 다시 로드</b>합니다.</li>
+                  <li><b>$(".reviewList").load(...):</b> Q&A 목록을 다시 불러와 화면을 갱신합니다.</li>
+                </ul>
+              </li>              
+              <li>오류 콜백(error)
+                <ul>
+                  <li>AJAX 요청 중 오류가 발생하면 오류 메시지를 표시합니다.</li>
+                </ul>
+              </li> 
+            </ul>
+          </details>            
+    </div>
+
+    <hr>
+
+    <div class="Error-Resolution">
+      <h1>🔧오류해결</h1>
+      <h2>1.컨트롤러 어노테이션 오류</h2>
+      <img src="../../../image/projects/beetmarket/비트마켓 1. 컨트롤러 어노테이션 오류 1 (오류해결).png" style="display: block; margin-bottom: 20px;" class="zoomable"/ >
+      <img src="../../../image/projects/beetmarket/비트마켓 1. 컨트롤러 어노테이션 오류 2 (오류해결).png" class="zoomable"/ >
+      <p><b>오류 설명:</b> 컨트롤러에 실수로 @Controller 대신 @RestController를 사용하여 JSON 응답이 반환되는 문제가 발생했습니다. 
+        @RestController는 주고 JSON 또는 XML데이터를 반환할 떄 사용해 되며 HTML을 반환하는 @Controller와는 용도가 다릅니다.</p>
+      <p><b>오류 발생:</b> 브라우저 화면에서 예상했던 HTML 화면대신 JSON 데이터가 출력되는 것을 발견했습니다.</p>
+      <img src="../../../image/projects/beetmarket/비트마켓 1. 컨트롤러 어노테이션 오류 3 (오류해결).png" class="zoomable"/ > 
+      <p><b>오류해결:</b> @RestController를 @Controller로 수정하여 정상적으로 화면에 출력이 되었습니다.</p>
+
+      <hr>
+
+      <h2>2.모달 닫기 후 백드롭이 제거되지 않는 문제</h2>
+      <img src="../../../image/projects/beetmarket/비트마켓 2. 모달 닫기 후 백드롭이 제거되지 않는 문제 1 (오류해결).png" style="display: block; margin-bottom: 20px;" class="zoomable"/ >
+      <img src="../../../image/projects/beetmarket/비트마켓 2. 모달 닫기 후 백드롭이 제거되지 않는 문제 2 (오류해결).png" class="zoomable"/ >
+      <p><b>오류 설명:</b> 모달창을 닫았을 때 검은배경(백드롭)이 사라지지 않는 문제 발생.</p>
+      <p><b>오류 발생:</b> 상품Q&A에서 질문 수정할때 오류 확인.</p>
+      <img src="../../../image/projects/beetmarket/비트마켓 2. 모달 닫기 후 백드롭이 제거되지 않는 문제 3 (오류해결).png" class="zoomable"/ > 
+      <p><b>오류해결:</b> AJAX 모달 폼에 
+      <pre>
+        <code>
+           $(&#39;#GQUModal&#39;).on(&#39;hidden.bs.modal&#39;, function () { 
+              $(&#39;.modal-backdrop&#39;).remove();
+          });         
+        </code>
+      </pre>
+      이라는  이벤트 핸들러를 추가하여 백드롭을 수동으로 제거 할 수있도록 오류를 해결했습니다.</p>      
     </div>
   </div>
+
+  </div>        
+  <!-- 모달(확대된 이미지) -->
+  <div class="modal" id="imageModal">
+    <img id="modalImg">
+  </div>
+  <a href="https://leeleeseop.github.io/leesub-blog.github.io/">뒤로 돌아가기</a>           
+  <script src="../../../JavaScript/Beetmarket/Beetmarket.js"></script>            
 </body>
 </html>
