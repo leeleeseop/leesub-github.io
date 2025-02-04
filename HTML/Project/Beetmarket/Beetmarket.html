@@ -819,23 +819,28 @@
     <hr>
 
       <h2>3.상품 Q&A 질문 등록</h2>
+            
       <h3>GoodsQ&A Write Controller</h3>
       <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write Controller 9(핵심코드).png" class="zoomable"/>
-        <ul>
-          <li><b>위 코드는 상품Q&A를 등록한 데이터를 JSON 형태로 사용자에게 응답하는 기능을 처리합니다.</b></li>
-        <ul>
-        <details>
+            
+      <ul>
+        <li><b>위 코드는 상품Q&A를 등록한 데이터를 JSON 형태로 사용자에게 응답하는 기능을 처리합니다.</b></li>
+      <ul>
+          
+      <details>
         <summary><b>사용자 ID설정</b></summary>
         <ul>
           <li><b>vo.setId(LoginUtil.getId(session);</b>을 사용해 현재 로그인한 사용자의 ID를 Goods_QnaVO 객체에 저장합니다.</li>
         </ul>
       </details>
+          
       <details>
         <summary><b>Q&A등록 처리</b></summary>
         <ul>
           <li><b>service.write(vo)</b>에서 VO를 서비스로 전달해 데이터를 데이터베이스에 저장합니다.</li>
         </ul>
       </details>
+          
       <details>
         <summary><b>JSON 응답 생성</b></summary>
         <ul>
@@ -845,90 +850,96 @@
 
       <h3>GoodsQ&A Write SQL 쿼리</h3>
       <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Wrtie SQL 쿼리 10(핵심코드).png" class="zoomable"/>
+        
+      <ul>
+        <li><b>위 코드는 상품문의를 데이터베이에 등록하는 SQL쿼리로 상품 Q&A데이터를 goods_qna테이블에 삽입하는 역할을 합니다.</b></li>
+      </ul>
+        
+      <details>
+        <summary><b>상품 Q&A번호 생성</b></summary>
+        <pre>
+          <code>
+            <selectKey keyProperty="goodsQNA" resultType="Long" order="BEFORE">
+              select goods_qna_seq.nextval from dual
+            </selectKey>
+          </code>
+        </pre>
         <ul>
-          <li><b>위 코드는 상품문의를 데이터베이에 등록하는 SQL쿼리로 상품 Q&A데이터를 goods_qna테이블에 삽입하는 역할을 합니다.</b></li>
+          <li><b><slelctKey>:</b> Q&A번호를 자동으로 생성 시퀀스goods_qna_seq를 사용해 새로운 상품 Q&A번호를 생성합니다.</li>
+          <li><b>keyProperty="goodsQNA":</b> 자동으로 생성된 상품 Q&A 번호는 goodsQNA 속성에 저장됩니다.</li>
+          <li><b>resultType="Long":</b> 생성된 Q&A번호는 Long 타입입니다.</li>
+          <li><b>order="BEFORE":</b> 번호가 데이터베이스 삽입되게 전에 생성합니다.</li>
+          <li><b>select goods_qna_seq.nextval from dual:</b> Oracle 시퀀스(goods_qna_seq)를 사용해여 새로운 Q&A번호를 생성합니다.</li>
+        </ul>
+      </details>
+        
+      <details>
+        <summary><b>Q&A 데이터 삽입 쿼리</b></summary>
         <ul>
-        <details>
-          <summary><b>상품 Q&A번호 생성</b></summary>
-          <pre>
-            <code>
-              <selectKey keyProperty="goodsQNA" resultType="Long" order="BEFORE">
-                select goods_qna_seq.nextval from dual
-              </selectKey>
-            </code>
-          </pre>
-          <ul>
-            <li><b><slelctKey>:</b> Q&A번호를 자동으로 생성 시퀀스goods_qna_seq를 사용해 새로운 상품 Q&A번호를 생성합니다.</li>
-            <li><b>keyProperty="goodsQNA":</b> 자동으로 생성된 상품 Q&A 번호는 goodsQNA 속성에 저장됩니다.</li>
-            <li><b>resultType="Long":</b> 생성된 Q&A번호는 Long 타입입니다.</li>
-            <li><b>order="BEFORE":</b> 번호가 데이터베이스 삽입되게 전에 생성합니다.</li>
-            <li><b>select goods_qna_seq.nextval from dual:</b> Oracle 시퀀스(goods_qna_seq)를 사용해여 새로운 Q&A번호를 생성합니다.</li>
-          </ul>
-        </details>
-        <details>
-          <summary><b>Q&A 데이터 삽입 쿼리</b></summary>
-          <ul>
-            <li>insert into goods_qna: goods_qna 테이블에 새로운 상품 Q&A 데이터를 삽입합니다.</li>
-            <li> 삽입할 컬럼
-              <ul>
-                <li><b>goodsQNA:</b> 상품Q&A번호 (자동 생성된 값)</li>
-                <li><b>goodsNo:</b> 상품 번호 (어떤 상품에 대한 Q&A인지 식별하기 위한 번호)</li>
-                <li><b>question:</b> 사용자가 작성한 질문 내용</li>
-                <li><b>id:</b> 질문을 작성한 사용자 ID</li>
-              </ul>
-            </li>
-          </ul>
-        </details>
+          <li>insert into goods_qna: goods_qna 테이블에 새로운 상품 Q&A 데이터를 삽입합니다.</li>
+          <li> 삽입할 컬럼
+            <ul>
+              <li><b>goodsQNA:</b> 상품Q&A번호 (자동 생성된 값)</li>
+              <li><b>goodsNo:</b> 상품 번호 (어떤 상품에 대한 Q&A인지 식별하기 위한 번호)</li>
+              <li><b>question:</b> 사용자가 작성한 질문 내용</li>
+              <li><b>id:</b> 질문을 작성한 사용자 ID</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
 
-        <h3>GoodsQ&A Write JavaScript</h3>
-        <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write JavaScript 11(핵심코드).png" class="zoomable"/>
-          <ul>
-            <li><b>위 스크립트는 리뷰 작성 모달 창을 열고 선택한 주문 정보를 모달에 표시하며, 이미지 미리보기 기능을 제공합니다.</b></li>
-          <ul>
-          <details>
-            <summary><b>리뷰 작성 모달 열기 ($(:”.reviewBtn”).click)</b></summary>
+      <h3>GoodsQ&A Write JavaScript</h3>
+      <img src="../../../image/projects/beetmarket/비트마켓 GoodsQ&A Write JavaScript 11(핵심코드).png" class="zoomable"/>
+        
+      <ul>
+        <li><b>위 스크립트는 리뷰 작성 모달 창을 열고 선택한 주문 정보를 모달에 표시하며, 이미지 미리보기 기능을 제공합니다.</b></li>
+      <ul>
+          
+      <details>
+        <summary><b>리뷰 작성 모달 열기 ($(:”.reviewBtn”).click)</b></summary>
+        <ul>
+          <li><b>클릭 이벤트:.reviewBtn </b>클래스를 가진 버튼을 클릭하면 리뷰 작성 모달이 열립니다.</li>
+          <li> 주문 정보 가져오기
             <ul>
-              <li><b>클릭 이벤트:.reviewBtn </b>클래스를 가진 버튼을 클릭하면 리뷰 작성 모달이 열립니다.</li>
-              <li> 주문 정보 가져오기
-                <ul>
-                  <li><b>goodsQNA:</b> 클릭한 버튼이 주문 항목(.orderListItem)를 찾습니다.(/li>
-                  <li><b>goodsNo:</b> 상품 번호 (어떤 상품에 대한 Q&A인지 식별하기 위한 번호)</li>
-                  <li><b>question:</b> 사용자가 작성한 질문 내용</li>
-                  <li><b>id:</b> 질문을 작성한 사용자 ID</li>
-                </ul>
-              </li>
-              <li> 주문 정보
-                <ul>
-                  <li><b>orderNo:</b> 주문항목에서 주문 번호를 가져옵니다.(/li>
-                  <li><b>goodsName:</b> 주문 항목에서 상품 이름을 가져옵니다.</li>
-                  <li><b>optionName:</b> 주문 항목에서 상품 옵션명을 가져옵니다.</li>
-                  <li><b>amount:</b> 주문 항목에서 수량을 가져옵니다.</li>
-                </ul>
-              </li>
-              <li> 모달 창에 값 설정
-                <ul>
-                  <li><b>주문번호, 상품명, 옵션명, 수량</b>을 모달창에 해당 필드에 표시하도록 값을 가져옵니다.(/li>
-                </ul>
-              </li>
+              <li><b>goodsQNA:</b> 클릭한 버튼이 주문 항목(.orderListItem)를 찾습니다.(/li>
+              <li><b>goodsNo:</b> 상품 번호 (어떤 상품에 대한 Q&A인지 식별하기 위한 번호)</li>
+              <li><b>question:</b> 사용자가 작성한 질문 내용</li>
+              <li><b>id:</b> 질문을 작성한 사용자 ID</li>
             </ul>
-          </details>
-          <details>
-            <summary><b>이미지 미리보기 (previewImage)</b></summary>
+          </li>
+          <li> 주문 정보
             <ul>
-              <li><b>파일 선택 이벤트 : 파일이 선택되면 previewImage 호출됩니다.</li>
-              <li>FileReader 사용 : 선택한 파일을 읽어 이미지를 미리보기로 표시합니다.
-                <ul>
-                  <li><b>event.target.files[0]:</b> 선택된 파일을 가져옵니다.(/li>
-                  <li><b>reader.onload:</b> 파일이 성곡적으로 읽혔을 때 이미지 미리보기 가 표시됩니다.</li>
-                </ul>
-              </li>
-              <li>오류 처리
-                <ul>
-                  <li><b>reader.onerror:</b> 파일을 읽는 중 오류가 발생하면 경고 메시지를 표시합니다.(/li>
-                </ul>
-              </li>
+              <li><b>orderNo:</b> 주문항목에서 주문 번호를 가져옵니다.(/li>
+              <li><b>goodsName:</b> 주문 항목에서 상품 이름을 가져옵니다.</li>
+              <li><b>optionName:</b> 주문 항목에서 상품 옵션명을 가져옵니다.</li>
+              <li><b>amount:</b> 주문 항목에서 수량을 가져옵니다.</li>
             </ul>
-         </details>
+          </li>
+          <li> 모달 창에 값 설정
+            <ul>
+              <li><b>주문번호, 상품명, 옵션명, 수량</b>을 모달창에 해당 필드에 표시하도록 값을 가져옵니다.(/li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+          
+      <details>
+        <summary><b>이미지 미리보기 (previewImage)</b></summary>
+        <ul>
+          <li><b>파일 선택 이벤트 : 파일이 선택되면 previewImage 호출됩니다.</li>
+          <li>FileReader 사용 : 선택한 파일을 읽어 이미지를 미리보기로 표시합니다.
+            <ul>
+              <li><b>event.target.files[0]:</b> 선택된 파일을 가져옵니다.(/li>
+              <li><b>reader.onload:</b> 파일이 성곡적으로 읽혔을 때 이미지 미리보기 가 표시됩니다.</li>
+            </ul>
+          </li>
+          <li>오류 처리
+            <ul>
+              <li><b>reader.onerror:</b> 파일을 읽는 중 오류가 발생하면 경고 메시지를 표시합니다.(/li>
+            </ul>
+          </li>
+        </ul>
+     </details>
 
         <h3>Review Write HTML(JSP)</h3>
         <img src="../../../image/projects/beetmarket/비트마켓 Review Write HTML(JSP) 12(핵심코드).png" class="zoomable"/>
