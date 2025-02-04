@@ -46,8 +46,10 @@
 }
 
 .Document img {
-  width: 500px;
-  height: auto;
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin: 0 auto;
 }
 
 /* 모달(이미지 확대) 스타일 */
