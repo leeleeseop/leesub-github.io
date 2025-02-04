@@ -3,6 +3,9 @@
    --------------------------------------------- */
 
 /* 전체 컨테이너: 가운데 정렬, 폭 제한 */
+@charset "UTF-8";
+
+/* 전체 컨테이너: 가운데 정렬, 폭 제한 */
 .container {
   max-width: 1200px;      /* 원하는 최대 폭 */
   margin: 0 auto;         /* 가운데 정렬 */
@@ -35,6 +38,17 @@ hr {
 .header img {
   max-width: 400px; /* 프로젝트 로고나 대표 이미지가 너무 클 경우 조절 */
   height: auto;
+}
+
+.Document img,
+.project img,
+.core-code img,
+.Error-Resolution img {
+  max-width: 560px;  /* 560px 초과 금지 */
+  width: 560px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
 }
 
 /* 프로젝트 간단 소개(Introduction) 영역 */
@@ -84,33 +98,12 @@ img.zoomable {
   margin-bottom: 20px;
 }
 
-/* 모달을 전체 화면 덮는 식으로 */
-.modal {
-  display: none; /* 처음엔 숨김 */
-  position: fixed; /* 화면 고정 */
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto; /* 스크롤 */
-  background-color: rgba(0, 0, 0, 0.8); /* 반투명 배경 */
-  text-align: center;
-}
-
-/* 모달 안에 뜨는 이미지 */
-#modalImg {
-  max-width: 80%;
-  margin-top: 50px;
-}
-
 /* details 태그 디자인 */
 details {
   margin-bottom: 10px;
   border: 1px solid #ddd;
   padding: 5px 10px;
   border-radius: 5px;
-  background: #fafafa;
 }
 
 details summary {
@@ -173,4 +166,25 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* 모달(이미지 확대) 스타일 */
+.modal {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
 }
