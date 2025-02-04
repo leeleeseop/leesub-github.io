@@ -731,16 +731,45 @@
     </ul> <!-- 여기서 ul을 닫는다 -->
     
     <details>
-      <summary><b>리뷰 작성 모달 열기 ( $(".reviewBtn").click )</b></summary>
+      <summary><b>리뷰 작성 모달 열기 ($(".reviewBtn").click)</b></summary>
       <ul>
-        <li>…</li>
+        <li><b>클릭 이벤트:</b> .reviewBtn 클래스를 가진 버튼을 클릭하면 리뷰 작성 모달이 열립니다.</li>
+        <li>주문 정보 가져오기
+          <ul>
+            <li><b>$(this).closest(".orderListItem"):</b> 클릭한 버튼이 주문 항목(.orderListItem)를 찾습니다.</li>
+          </ul>
+        </li>
+        <li>주문 정보
+          <ul>
+            <li><b>orderNo:</b> 주문항목에서 주문 번호를 가져옵니다.</li>
+            <li><b>goodsName:</b> 주문 항목에서 상품 이름을 가져옵니다.</li>
+            <li><b>optionName:</b> 문 항목에서 상품 옵션명을 가져옵니다.</li>
+            <li><b>amount:</b> 주문 항목에서 수량을 가져옵니다.</li>
+          </ul>
+        </li>
+        <li>모달 창에 값 설정
+          <ul>
+            <li><b>주문번호, 상품명, 옵션명, 수량</b>을 모달창에 해당 필드에 표시하도록 값을 가져옵니다.</li>
+          </ul>
+        </li>         
       </ul>
     </details>
     
     <details>
       <summary><b>이미지 미리보기 (previewImage)</b></summary>
       <ul>
-        <li>…</li>
+        <li>파일 선택 이벤트 : 파일이 선택되면 previewImage 호출됩니다.</li>
+        <li>FileReader 사용 : 선택한 파일을 읽어 이미지를 미리보기로 표시합니다.
+          <ul>
+            <li><b>event.target.files[0]:</b> 선택된 파일을 가져옵니다.</li>
+            <li><b>reader.onload:</b> 파일이 성곡적으로 읽혔을 때 이미지 미리보기 가 표시됩니다.</li>
+          </ul>
+        </li>
+        <li><b>오류 처리</b>
+          <ul>
+            <li><b>reader.onerror :</b> 파일을 읽는 중 오류가 발생하면 경고 메시지를 표시합니다.</li>
+          </ul>
+        </li>        
       </ul>
     </details>
     
@@ -755,18 +784,39 @@
     <details>
       <summary><b>상품 정보 표시</b></summary>
       <ul>
-        <li>…</li>
+        <li>JavaScript의 jQuery를 사용하여 사용자가 리뷰 버튼을 클릭할 때마다 해당 .orderListItem이라는 부모 클래스에서 주문 번호, 상품명, 옵션명, 수량 정보를 동적으로 가져옵니다.</li>
       </ul>
     </details>
     
     <details>
       <summary><b>별점 입력</b></summary>
       <ul>
-        <li>…</li>
+        <li>별점은 필수 항목이므로 사용자는 별점(1~5)점 중 하나를 선택하여 상품에 대한 만족도를 평가할 수 있습니다.</li>
       </ul>
     </details>
 
-      <hr>
+    <details>
+      <summary><b>리뷰 내용 입력</b></summary>
+      <ul>
+        <li>리뷰 내용을 작성하는 텍스트 필드가 제공되며 필수 입력 항목입니다.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary><b>리뷰 이미지 업로드 및 미리보기</b></summary>
+      <ul>
+        <li>사용자는 리뷰에 이미지를 업로드 할 수 있으며 업로드 된 이미지를 미리보기 표시 할수있습니다.</li>
+      </ul>
+    </details>            
+
+    <details>
+      <summary><b>주문 번호 입력</b></summary>
+      <ul>
+        <li>해당 리뷰가 어떤 주문과 연결되었는지 서버에 전달하며 hidden input필드를 사용하여 주문번호는 숨겼습니다.</li>
+      </ul>
+    </details> 
+            
+    <hr>
 
       <h2>3.상품 Q&A 질문 등록</h2>
       <h3>GoodsQ&A Write Controller</h3>
