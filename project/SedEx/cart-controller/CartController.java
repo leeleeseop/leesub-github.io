@@ -252,9 +252,9 @@ public class CartController {
 		}//end of while
 	}//end of public void excute
 
-//주문 추가 메서드
-//주문 추가 메서드를 정의합니다. arr은 연락처, 배송지, 요청사항 정보를 담고 있으며, cart_list는 장바구니 목록입니다.
-static int addOrder(String[] arr, List<CartVO> cart_list) throws Exception {
+	//주문 추가 메서드
+	//주문 추가 메서드를 정의합니다. arr은 연락처, 배송지, 요청사항 정보를 담고 있으며, cart_list는 장바구니 목록입니다.
+	static int addOrder(String[] arr, List<CartVO> cart_list) throws Exception {
 		// 장바구니 목록을 순회하며 주문 처리
 		for(CartVO vo : cart_list) {
 			
