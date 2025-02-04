@@ -38,6 +38,14 @@ hr {
   height: auto;
 }
 
+.Document img,
+.project img,
+.core-code img,
+.Error-Resolution img {
+  max-width: 560px;  /* 560px 초과 금지 */
+  height: auto;
+}
+
 /* 프로젝트 간단 소개(Introduction) 영역 */
 .Introduction h3,
 .Document h1,
