@@ -41,18 +41,7 @@
 
 .Document img {
   width: 500px;
-  hight: 500px;
-}
-
-.Main {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
-}
-
-.Main img{
-  width: 560px;
-  hight: 560px;
+  height: auto;
 }
 
 /* 모달(이미지 확대) 스타일 */
