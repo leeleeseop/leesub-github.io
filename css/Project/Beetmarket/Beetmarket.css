@@ -1,5 +1,9 @@
+/*!
+* Beetmarket.html를 위한 css
+*/
 @charset "UTF-8";
 
+<style type="text/css">
 .container {
     display: flex;
     flex-direction: column;
@@ -8,12 +12,6 @@
 }
 
 .project-title {
-    display: block;
-    margin: 0 auto;
-    width: 60%;
-}
-
-.Introduction {
     display: block;
     margin: 0 auto;
     width: 60%;
@@ -39,17 +37,26 @@
     margin: 0 auto;
 }
 
-.Document {
+.Introduction, .Document {
     display: block;
     margin: 0 auto;
     width: 60%;
 }
 
 .Document img {
-   max-width: 100%;
-   height: auto;
-   display: block;
-   margin: 0 auto;
+  width: 500px;
+  hight: 500px;
+}
+
+.Main {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.Main img{
+  width: 560px;
+  hight: 560px;
 }
 
 /* 모달(이미지 확대) 스타일 */
