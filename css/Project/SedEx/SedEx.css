@@ -38,6 +38,26 @@ hr {
   height: auto;
 }
 
+.Document img{
+  width: 560px;
+  height: auto;
+}
+
+.project img{
+  width: 560px;
+  height: auto;
+}
+
+.core-code img{
+  width: 560px;
+  height: auto;
+}
+
+.Error-Resolution img{
+  width: 560px;
+  height: auto;
+}
+
 /* 프로젝트 간단 소개(Introduction) 영역 */
 .Introduction h3,
 .Document h1,
@@ -175,24 +195,4 @@ a:hover {
   max-height: 90%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
-}
-
-.Document img{
-  width: 560px;
-  height: auto;
-}
-
-.project img{
-  width: 560px;
-  height: auto;
-}
-
-.core-code img{
-  width: 560px;
-  height: auto;
-}
-
-.Error-Resolution img{
-  width: 560px;
-  height: auto;
 }
