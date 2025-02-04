@@ -1,0 +1,188 @@
+/*!
+* interyard.html를 위한 css
+*/
+@charset "UTF-8";
+
+/* 전체 컨테이너: 가운데 정렬, 폭 제한 */
+.container {
+  max-width: 1200px;      /* 원하는 최대 폭 */
+  margin: 0 auto;         /* 가운데 정렬 */
+  padding: 0 20px;        /* 좌우 여백 */
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 구분선 */
+hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* 헤더 */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header .project-title {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.header img {
+  max-width: 400px; /* 프로젝트 로고나 대표 이미지가 너무 클 경우 조절 */
+  height: auto;
+}
+
+.Document img,
+.project img,
+.core-code img,
+.Error-Resolution img {
+  max-width: 560px;  /* 560px 초과 금지 */
+  width: 560px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* 프로젝트 간단 소개(Introduction) 영역 */
+.Introduction h3,
+.Document h1,
+.project h1,
+.core-code h1,
+.Error-Resolution h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* 소제목 */
+.Introduction h3,
+.Document h3,
+.project h3,
+.core-code h2,
+.Error-Resolution h2 {
+  margin: 30px 0 10px;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* 리스트 스타일 */
+.Introduction ul,
+.Document ul,
+.project ul,
+.core-code ul,
+.Error-Resolution ul {
+  margin: 0 0 1em 1.2em;
+  padding: 0;
+  list-style: disc;
+}
+
+/* 이미지를 담는 영역(zoomable 등) */
+img.zoomable {
+  cursor: zoom-in;
+  max-width: 100%; /* 반응형 */
+  height: auto;
+  transition: 0.2s ease;
+}
+
+/* margin-bottom 이 필요한 img에만 클래스로 별도 적용 */
+.img-mb-20 {
+  margin-bottom: 20px;
+}
+
+/* details 태그 디자인 */
+details {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* code 블록 (pre > code) 예시 */
+pre code {
+  background: #f4f4f4;
+  display: block;
+  padding: 10px;
+  border-left: 3px solid #0aa;
+  color: #555;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1em;
+  white-space: pre-wrap; /* 줄바꿈 처리 */
+}
+
+/* 별점 표시 예시 */
+.fa-star {
+  font-size: 1.2rem;
+  color: #ccc; /* 기본 별색은 회색 */
+  margin-right: 2px;
+}
+.fa-star.checked {
+  color: #FFD700; /* 채워진 별은 금색 */
+}
+
+/* 예시로 추가한 클래스들 */
+.ReviewCount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ReviewCount .totalRiv {
+  margin: 0;
+}
+
+/* 리뷰 별점, 평균평점 등 */
+.totalscor {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.mt-5 {
+  margin-top: 2em; /* 예시 간격 */
+}
+
+/* 마지막에 있는 '뒤로 돌아가기' 링크 디자인(필요 시) */
+a {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  color: #1e90ff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 모달(이미지 확대) 스타일 */
+.modal {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
