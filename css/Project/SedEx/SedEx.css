@@ -38,24 +38,13 @@ hr {
   height: auto;
 }
 
-.Document img{
-  width: 560px;
-  height: auto;
-}
-
-.project img{
-  width: 560px;
-  height: auto;
-}
-
-.core-code img{
-  width: 560px;
-  height: auto;
-}
-
-.Error-Resolution img{
-  width: 560px;
-  height: auto;
+.Document img,
+.project img,
+.core-code img,
+.Error-Resolution img {
+  max-width: 560px;  
+  width: 100%;       
+  height: auto; 
 }
 
 /* 프로젝트 간단 소개(Introduction) 영역 */
