@@ -43,6 +43,7 @@ hr {
 .core-code img,
 .Error-Resolution img {
   max-width: 560px;  /* 560px 초과 금지 */
+  width: 560px;
   height: auto;
 }
 
