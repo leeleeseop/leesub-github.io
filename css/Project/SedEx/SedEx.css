@@ -12,9 +12,9 @@ html, body {
 
 /* 전체 컨테이너: 가운데 정렬, 폭 제한 */
 .container {
-  max-width: 1200px;      /* 원하는 최대 폭 */
-  margin: 0 auto;         /* 가운데 정렬 */
-  padding: 0 20px;        /* 좌우 여백 */
+  max-width: 1200px;     
+  margin: 0 auto;         
+  padding: 0 20px;        
   font-family: sans-serif;
   line-height: 1.6;
   color: #333;
@@ -41,7 +41,8 @@ hr {
 /* 헤더 */
 .header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top: 60px;
 }
 
 .header .project-title {
@@ -52,7 +53,7 @@ hr {
 }
 
 .header img {
-  max-width: 400px; /* 프로젝트 로고나 대표 이미지가 너무 클 경우 조절 */
+  max-width: 630px;
   height: auto;
 }
 
@@ -60,7 +61,7 @@ hr {
 .project img,
 .core-code img,
 .Error-Resolution img {
-  max-width: 560px;  /* 560px 초과 금지 */
+  max-width: 560px;  
   width: 560px;
   height: auto;
   display: block;
