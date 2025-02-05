@@ -15,13 +15,86 @@
   <b>Hard Skills</b>
   <details>
     <summary>SQL</summary>
-    <li> CRUD(Create, Read, Update, Delete) : 일반게시판, 공지사항, 메시지, 회원관리 </li>
-    <li> 제약조건: primaryKey, not null, unique, foreign key, check</li>
-    <li> DML : 데이터 (SELECT, INSERT, UPDATE, DELETE) </li>
-    <li> DDL :  테이블 생성 삭제 (CREATE, ALTER, DROP) </li>
-    <li> DCL : 권한관리 (GRANT, REVOKE) </li>
-    <li> JOIN : 여러테이블 간 데이터 결합(INNER JOIN, OUTER JOIN 등) </li>
-    <li> Subqueries : 서브쿼리를 활용한 복잡한 데이터 조회(SELECT, WHERE, FROM) </li>
-    <li> Transaction : (COMMIT, ROLLBACK) </li>
+    <ul>
+      <li> CRUD(Create, Read, Update, Delete) : 일반게시판, 공지사항, 메시지, 회원관리 </li>
+      <li> 제약조건: primaryKey, not null, unique, foreign key, check</li>
+      <li> DML: 데이터 (SELECT, INSERT, UPDATE, DELETE) </li>
+      <li> DDL:  테이블 생성 삭제 (CREATE, ALTER, DROP) </li>
+      <li> DCL: 권한관리 (GRANT, REVOKE) </li>
+      <li> JOIN: 여러테이블 간 데이터 결합(INNER JOIN, OUTER JOIN 등) </li>
+      <li> Subqueries: 서브쿼리를 활용한 복잡한 데이터 조회(SELECT, WHERE, FROM) </li>
+      <li> Transaction: (COMMIT, ROLLBACK) </li>
+    </ul>
+  </details>
+  
+  <details>
+    <summary>Java</summary>
+    <ul>
+      <li>OOP</li>
+      <li> 예외처리</li>
+      <li> Spring MVC: <b>@Controller</b>, <b>@RestController</b>, <b>@RequestMapping</b>, <b>@GetMapping</b>, <b>@PostMapping</b></li>
+      <li> 스프링 의존성 주입: <b>@Autowired</b>, <b>@Component</b>, <b>@Service</b>, <b>Repository</b> </li>
+      <li> JOIN : 여러테이블 간 데이터 결합(INNER JOIN, OUTER JOIN 등) </li>
+      <li> Servlets</li>
+      <li> JSP</li>
+    </ul>
+  </details>
+
+  <b>Soft Skills</b>
+  <details>
+    <summary>SQL</summary>
+    <ul>
+      <li>팀원 간 빠른 소통/li>
+      <li>효율적인 시간관리</li>
+    </ul>
+  </details>
+
+  <b>개발환경</b>
+  <details>
+    <summary>언어</summary>
+    <ul>
+      <li>JAVA</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVAScript</li>
+    </ul>
+  </details>
+  
+  <details>
+    <summary>IDE & Tools</summary>
+    <ul>
+      <li>Eclipse</li>
+      <li>STS</li>
+      <li>Visual Studio Code</li>
+      <li>GitHub</li>
+      <li>ERwin</li>
+    </ul>
+  </details>
+  
+  <details>
+    <summary>DB</summary>
+    <ul>
+      <li>Oracle
+      <ul>
+        <il>PL/SQL</il>
+      </ul>
+      </li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Libraries</summary>
+    <ul>
+      <li>Lombok</li>
+      <li>jQuery</li>
+      <li>MyBatis</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Frameworks</summary>
+    <ul>
+      <li>Spring Framework</li>
+    </ul>
   </details>
 </div>
