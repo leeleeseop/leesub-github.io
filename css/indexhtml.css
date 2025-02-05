@@ -3,7 +3,6 @@
 */
 @charset "UTF-8";
 
-<style type="text/css">
     html, body {
         margin: 0;
         padding: 0;
@@ -12,9 +11,9 @@
     }
 
     .header {
-        background-color: #87CEEB; /* 연한 파란색 배경 */
+        background-color: #87CEEB; 
         width: 100%;
-        height: 300px; /* 헤더 높이 */
+        height: 300px; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,8 +22,8 @@
     }
 
     .container {
-        text-align: center; /* 텍스트 중앙 정렬 */
-        margin-top: -50px; /* 헤더와 자연스럽게 연결 */
+        text-align: center; 
+        margin-top: -50px; 
     }
 
     .page-title {
@@ -35,7 +34,7 @@
 
     .introduction {
         font-size: 16px;
-        color: #555; /* 부드러운 텍스트 색상 */
+        color: #555; 
         margin: 10px 0 0 0;
         margin-top: 30px;
     }
@@ -43,15 +42,15 @@
     .profile-circle {
         width: 100px;
         height: 100px;
-        border-radius: 50%; /* 원형 배경 */
-        background-color: white; /* 흰색 배경 */
-        border: 3px solid #87CEEB; /* 테두리 색상 */
+        border-radius: 50%; 
+        background-color: white; 
+        border: 3px solid #87CEEB; 
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 24px;
-        color: #87CEEB; /* 텍스트 색상 */
-        margin-top: -50px; /* 헤더와 자연스럽게 연결 */
+        color: #87CEEB; 
+        margin-top: -50px; 
     }
 
     * {
@@ -87,8 +86,7 @@
     }
 
     .project-card a {
-        text-decoration: none;
-        
+        text-decoration: none;  
     }
 
     .project-card img{
@@ -101,7 +99,6 @@
         margin-left: 300px;
         margin-top: 33px;
         margin-bottom: 50px;
-        
     }
 
     .projects{
@@ -113,4 +110,3 @@
         height: auto;
         margin-right: 10px;
     }
-</style>
