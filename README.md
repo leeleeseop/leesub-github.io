@@ -1,16 +1,20 @@
-  <div container>
+  <div class="header">
     <h1>이섭이 블로그</h1>
     <h3>안녕하세요, 신입 개발자 이이섭입니다.<br>
     배우며 성장하고, 도움을 줄 수 있는 개발자가 되고 싶습니다.</h3>
     | 경기도 의정부시 민락동 <br>
     | 010-2366-7237 <br>
     | aa990724@naver.com
-  
+  </div>
+
+  <div class="Profile">
     <h1>Profile</h1>
     <h3>경력(총1년2개월)</h3>
     동아기업 2022.11 - 202.02
     <li>그래픽 디자인 업무</li>
-  
+  </div>
+
+  <div class="Skills"> 
     <h1>Skills</h1>
     <b>Hard Skills</b>
     <details>
@@ -97,30 +101,31 @@
         <li>Spring Framework</li>
       </ul>
     </details>
+</div>
 
+<div class="Projects">
+    <h1>프로젝트</h1>
+      <a href="HTML/Project/SedEex/SedEex.html">
+          <img src="image/projects/SedEx/backgroundSedEx.png" alt="SedEx 프로젝트">
+          <div style="color:black;">
+              <h3>세덱스(SedEx) 팀 프로젝트</h3>
+              <p>스포츠 용품 쇼핑 서비스</p>
+          </div>
+      </a>
   
-      <h1>프로젝트</h1>
-        <a href="HTML/Project/SedEex/SedEex.html">
-            <img src="image/projects/SedEx/backgroundSedEx.png" alt="SedEx 프로젝트">
-            <div style="color:black;">
-                <h3>세덱스(SedEx) 팀 프로젝트</h3>
-                <p>스포츠 용품 쇼핑 서비스</p>
-            </div>
-        </a>
-    
-        <a href="HTML/Project/interyard/interyard.html">
-            <img src="image/projects/interYard/interYard사진.png" alt="interYard 프로젝트">
-            <div style="color:black;">
-                <h3>인터야드(interYard) 팀 프로젝트</h3>
-                <p>온라인 종합 플랫폼</p>
-            </div>
-        </a>
-    
-        <a href="HTML/Project/Beetmarket/Beetmarket.html">
-            <img src="image/projects/beetmarket/beetmarket사진.png" alt="Beetmarket 프로젝트">
-            <div style="color:black;">
-                <h3>비트마켓(Beetmarket) 팀 프로젝트</h3>
-                <p>온라인 쇼핑 플랫폼</p>
-            </div>
-        </a>
+      <a href="HTML/Project/interyard/interyard.html">
+          <img src="image/projects/interYard/interYard사진.png" alt="interYard 프로젝트">
+          <div style="color:black;">
+              <h3>인터야드(interYard) 팀 프로젝트</h3>
+              <p>온라인 종합 플랫폼</p>
+          </div>
+      </a>
+  
+      <a href="HTML/Project/Beetmarket/Beetmarket.html">
+          <img src="image/projects/beetmarket/beetmarket사진.png" alt="Beetmarket 프로젝트">
+          <div style="color:black;">
+              <h3>비트마켓(Beetmarket) 팀 프로젝트</h3>
+              <p>온라인 쇼핑 플랫폼</p>
+          </div>
+      </a>
 </div>
