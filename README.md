@@ -124,7 +124,6 @@
 
 ### 비트마켓(Beetmarket) 팀 프로젝트
 온라인 쇼핑 플랫폼
-[프로젝트 상세보기]
 <a href="https://leeleeseop.github.io/leesub-blog.github.io/HTML/Project/Beetmarket/Beetmarket.html">
   <img src="image/projects/beetmarket/beetmarket사진.png" alt="beetmarket 프로젝트" width="560" height="auto">
 </a>
