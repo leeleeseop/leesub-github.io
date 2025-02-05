@@ -76,7 +76,7 @@
     <ul>
       <li>Oracle
       <ul>
-        <il>PL/SQL</il>
+        <li>PL/SQL</li>
       </ul>
       </li>
     </ul>
