@@ -161,17 +161,6 @@ pre code {
   margin-top: 2em;
 }
 
-a {
-  display: inline-block;
-  margin-top: 40px;
-  text-decoration: none;
-  color: #1e90ff;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .modal {
   display: none; 
   position: fixed;
