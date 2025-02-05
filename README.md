@@ -98,7 +98,7 @@
       </ul>
     </details>
 
-    <div class="portfolio">
+  
       <h1>프로젝트</h1>
       <div class="projects">
           <div class="project-card">
@@ -129,5 +129,4 @@
       
           </div>
       </div>
-  </div>
 </div>
