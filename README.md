@@ -110,7 +110,7 @@
 스포츠 용품 쇼핑 서비스  
 [프로젝트 상세보기](HTML/Project/SedEex/SedEex.html)
 
-![SedEx 프로젝트](image/projects/SedEx/backgroundSedEx.png width="300")
+![SedEx 프로젝트](image/projects/SedEx/backgroundSedEx.png)
 
 ---
 
@@ -118,7 +118,7 @@
 온라인 종합 플랫폼  
 [프로젝트 상세보기](HTML/Project/interyard/interyard.html)
 
-![interYard 프로젝트](image/projects/interYard/interYard사진.png width="300")
+![interYard 프로젝트](image/projects/interYard/interYard사진.png)
 
 ---
 
@@ -126,4 +126,4 @@
 온라인 쇼핑 플랫폼  
 [프로젝트 상세보기](HTML/Project/Beetmarket/Beetmarket.html)
 
-![Beetmarket 프로젝트](image/projects/beetmarket/beetmarket사진.png width="300")
+![Beetmarket 프로젝트](image/projects/beetmarket/beetmarket사진.png)
