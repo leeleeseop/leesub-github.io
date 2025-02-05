@@ -210,6 +210,7 @@ a:hover {
      display: flex;
      align-items: center;
      border: 1px solid #ccc;
+     border-radius: 8px;
      padding: 12px;
      max-width: 500px;
      font-family: Arial, sans-serif;
@@ -229,6 +230,7 @@ a:hover {
      display: flex;
      align-items: center;
      border: 1px solid #ccc;
+    border-radius: 8px;
      padding: 12px;
      max-width: 500px;
      font-family: Arial, sans-serif;
