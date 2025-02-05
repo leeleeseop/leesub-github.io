@@ -108,7 +108,7 @@
 
 ### 세덱스(SedEx) 팀 프로젝트
 스포츠 용품 쇼핑 서비스  
-<a href="HTML/Project/SedEex/SedEex.html">
+[프로젝트 상세보기](leesub-blog.github.io/HTML/Project/SedEex/SedEex.html)
 
 <img src="image/projects/SedEx/backgroundSedEx.png" alt="SedEx 프로젝트" width="560" height="auto">
 
