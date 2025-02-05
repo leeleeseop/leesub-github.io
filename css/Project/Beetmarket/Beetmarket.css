@@ -54,7 +54,7 @@ hr {
 }
 
 .header img {
-  max-width: 630px; /* 프로젝트 로고나 대표 이미지가 너무 클 경우 조절 */
+  max-width: 630px;
   height: auto;
 }
 
@@ -62,7 +62,7 @@ hr {
 .project img,
 .core-code img,
 .Error-Resolution img {
-  max-width: 560px;  /* 560px 초과 금지 */
+  max-width: 560px;  
   width: 560px;
   height: auto;
   display: block;
