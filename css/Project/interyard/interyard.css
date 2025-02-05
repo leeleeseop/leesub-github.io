@@ -10,7 +10,6 @@ html, body {
     height: 100%;
 }
 
-/* 전체 컨테이너: 가운데 정렬, 폭 제한 */
 .container {
   max-width: 1200px;    
   margin: 0 auto;         
@@ -20,7 +19,6 @@ html, body {
   color: #333;
 }
 
-/* 구분선 */
 hr {
   margin: 40px 0;
   border: none;
@@ -38,7 +36,6 @@ hr {
   box-sizing: border-box;
 }
 
-/* 헤더 */
 .header {
   text-align: center;
   margin-bottom: 50px;
@@ -68,7 +65,6 @@ hr {
   margin-bottom: 20px;
 }
 
-/* 프로젝트 간단 소개(Introduction) 영역 */
 .Introduction h3,
 .Document h1,
 .project h1,
@@ -79,7 +75,6 @@ hr {
   margin-bottom: 15px;
 }
 
-/* 소제목 */
 .Introduction h3,
 .Document h3,
 .project h3,
@@ -91,7 +86,6 @@ hr {
   font-weight: 600;
 }
 
-/* 리스트 스타일 */
 .Introduction ul,
 .Document ul,
 .project ul,
@@ -102,7 +96,6 @@ hr {
   list-style: disc;
 }
 
-/* 이미지를 담는 영역(zoomable 등) */
 img.zoomable {
   cursor: zoom-in;
   max-width: 100%; 
@@ -115,7 +108,6 @@ img.zoomable {
   margin-bottom: 20px;
 }
 
-/* details 태그 디자인 */
 details {
   margin-bottom: 10px;
   border: 1px solid #ddd;
@@ -129,7 +121,6 @@ details summary {
   font-size: 1rem;
 }
 
-/* code 블록 (pre > code) 예시 */
 pre code {
   background: #f4f4f4;
   display: block;
@@ -141,7 +132,6 @@ pre code {
   white-space: pre-wrap; 
 }
 
-/* 별점 표시 예시 */
 .fa-star {
   font-size: 1.2rem;
   color: #ccc; 
@@ -151,7 +141,6 @@ pre code {
   color: #FFD700; 
 }
 
-/* 예시로 추가한 클래스들 */
 .ReviewCount {
   display: flex;
   align-items: center;
@@ -163,7 +152,6 @@ pre code {
   margin: 0;
 }
 
-/* 리뷰 별점, 평균평점 등 */
 .totalscor {
   font-size: 1.1rem;
   font-weight: 600;
@@ -173,7 +161,6 @@ pre code {
   margin-top: 2em; 
 }
 
-/* 마지막에 있는 '뒤로 돌아가기' 링크 디자인(필요 시) */
 a {
   display: inline-block;
   margin-top: 40px;
@@ -185,7 +172,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 모달(이미지 확대) 스타일 */
 .modal {
   display: none; 
   position: fixed;
