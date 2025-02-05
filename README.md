@@ -118,7 +118,7 @@
 온라인 종합 플랫폼  
 [프로젝트 상세보기](HTML/Project/interyard/interyard.html)
 
-![interYard 프로젝트](image/projects/interYard/interYard사진.png)
+![interYard 프로젝트]<img src="image/projects/interYard/interYard사진.png" alt="interYard 프로젝트" width="300">
 
 ---
 
