@@ -54,7 +54,7 @@ hr {
 }
 
 .header img {
-  max-width: 400px; /* 프로젝트 로고나 대표 이미지가 너무 클 경우 조절 */
+  max-width: 560px; /* 프로젝트 로고나 대표 이미지가 너무 클 경우 조절 */
   height: auto;
 }
 
