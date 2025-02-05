@@ -13,7 +13,7 @@
 
     .header {
         background-color: #87CEEB; /* 연한 파란색 배경 */
-        width: 100%;
+        width: 2080px;
         height: 300px; /* 헤더 높이 */
         display: flex;
         justify-content: center;
