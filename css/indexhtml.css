@@ -106,7 +106,6 @@ html, body {
     margin-right: 10px;
 }
 
-/* 카드 디자인 */
 .card {
     display: flex;
     align-items: center;
@@ -125,43 +124,4 @@ html, body {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-/* 반응형 미디어 쿼리 */
-@media (max-width: 768px) {
-    .header {
-        height: 200px; /* 모바일에서 높이 줄이기 */
-    }
-
-    .page-title {
-        font-size: 24px; /* 모바일에서 글자 크기 줄이기 */
-    }
-
-    .profile-circle {
-        width: 80px;
-        height: 80px;
-        font-size: 20px;
-    }
-
-    .Study, .portfolio {
-        max-width: 95%; /* 모바일에서 더 넓게 사용 */
-        margin: 10px auto;
-    }
-
-    .study-category {
-        flex-direction: column; /* 모바일에서 세로 정렬 */
-        gap: 20px;
-    }
-
-    .project-card {
-        flex-direction: column; /* 모바일에서 세로 정렬 */
-    }
-
-    .project-card img {
-        max-width: 100%;
-    }
-
-    .card {
-        max-width: 100%;
-    }
 }
