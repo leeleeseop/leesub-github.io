@@ -103,29 +103,26 @@
     </details>
 </div>
 
-<div class="Projects">
-    <h1>프로젝트</h1>
-      <a href="HTML/Project/SedEex/SedEex.html">
-          <img src="image/projects/SedEx/backgroundSedEx.png" alt="SedEx 프로젝트">
-          <div style="color:black;">
-              <h3>세덱스(SedEx) 팀 프로젝트</h3>
-              <p>스포츠 용품 쇼핑 서비스</p>
-          </div>
-      </a>
-  
-      <a href="HTML/Project/interyard/interyard.html">
-          <img src="image/projects/interYard/interYard사진.png" alt="interYard 프로젝트">
-          <div style="color:black;">
-              <h3>인터야드(interYard) 팀 프로젝트</h3>
-              <p>온라인 종합 플랫폼</p>
-          </div>
-      </a>
-  
-      <a href="HTML/Project/Beetmarket/Beetmarket.html">
-          <img src="image/projects/beetmarket/beetmarket사진.png" alt="Beetmarket 프로젝트">
-          <div style="color:black;">
-              <h3>비트마켓(Beetmarket) 팀 프로젝트</h3>
-              <p>온라인 쇼핑 플랫폼</p>
-          </div>
-      </a>
-</div>
+## Projects
+
+### 세덱스(SedEx) 팀 프로젝트
+스포츠 용품 쇼핑 서비스  
+[프로젝트 상세보기](HTML/Project/SedEex/SedEex.html)
+
+![SedEx 프로젝트](image/projects/SedEx/backgroundSedEx.png)
+
+---
+
+### 인터야드(interYard) 팀 프로젝트
+온라인 종합 플랫폼  
+[프로젝트 상세보기](HTML/Project/interyard/interyard.html)
+
+![interYard 프로젝트](image/projects/interYard/interYard사진.png)
+
+---
+
+### 비트마켓(Beetmarket) 팀 프로젝트
+온라인 쇼핑 플랫폼  
+[프로젝트 상세보기](HTML/Project/Beetmarket/Beetmarket.html)
+
+![Beetmarket 프로젝트](image/projects/beetmarket/beetmarket사진.png)
