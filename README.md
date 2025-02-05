@@ -44,7 +44,7 @@
   <details>
     <summary>SQL</summary>
     <ul>
-      <li>팀원 간 빠른 소통/li>
+      <li>팀원 간 빠른 소통</li>
       <li>효율적인 시간관리</li>
     </ul>
   </details>
