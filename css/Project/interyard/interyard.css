@@ -105,7 +105,7 @@ hr {
 /* 이미지를 담는 영역(zoomable 등) */
 img.zoomable {
   cursor: zoom-in;
-  max-width: 100%; /* 반응형 */
+  max-width: 100%; 
   height: auto;
   transition: 0.2s ease;
 }
@@ -138,17 +138,17 @@ pre code {
   color: #555;
   font-family: 'Courier New', monospace;
   margin-bottom: 1em;
-  white-space: pre-wrap; /* 줄바꿈 처리 */
+  white-space: pre-wrap; 
 }
 
 /* 별점 표시 예시 */
 .fa-star {
   font-size: 1.2rem;
-  color: #ccc; /* 기본 별색은 회색 */
+  color: #ccc; 
   margin-right: 2px;
 }
 .fa-star.checked {
-  color: #FFD700; /* 채워진 별은 금색 */
+  color: #FFD700; 
 }
 
 /* 예시로 추가한 클래스들 */
@@ -170,7 +170,7 @@ pre code {
 }
 
 .mt-5 {
-  margin-top: 2em; /* 예시 간격 */
+  margin-top: 2em; 
 }
 
 /* 마지막에 있는 '뒤로 돌아가기' 링크 디자인(필요 시) */
@@ -187,7 +187,7 @@ a:hover {
 
 /* 모달(이미지 확대) 스타일 */
 .modal {
-  display: none; /* 기본적으로 숨김 */
+  display: none; 
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -209,13 +209,13 @@ a:hover {
 .profile-circle {
     width: 100px;
     height: 100px;
-    border-radius: 50%; /* 원형 배경 */
-    background-color: white; /* 흰색 배경 */
-    border: 3px solid #70AD47; /* 테두리 색상 */
+    border-radius: 50%; 
+    background-color: white; 
+    border: 3px solid #70AD47; 
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: #70AD47; /* 텍스트 색상 */
-    margin-top: -50px; /* 헤더와 자연스럽게 연결 */
+    color: #70AD47;
+    margin-top: -50px; 
 }
