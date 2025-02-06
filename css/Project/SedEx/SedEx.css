@@ -26,7 +26,7 @@ hr {
 }
 
 .header-background {
-  background-color: #145A32;
+  background-color: #355ac5;
   width: 100%;
   height: 300px;
   display: flex;
@@ -185,12 +185,12 @@ pre code {
     height: 100px;
     border-radius: 50%; 
     background-color: white;
-    border: 3px solid #145A32; 
+    border: 3px solid #355ac5; 
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: #145A32; 
+    color: #355ac5; 
     margin-top: -50px;
 }
 
@@ -227,7 +227,7 @@ pre code {
 
  .projectcode-card a {
      text-decoration: none;
-     color: #0366d6;
+     color: #355ac5;
      font-weight: bold;
      display: flex;
      align-items: center;
