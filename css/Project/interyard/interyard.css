@@ -11,7 +11,7 @@ html, body {
 }
 
 .container {
-  max-width: 1200px;    
+  max-width: 1200px;      
   margin: 0 auto;         
   padding: 0 20px;        
   font-family: sans-serif;
@@ -58,7 +58,7 @@ hr {
 .project img,
 .core-code img,
 .Error-Resolution img {
-  max-width: 560px; 
+  max-width: 560px;  
   width: 560px;
   height: auto;
   display: block;
@@ -103,7 +103,6 @@ img.zoomable {
   transition: 0.2s ease;
 }
 
-/* margin-bottom 이 필요한 img에만 클래스로 별도 적용 */
 .img-mb-20 {
   margin-bottom: 20px;
 }
@@ -158,18 +157,7 @@ pre code {
 }
 
 .mt-5 {
-  margin-top: 2em; 
-}
-
-a {
-  display: inline-block;
-  margin-top: 40px;
-  text-decoration: none;
-  color: #1e90ff;
-}
-
-a:hover {
-  text-decoration: underline;
+  margin-top: 2em;
 }
 
 .modal {
@@ -196,12 +184,52 @@ a:hover {
     width: 100px;
     height: 100px;
     border-radius: 50%; 
-    background-color: white; 
-    border: 3px solid #70AD47; 
+    background-color: white;
+    border: 3px solid #70AD47;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     color: #70AD47;
-    margin-top: -50px; 
+    margin-top: -50px;
 }
+
+ .mainPage-card {
+     display: flex;
+     align-items: center;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     padding: 12px;
+     max-width: 500px;
+     font-family: Arial, sans-serif;
+     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .mainPage-card a {
+     text-decoration: none;
+     color: #70AD47;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+ }
+
+ .projectcode-card {
+     display: flex;
+     align-items: center;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     padding: 12px;
+     max-width: 500px;
+     font-family: Arial, sans-serif;
+     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .projectcode-card a {
+     text-decoration: none;
+     color: #70AD47;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+ }
