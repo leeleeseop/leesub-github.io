@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>interyard</title>
+  <link rel="stylesheet" href="../../../css/Project/interyard/interyard.css">
+  <link rel="stylesheet" href="indexhtml(Media  Query).css">
+</head>
+<body>
+
+  <div class="header-background">
+        <div class="profile-circle">
+            이
+        </div>
+  </div>
+
+  <!-- Introduction start-->
+  <div class="container">
+    <div class="header">
+      <h1 class="project-title">인터야드(interyard)팀 프로젝트</h1>
+      <img src="../../../image/projects/interYard/interYard사진.png"/>
+    </div>
+    
+    <div class="Introduction">
+      <h3>요약</h3>
+      <ul>
+        <li>interYard는 온라인 종합 플랫폼에서 중고장터, 댓글 개발 담당을 맡게 되었습니다.</li>
+      </ul>
+          
+      <h3>역할</h3>
+      <ul>
+        <li>프로젝트 팀 인원 7명</li>
+        <li>역할: 부PM (PM보조)</li>
+        <li>담당: 중고장터 & 댓글</li>
+      </ul>
+          
+      <h3>프로젝트 기간</h3>
+      <ul>
+        <li>프로젝트 진행 기간 (2024.7.19 ~ 2024.8.6)</li>
+      </ul>
+      
+      <h3>도구 및 기술</h3>
+      <ul>
+        <li><strong>DBMS:</strong> Oracle11g xe</li>
+        <li><strong>개발언어:</strong> JAVA(JDK17), HTML, CSS</li>
+        <li><strong>라이브러리:</strong> jQuery, Bootstrap</li>
+        <li><strong>개발도구:</strong> Oracle SQL Developer</li>
+        <li><strong>템플릿 엔진:</strong> JSP</li>
+      </ul>
+    </div>
+    
+    <hr>
+    
+    <div class="Document">
+      <h1>📄문서작업</h1>
+      <h3>요구사항 정의서</h3>
+      <img src="../../../image/projects/interYard/인터야드 요구사항 정의서1.png" class="zoomable"/>
+      <img src="../../../image/projects/interYard/인터야드 요구사항 정의서2.png" class="zoomable"/>
+      
+      <h3>테이블 정의서</h3>
+      <img src="../../../image/projects/interYard/인터야드 테이블 정의서1.png" class="zoomable"/>
+      <img src="../../../image/projects/interYard/인터야드 테이블 정의서2.png" class="zoomable"/>
+      
+      <h3>Flow Diagram</h3>
+      <p>1.중고장터</p>
+      <img src="../../../image/projects/interYard/인터야드 다이어그램1.jpg" class="zoomable"/>
+      <p>2.댓글</p>
+      <img src="../../../image/projects/interYard/인터야드 다이어그램2.jpg" class="zoomable"/>
+      
+      <h3>메뉴흐름도</h3>
+      <h4>1.중고장터</h4>
+      <img src="../../../image/projects/interYard/인터야드 메뉴흐름도1.jpg" class="zoomable"/>
+      <h4>2.댓글</h4>
+      <img src="../../../image/projects/interYard/인터야드 메뉴흐름도2.jpg" class="zoomable"/>
+    </div>
+
+    <hr>
+
+    <div class="project">
+      <h1>💻프로젝트 화면</h1>
+      <h3>1.중고장터 리스트</h3>
+      <img src="../../../image/projects/interYard/인터야드 중고장터 리스트.png" class="zoomable"/>
+      <ul>
+      <li><b>중고 상품의 리스트로 사용자들이 올린 상품을 보여주기 위해 개발했습니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>상품 이미지:</b> 중고 상품의 이미지</li>
+          <li><b>상품명:</b> 중고 상품의 이름</li>
+          <li><b>상품가격:</b> 중고 상품의 가격</li>
+          <li><b>등록일:</b> 상품이 등록된 날짜</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>입력 데이터</b></summary>
+        <ul>
+          <li><b>검색:</b> 찾고 싶은 상품명을 입력하는 기능</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>등록:</b> (WriteForm.do)</li>
+        </ul>
+      </details>
+
+      <hr>
+
+      <h3>2.중고장터 상품 상세보기</h3>
+      <img src="../../../image/projects/interYard/인터야드 중고장터 상품 상세보기.png" class="zoomable"/>
+      <ul>
+        <li><b>중고 상품의 리스트로 사용자들이 올린 상품을 보여주기 위해 개발했습니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>상품 이미지:</b> 중고 상품의 이미지</li>
+          <li><b>상품명:</b> 중고 상품의 이름</li>
+          <li><b>상품 내용:</b> 중고 상품의 대한 내용</li>
+          <li><b>가격: </b> 중고 상품의 가격</li>
+          <li><b>상품 상태:</b> 상품이 판매 중일 경우 '판매중', 판매 완료일 경우 '판매완료'</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>메시지:</b> (Message WriteForm.do)</li>
+          <li><b>수정:</b> (UsedGoods UpdateForm.do)</li>
+          <li><b>삭제:</b> (UsedGoods Delete.do)</li>
+          <li><b>리스트:</b> (UsedGoods list.do)</li>
+        </ul>
+      </details>
+        <hr>
+  
+      <h3>3.중고상품 등록</h3>
+      <img src="../../../image/projects/interYard/인터야드 중고상품 등록.png" class="zoomable"/>
+      <ul>
+        <li><b>사용자가 상품등록 에서 데이터를 입력하고 등록버튼을 클릭하면 리스트 반영 될수있도록 개발했습니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>입력 데이터</b></summary>
+        <ul>
+          <li><b>상품명:</b> 상품명을 입력할수있는 기능</li>
+          <li><b>상품내용:</b> 상품에 대한 정보를 입력할수있는 기능</li>
+          <li><b>가격:</b> 상품의 가격을 입력할수있는 기능</li>
+          <li><b>상품이미지:</b> 상품의 이미지를 업로드 할수있는 기능</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>등록:</b> (UsedGoods Write.do)</li>
+          <li><b>다시입력:</b> (UsedGoods WriteForm.do)</li>
+          <li><b>취소:</b> (UsedGoods listd.do)</li>
+        </ul>
+      </details>
+    
+      <hr>
+      
+      <h3>4.중고상품 수정</h3>
+      <img src="../../../image/projects/interYard/인터야드 중고상품 수정.png" class="zoomable"/>
+      <ul>
+        <li><b>사용자가 상품수정에서 데이터를 수정할 수 있도록 개발했습니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>상품 번호:</b> 해당 상품의 번호</li>
+          <li><b>상품명:</b> 중고 상품의 이름</li>
+          <li><b>상품 설명:</b> 상품의 상세 정보</li>
+          <li><b>가격:</b> 중고 상품의 가격</li>
+          <li><b>상품 상태:</b> 상품의 상태 (판매중, 판매완료)</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>입력 데이터</b></summary>
+        <ul>
+          <li><b>상품명:</b> 상품명을 수정할 수 있는 기능</li>
+          <li><b>상품설명:</b> 상품 설명을 수정할 수 있는 기능</li>
+          <li><b>가격:</b> 가격을 입력하여 수정하는 기능</li>
+          <li><b>상품 상태:</b> "판매중", "판매완료" 상태를 변경하는 기능</li>
+          <li><b>이미지 변경:</b> 새로운 사진으로 바꾸는 기능</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>수정:</b> (UsedGoods Update.do)</li>
+          <li><b>다시입력:</b> (UsedGoods Update.do)</li>
+          <li><b>취소:</b> (UsedGoods list.do)</li>
+        </ul>
+      </details>
+     
+      <hr>
+
+      <h3>5.중고장터 상품 삭제</h3>
+      <img src="../../../image/projects/interYard/인터야드 중고장터 상품 삭제.png" class="zoomable"/>
+      <ul>
+        <li><b>
+               상세보기에서 삭제 버튼을 클릭하면 리스트로 돌아가며 상품은 삭제되고, 
+              "상품이 삭제되었습니다"라는 문구가 표시되도록 개발했습니다.
+        </b></li>
+      </ul>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>Close:</b> (Close Modal)</li>
+        </ul>
+      </details>
+
+      <hr>
+      
+      <h3>6.중고 장터 댓글 리스트</h3>
+      <img src="../../../image/projects/interYard/인터야드 중고 장터 댓글 리스트.png" class="zoomable"/>
+      <ul>
+        <li><b>상품상세보기 밑에 댓글 리스트가 있으며 다른 사용자들의 댓글을 볼 수 있도록 개발했습니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>작성자 ID:</b> 댓글 작성자의 아이디</li>
+          <li><b>작성일:</b> 댓글이 작성된 날짜</li>
+          <li><b>댓글 내용:</b> 사용자가 남긴 댓글 내용</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>등록:</b> (reply WriteForm.do)</li>
+          <li><b>수정:</b> (reply UpdateForm.do)</li>
+          <li><b>삭제:</b> (reply Delete.do)</li>
+        </ul>
+      </details>
+
+      <hr>
+
+      <h3>7.중고장터 댓글 등록</h3>
+      <img src="../../../image/projects/interYard/인터야드 중고장터 댓글 등록.png" class="zoomable"/>
+      <ul>
+        <li><b>모달 창에서 댓글 내용을 수정할 수 있으며 수정 버튼을 클릭하면 수정 처리가 될 수 있도록 개발했습니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>출력 데이터</b></summary>
+        <ul>
+          <li><b>댓글 내용:</b> 사용자가 작성한 댓글내용</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>입력 데이터</b></summary>
+        <ul>
+          <li><b>댓글 내용:</b> 댓글 내용을 수정 할 수있는 입력 기능</li>
+        </ul>
+      </details>      
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>수정:</b> (Reply Update.do)</li>
+          <li><b>취소:</b> (Close Modal)</li>
+        </ul>
+      </details>
+
+      <hr>
+
+      <h3>8.중고장터 댓글 삭제</h3>
+      <img src="../../../image/projects/interYard/인터야드 중고장터 댓글 삭제.png" class="zoomable"/>
+      <ul>
+        <li><b>댓글 삭제 여부를 확인하는 모달 창을 통해, 삭제 버튼을 클릭하면 리스트에서 댓글이 삭제됩니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>링크</b></summary>
+        <ul>
+          <li><b>삭제:</b> (Reply Delete.do)</li>
+          <li><b>취소:</b> (Close Modal)</li>
+        </ul>
+      </details>   
+    </div>
+
+    <hr>
+
+    <div class="core-code">
+      <h1>🔑핵심코드</h1>
+      <h2>1.중고장터 리스트</h2>
+      <img src="../../../image/projects/interYard/인터야드 중고장터 리스트(핵심코드).png" class="zoomable"/>
+      <h3>usedgoods List.do Controller</h3>
+      <img src="../../../image/projects/interYard/인터야드 usedgoods List.do Controller(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li>
+          <p><b>
+            LIST는 중고 상품 리스트를 조회하는 SQL 쿼리이며, getListSQL 메서드는 페이징과 검색 조건을 
+            반영한 쿼리를 생성해 데이터를 가져옵니다. list 메서드는 데이터베이스에서 중고 상품 리스트를 
+            조회해 반환합니다.
+          </b></p>
+        </li>
+      </ul>
+      <details>
+        <summary><b>페이지 당 항목 수 설정</b></summary>
+        <ul>
+          <strong>if(strPerPageNum == null) pageObject.setPerPageNum(6);</strong>
+          <li>parPageNum이 null 이면 기본적으로 한 페이지에 6개의 항목이 표시 되도록 설정합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>리스트 데이터 가져오기</b></summary>
+        <ul>
+          <strong>result = Execute.execute(UsedGoodsInit.get(uri), pageObject);</strong>
+          <li>Execute.execute() 를 통해 중고 장터의 상품 리스트 데이터를 가져옵니다.</li>
+        </ul>
+      </details> 
+      <details>
+        <summary><b>리스트와 페이지 정보 설정</b></summary>
+        <pre>
+          <code>
+            request.<span style="color: red;">setAttribute</span>("list", result);
+            request.<span style="color: red;">setAttribute</span>("pageObject", pageObject);
+          </code>
+        </pre>
+        <ul>
+          <li>result 와 pageObejct를 request에 저장하고 JSP에 접근할 수 있도록 설정합니다.</li>
+        </ul>
+      </details>
+
+      <hr>
+
+      <h3>usedgoods List.do Controller</h3>
+      <img src="../../../image/projects/interYard/인터야드 usedgoods List DAO(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li>
+          <b>
+            LIST는 중고 상품 리스트를 조회하는 SQL 쿼리이며, getListSQL 메서드는 페이징과 검색 조건을 반영한 쿼리를 생성해 데이터를 가져옵니다. 
+            list 메서드는 데이터베이스에서 중고 상품 리스트를 조회해 반환합니다.
+          </b>
+        </li>
+      </ul> 
+      <details>
+        <summary><b>final String LIST</b></summary>
+        <ul>
+          <li>이 문자열은 중고 상품 목록을 가져오는 SQL 쿼리의 기본 형식을 정의합니다.</li>
+          <li>각 상품의 상품번호(ugno), 제목(title), 아이디(id), 가격(price), 작성일(writeDate), 이미지(image) 등의 정보를 조회하는 SQL 쿼리입니다.</li>
+          <li>from & where 절
+            <ul>
+              <li>
+                데이터를 두 개의 테이블인 usedgoods 테이블(u)과 member 테이블(m)에서 가져옵니다. 
+                usedgoods 테이블(u)에서 중고 상품 정보를 가져오고, member 테이블(m) id를 조인합니다.
+              </li>
+              <li>where 1=1 은 항상 참인 조건으로, 나중에 필요한 조건을 쉽게 추가하기 위해 사용됩니다.</li>
+            <ul>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>getListSQL</b></summary>
+        <ul>
+          <li><b>기본쿼리: LIST</b>라는 변수를 사용해 상품번호, 제목, 아이디, 가격, 작성일 이미지를 조회하는 기본 쿼리를 구성합니다.</li>
+          <li><b>검색 조건 추가 : getSearch(pageObject, false)</b> 메서드를 통해 검색 조건을 추가합니다.</li>
+          <li><b>m.id = u.id 조건 : member</b>테이블의 회원 아이디와 usedgoods 테이블의 아이디가 일치하는지를 확인하는 부분입니다.</li>
+          <li><b>order by ugno desc :</b> 상품 번호(ugno)를 기준으로 내림차순으로 정렬하여 최신 상품이 가장 먼저 나오도록 합니다.</li>
+          <li><b>rnum between ? and ? : </b> 페이징 처리를 위한 코드로, 각 페이지에서 보여줄 데이터의 시작 행과 끝 행을 지정합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>리스트 메서드</b></summary>
+        <ul>
+        <li><code><span style="color: red;">con = DB.getConnection();</span></code>: 데이터베이스에 연결을 설정합니다.</li>
+        <li><code><span style="color: red;">pstmt = con.prepareStatement(getListSQL(pageObject));</span></code>: getListSQL() 메서드를 호출해 검색 조건과 페이징이 적용된 SQL 쿼리를 생성합니다.</li>
+        <pre>
+          <code>
+            pstmt.<span style="color: red;">setLong</span>(++idx, pageObject.<span style="color: red;">getStartRow</span>());
+            pstmt.<span style="color: red;">setLong</span>(++idx, pageObject.<span style="color: red;">getEndRow</span>());
+          </code>
+        </pre>
+        <li>페이징 처리를 위해 시작 행과 끝 행을 설정하여, 특정 페이지의 데이터만 조회합니다.</li>
+        <li><code><span style="color: red;">rs = pstmt.executeQuery();</span></code>: SQL 쿼리를 실행합니다.</li>
+        <li><code><span style="color: red;">UsedGoodsVO vo = new UsedGoodsVO();</span></code>: 중고 상품의 각 행을 저장할 UsedGoodsVO 객체를 생성합니다.
+          <ul>
+            <li><code><span style="color: red;">vo.setUgno(rs.getLong("ugno"))</span></code>: 상품번호</li>
+            <li><code><span style="color: red;">vo.setTitle(rs.getString("title")</span></code>: 상품 제목</li>
+            <li><code><span style="color: red;">vo.setId(rs.getString("id"))</span></code>: 작성자 ID</li>
+            <li><code><span style="color: red;">vo.setPrice(rs.getLong("price"))</span></code>: 상품 가격</li>
+            <li><code><span style="color: red;">vo.setWriteDate(rs.getString("writeDate"))</span></code>: 상품 작성일</li>
+            <li><code><span style="color: red;">vo.setImage(rs.getString("image"))</span></code>: 상품 이미지</li>
+            <li><code><span style="color: red;">list.add(vo);</span></code>: 에 담습니다.</li>
+          </ul>
+        </li>
+        <li><code><span style="color: red;">DB.close(con, pstmt, rs);</span></code>: 데이터베이스 연결 종료</li>
+        <li><code><span style="color: red;">return list;</span></code>: 중고 상품 데이터가 담긴 리스트 반환</li>
+        </ul>
+      </details> 
+
+      <hr>
+
+      <h3>usedgoods List HTML</h3>
+      <img src="../../../image/projects/interYard/인터야드 usedgoods List HTML(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li>
+          <b>
+            위 코드는 상품 목록을 카드 형식으로 동적으로 출력하는 기능을 담당합니다. 
+            c:forEach 태그를 사용하여 서버에서 받아온 각 상품의 이미지, 제목, 가격, 등록일 등 정보를 화면에 표시합니다.
+          </b>
+        </li>
+      </ul> 
+      <details>
+        <summary><b>상품 데이터 출력</b></summary>
+        <ul>
+          <li><code><span style="color: red;">items="${list}”</span></code>는 서버에서 전달된 상품 목록을 받아 반복 처리합니다.</li>
+          <li>상품 목록에서 이미지(vo.image), 제목(vo.title), 가격(vo.price), 등록일(vo.writeDate) 등의 데이터를 화면에 동적으로 출력합니다.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>상품 카드 구성</b></summary>
+        <ul>
+          <li>각 상품은 product-item 클래스를 가진 카드 형식으로 디자인되어 있으며 상품 이미지, 제목, 가격 등을 포함하여 그리드 형식으로 화면에 표시됩니다.</li>
+          <pre><code>&lt;img class="card-img-top" src="${pageContext.request.contextPath}${vo.image}" alt="image"&gt;</code></pre>
+          <li>카드 상단에는 상품의 이미지가 img 태그로 출력됩니다.</li>
+          <li><code><span style="color: red;">${pageContext.request.contextPath}</span></code>는 이미지의 경로로 사용됩니다.</li>
+          <li>상품 제목과 가격은 card-body 내부에 표시되며, 제목은&lt;strong&gt;과 가격은&lt;h5&gt; 태그로 출력됩니다.</li>
+          <li> 
+            <pre><code>&lt;h5&gt;&lt;fmt:formatNumber value="${vo.price}" pattern="#,###"/&gt;원&lt;/h5&gt;</code></pre>
+            <ul>
+              <li>상품의 가격을 출력하는 부분입니다. fmt:formatNumber 태그를 사용하여 가격을 천 단위로 구분하여 보기 쉽게 출력합니다.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <hr>
+
+      <h2>2.중고장터 등록</h2>
+      <img src="../../../image/projects/interYard/인터야드 중고장터 등록(핵심코드).png" class="zoomable"/>
+      <h3>usedgoods writeForm.do Controller</h3>
+      <img src="../../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1.png" class="zoomable"/>
+      <ul>
+        <li><b>위 코드는 상품 등록 하기 위해 사용자가  /usedgoods/writeForm.do URL을 요청하면 해당 요청을 받아 상품 등록을 위한 폼 페이지로 이동합니다.</b></li>
+      </ul>
+      <img src="../../../image/projects/interYard/인터야드 usedgoods writeForm.do Controller(핵심코드)1-2.png" class="zoomable"/>
+      <ul>        
+        <li><b>위 코드는 사용자가 상품 등록 폼에서 제출한 데이터를 처리하여 서버에 저장하고 등록 성공 메시지를 전송한 후 리스트 페이지로 리다이렉트합니다.</b></li>
+      </ul>  
+      <details>
+        <summary><b>이미지 업로드 처리</b></summary>
+        <ul>
+          <pre>
+            <code>
+              MultipartRequest multi =<span style="color: blue;">new</span> <span style="color: red;">MultipartRequest</span>
+              (request, realSavePath, sizeLimit,<span style="color: green;">"utf-8",</span> <span style="color: blue;">new</span><span style="color: red;">DefaultFileRenamePolicy()</span>);
+            </code>
+          </pre>
+          <li><b>MultipartRequest</b>를 사용하여 이미지 파일 업로드를 처리합니다. 시용자가 업로드한 이미지를 서버의 특정 경로에 저장하면 업로드한 파일의 경로와 파일명을 가져옵니다.</li>
+          <li><b>realSavePath:</b> 실제 파일을 저장할 경로</li>
+          <li><b>sizeLimit:</b> 업로드 가능한 파일의 최대 크기</li>
+          <li><b>DefaultFileRenamePolicy:</b> 동일한 파일명이 존재할 경우 자동으로 파일명을 변경</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>일반 데이터 수집</b></summary>
+        <ul>
+          <li>multi.getParameter()를 사용하여 사용자가 폼에 입력한 (제목, 내용, 가격, 이미지 등) 데이터를 서버에서 수집합니다.</li>
+          <pre>
+            <code>
+              String title = multi.<span style="color: red;">getParameter</span>(<span style="color: green;">"title"</span>);
+              String content = multi.<span style="color: red;">getParameter</span>(<span style="color: green;">"content"</span>);
+              String image = multi.<span style="color: red;">getFilesystemName</span>(<span style="color: green;">"imageFile"</span>);
+              Long price = Long.<span style="color: red;">parseLong</span>(multi.<span style="color: red;">getParameter</span>(<span style="color: green;">"price"</span>));
+            </code>
+          </pre>
+          <li>이미지 경로는 imagePath 변수에 저장하여 DB에 저장할 때 사용합니다.
+          <ul>
+            <li>String imagePath = savePath + "/" + image;</li>
+          </ul>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>VO에 데이터 저장</b></summary>
+        <ul>
+          <li>사용자가 입력한 데이터를 UsedGoodsVO 객체에 저장합니다.</li>
+          <pre>
+            <code>
+              UsedGoodsVO vo = <span style="color: blue;">new</span> <span style="color: red;">UsedGoodsVO</span>();
+              vo.<span style="color: red;">setTitle</span>(title);
+              vo.<span style="color: red;">setContent</span>(content);
+              vo.<span style="color: red;">setId</span>(id);
+              vo.<span style="color: red;">setPrice</span>(price);
+              vo.<span style="color: red;">setImage</span>(imagePath);
+            </code>
+          </pre>
+      </details>
+      <details>
+        <summary><b>상품 등록 서비스 호출</b></summary>
+        <ul>
+          <li>Execute.execute() 메서드를 호출하여 UsedGoodsVO에 저장된 데이터를 데이터베이스에 저장합니다.
+            Execute.execute(UsedGoodsInit.get(uri), vo);
+          </li>
+      </details>
+
+      <h3>usedgoods write DAO</h3>            
+      <img src="../../../image/projects/interYard/인터야드usedgoods write DAO(핵심코드)1.png" class="zoomable"/>
+      <ul>
+        <li><b>위 코드는 중고상품 데이터를 데이터베이스에 삽입하기 위해 작성된 쿼리로 사용자가 입력한 상품 정보를 데이터베이스의 usedgoods 테블에 저장합니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>final String WRITE = “ insert into usedgoods “</b></summary>
+        <ul>
+          <li>WRITE는 SQL INSERT 문을 문자열로 정의 하는 변수이며 usedgoods 테이블에 데이터를
+              삽입하며 insert into 구문은 SQL에서 새로운 레코드를 데이터베이스에 추가합니다.
+          </li>
+        </ul>
+      </details> 
+      <details>
+        <summary><b>“( ugno, title, content, id, image, price)“</b></summary>
+        <ul>
+          <li>이 코드는 등록에서 데이터를 삽입할때 해당 컬럼들에 값을 저장합니다.</li>
+          <li><b>ugno:</b> 중고상품 번호 (Primary Key)</li>
+          <li><b>title:</b> 상품 제목</li>
+          <li><b>content:</b> 상품설명</li>
+          <li><b>id:</b> 사용자 ID</li>
+          <li><b>image:</b> 상품 이미지</li>
+          <li><b>price:</b> 상품 가격</li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>values(usedgoods_seq.nextval, ?, ?, ?, ?, ?)</b></summary>
+        <ul>
+          <li>usedgoods_seq.nextval상품번호를 자동으로 생성하는 기능을 담당합니다.</li>
+          <li>?, ?, ?, ?, ? (상품제목, 상품설명, ID, 상품이미지, 상품가격)을 입력해야 할 파라미터 개수 입니다.</li>
+        </ul>
+      </details>              
+      <img src="../../../image/projects/interYard/인터야드usedgoods write DAO(핵심코드)1-2.png" class="zoomable"/>
+      <ul>
+        <li>위 코드는 사용자가 입력한 중고 상품 정보를 데이터베이스에 등록하는 기능을 수행하고 UsedGoodsVO 에 담긴 데이터를 사용해 데이터베이스에 삽입하고 셩공 여부를 반환합니다.</li>
+      </ul>
+      <details>
+        <summary><b>public int write(UsedGoodsVO vo) throws Exception </b></summary>
+        <ul>
+          <li>이 메서드는 UsedGoodsVO 에 매개변수로 받아서 상품 데이터를 데이터베이스에 등록 합니다.</li>
+        </ul>
+      </details>             
+      <details>
+        <summary><b>pstmt.setString(1, vo.getTitle()); 등</b></summary>
+        <ul>
+          <li>vo 에서 제목, 내용, 이미지, 가격 데이터를 가져와 각각의 물음표(?)에 값을 바인딩합니다.</li>
+        </ul>
+      </details> 
+      
+      <h3>usedgoods writeForm HTML</h3>            
+      <img src="../../../image/projects/interYard/인터야드usedgoods writeForm HTML핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>위 코드는 상품명, 상품내용, 가격, 이미지 파일을 필수로 입력해야하는 코드입니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>상품명 입력</b></summary>
+        <ul><li>상품명은 입력란에 아무것도 입력되지 않았을때 “상품명을 입력해주세요” 안내가 문구가 
+              뜨며 최소 1자에서 최대 20자까지 허용되고 필수로 입력해야하는 필수 항목입니다.</li></ul>
+      </details> 
+      <details>
+        <summary><b>상품내용 입력</b></summary>
+        <ul>
+          <li>상품내용을 입력하지 않았을 경우 “상품내용을 입력해주세요” 라는 안내 문구가 나오는 
+              필수 항목이며 상품상세내용의 최대 글자 수 는 100글자 제한 과 글자수 표시로 얼마나 작성했는지 보여줍니다.</li>
+        </ul>
+      </details> 
+      <details>
+        <summary><b>가격 입력</b></summary>
+        <ul>
+          <li><b>사용자가 가격을 입력할 때 oninput="formatPrice(this)" 로 인해 천 단위 콤마를 추가하며 입력하지 않았을때는 가격을 입력하세요 라는 안내문구가 뜹니다.</b></li>
+        </ul>
+      </details>
+      <details>
+        <summary><b>이미지 첨부</b></summary>
+        <ul>
+          <li>type=”file”: 파일을 업로드 하기 위한 필드입니다.</li>
+        </ul>
+      </details>              
+      
+      <h3>usedgoods writeForm Script</h3>              
+      <img src="../../../image/projects/interYard/인터야드 usedgoods writeForm Script (핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>위 코드는 가격 입력 필드의 형식을 조정하고 댓글 입력 시 글자 수를 실시간으로 제한 및 표시 하는 JavaScript 및 jQuery 입니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>String content = request.getParameter("content");</b></summary>
+        <ul><li>사용자가 입력한 댓글 내용을 content에 저장합니다.</li></ul>
+      </details>
+      <details>
+        <summary><b>ReplyVO 생성 및 저장</b></summary>
+        <ul><li>댓글의 상품번호(Ugno), 댓글내용(Content), ID를 저장하기 위해 ReplyVO를 생성하고 vo에 담습니다.</li></ul>
+      </details>
+      <details>
+        <summary><b>리다이렉트</b></summary>
+        <ul><li>댓글등록이 완료 후 댓글번호와 페이지번호 등의 정보를 포함하여 view로 이동합니다 .</li></ul>
+      </details>   
+
+      <h3>reply Write DAO</h3>              
+      <img src="../../../image/projects/interYard/인터야드 reply Write DAO(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>이 메서드는 댓글을 데이터베이스에 등록하며 데이터베이스에 저장이되고 반환하는 역할을 합니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>SQL 데이터 세팅</b></summary>
+        <ul>
+          <pre>
+            <code>
+              pstmt = con.prepareStatement(WRITE);
+              pstmt.setLong(1, vo.getUgno());
+              pstmt.setString(2, vo.getContent());
+              pstmt.setString(3, vo.getId());
+            </code>
+          </pre>
+          <li>pstmt : SQL 쿼리를 실행할 prepareStatement 객체를 생성합니다.</li>
+          <li>pstmt.setLong(1, vo.getUgno()) : 중고상품 번호 (ugno)를 첫 번째 파라미터로 입력합니다.</li>
+          <li>pstmt.setString(2, vo.getContent()) : 댓글내용 (content)을 두 번째 파라미터로 입력합니다.</li>
+          <li>pstmt.setString(3, vo.getId()) :  작성자ID를 세 번째 파라미터로 입력합니다.</li>
+      </details>
+      <details>
+        <summary><b>SQL 실행 및 결과</b></summary>
+        <ul>
+          <pre>
+            <code>
+              result = pstmt.executeUpdate();
+              System.out.println("*** 댓글 등록이 완료 되었습니다.");
+            </code>
+          </pre>
+          <li><b>executeUpdate():</b> 댓글을 데이터베이스에 삽입하는 SQL쿼리를 실행합니다.</li>
+          <li><b>등록 완료 메시지:</b> 댓글이 성공적으로 등록되면 “ 댓글 등록이 완료 되었습니다. “라는 메시지가 출력됩니다.</li>
+      </details>
+
+      <h3>reply Write JavaScript (JSP)</h3>              
+      <img src="../../../image/projects/interYard/인터야드 reply Write JavaScript (JSP)(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li><b>이 코드는 댓글 등록을 위한 모달 창을 보여주는 기능을 처리하는 JavaScript 및 jQuery 스크립트입니다.</b></li>
+      </ul>
+      <details>
+        <summary><b>폼 필드</b></summary>
+        <ul>
+          <pre>
+            <code>
+              $("#replyForm").find(".form-group").show();
+              $("#replyForm").find(".form-group>input, .form-group>textarea").val("");
+            </code>
+          </pre>
+          <li>ReplyForm 아이디를 가진 폼에서 input 및 textarea 필드를 찾아서 모두 보이게 설정합니다.</li>
+          <li>val(””) : 입력된 값들을 초기화하여 댓글을 새로 작성할 수 있도록 이전 입력된 데이터를 모두 지웁니다.</li>
+      </details>
+
+     <h3>reply html (JSP)</h3>
+      <img src="../../../image/projects/interYard/인터야드 reply html (JSP)(핵심코드).png" class="zoomable"/>
+      <ul>
+        <li>
+          <b>위 코드는 댓글을 등록, 수정, 삭제하기 위한 모달 창을 제공하며 각 상황에 맞는 입력 필드와  버튼이 구현되었습니다.</b>
+        </li>
+      </ul>
+      <details>
+        <summary><b>댓글 입력 폼(form id="replyForm")</b></summary>
+        <ul>
+          <li><b>id="replyForm":</b> 댓글 등록, 수정, 삭제 시 데이터를 서버로 전송하는 폼 태그입니다.</li>
+          <li><b>method=”post” 와 action=”reply/write.do:</b> 댓글번호(rno)를 저장하는 숨겨진 필드입니다.</li>
+      </details>
+              
+      <details>
+        <summary><b>Modal body</b></summary>
+          <pre>
+            <code>
+              &lt;!-- Modal body --&gt;
+              &lt;div class="modal-body"&gt;
+                  &lt;div class="form-group" id="contentDiv"&gt;
+                      &lt;label for="content"&gt;댓글작성&lt;/label&gt;
+                      &lt;textarea class="form-control" rows="3" id="content" name="content"
+                          title="댓글을 입력해주세요." placeholder="댓글을 입력해주세요()."
+                          maxlength="100"&gt;&lt;/textarea&gt;
+                      &lt;div id="charCount"&gt;0/100&lt;/div&gt;
+                      &lt;div id="contentError" style="color: red; display: none;"&gt;
+                          댓글은 최대 100글자까지 입력할 수 있습니다.
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+        <ul>
+          <li><pre><code>&lt;textarea class="form-control" id="content" name="content" maxlength="100"&gt;&lt;/textarea&gt;</code></pre>
+          <ul>  
+            <li><b>댓글 작성 필드:</b> 사용자는 최대 100글자 까지 댓글을 작성하는 입력 필드입니다.</li>
+          </ul>
+            
+          <li><pre><code>&lt;div id="charCount"&gt;0/100&lt;/div&gt;</code></pre>
+          <ul>  
+            <li><b>글자 수 카운터:</b> 사용자가 댓글 입력 시 글자 수가 실시간으로 표시 해줍니다.</li>
+          </ul>
+          </li>
+
+         <li><pre><code></code>&lt;div id="contentError" style="color: red; display: none;"&gt;</code></pre>
+          <ul>  
+            <li><b>글자 수 오류 메시지:</b> 사댓글이 100글자를 초과하면 오류메시지가 표시됩니다.</li>
+          </ul>
+          </li>
+        </ul>
+      </details>              
+      </div >
+        
+      <hr>
+              
+    <div class="Error-Resolution">
+      <h1>🔧오류해결</h1>
+      <img src="../../../image/projects/interYard/인터야드 리스트에서 상세페이지 넘어갈 때 오류 1.png" class="zoomable"/ >
+      <img src="../../../image/projects/interYard/인터야드 리스트에서 상세페이지 넘어갈 때 오류 2.png" class="zoomable"/ >
+      <p><b>오류 설명:</b> 자바스크립트 변수가 ugno변수를 사용하려고 하지만 ugno가 정의되지 않아서 생긴 오류입니다.</p>
+      <p><b>오류 발생:</b> 리스트에서 상세페이지로 넘어갈때  ReferenceError가 발생했다는걸 발견했습니다.</p>
+      <img src="../../../image/projects/interYard/인터야드 리스트에서 상세페이지 넘어갈 때 오류 3.png" class="zoomable"/ > 
+      <p><b>오류해결:</b> ungo를 지우고 no로 수정하여 오류를 해결했습니다.</p>
+      
+      <hr>
+      
+      <h2>Oracle SQL 구문 오류</h2>
+      <img src="../../../image/projects/interYard/인터야드 Oracle SQL 구문 오류 1.png" class="zoomable"/ >
+      <img src="../../../image/projects/interYard/인터야드 Oracle SQL 구문 오류 2.png" class="zoomable"/ >
+      <p><b>오류 설명:</b> SQL 쿼리에서 writeDate 필드를 변환할 때 괄호 안에 적절한 변환 함수 (to_char)를 사용하지 않아 오류가 발생했습니다.</p>
+      <p><b>오류 발생:</b> 리스트 아니면 메인화면으로 들어갈때 ORA-00907: missing right parenthesis 이라는 오류가 발생했습니다.</p>
+      <img src="../../../image/projects/interYard/인터야드 Oracle SQL 구문 오류 3.png" class="zoomable"/ > 
+      <p><b>오류해결:</b> 괄호 내에 날짜 변환을 위한 함수가 필요했지만 함수 없이 괄호만 사용했기 떄문에 to_char()를 사용해 날짜를 변환하니 오류가 해결했습니다.  </p>      
+    </div>
+  </div>        
+  <!-- 모달(확대된 이미지) -->
+  <div class="modal" id="imageModal">
+    <img id="modalImg">
+  </div>
+              
+  <div class="mainPage-card">
+    <p>메인 페이지</p>
+     <a href="https://leeleeseop.github.io/leesub-blog.github.io">뒤로 돌아가기</a>
+</div>
+            
+<br>
+            
+<div class="projectcode-card">
+    <p>프로젝트 코드</p>
+     <a href="https://github.com/leeleeseop/leesub-blog.github.io/tree/main/project/interyard">전체코드 보기</a>
+</div>  
+              
+  <script src="../../../JavaScript/interyard/interyard.js"></script>
+<div style="height: 50px;"></div>
+</body>
+</html>

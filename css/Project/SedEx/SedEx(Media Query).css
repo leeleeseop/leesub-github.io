@@ -1,0 +1,54 @@
+/* SedEx 반응형 미디어 쿼리 */
+
+@media (max-width: 768px) {
+    .header-background {
+        height: 200px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+
+    .header .project-title {
+        font-size: 1.8rem;
+    }
+
+    .profile-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 0 15px;
+    }
+
+    .Introduction h3,
+    .Document h1,
+    .project h1,
+    .core-code h1,
+    .Error-Resolution h1 {
+        font-size: 1.3rem;
+    }
+
+    .mainPage-card, .projectcode-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .mainPage-card a, .projectcode-card a {
+        font-size: 1rem;
+    }
+
+    .ReviewCount {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal img {
+        max-width: 80%;
+    }
+}

@@ -1,0 +1,43 @@
+/* 
+  반응형 미디어 쿼리 @media (조건문) { 실행코드 } 
+  768px: 모바일전용
+*/
+@media (max-width:768px){
+  
+    .header {
+        height: 200px;
+    }
+
+    .page-title {
+        font-size: 24px; 
+    }
+
+    .profile-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .Study, .portfolio {
+        max-width: 95%; 
+        margin: 10px auto;
+    }
+
+    .study-category {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .project-card {
+        flex-direction: column; 
+    }
+
+    .project-card img {
+        max-width: 100%;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+  
+}

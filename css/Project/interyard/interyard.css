@@ -1,0 +1,235 @@
+/*!
+* interyard.html를 위한 css
+*/
+@charset "UTF-8";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+  max-width: 1200px;      
+  margin: 0 auto;         
+  padding: 0 20px;        
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.header-background {
+  background-color: #70AD47;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 60px;
+}
+
+.header .project-title {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.header img {
+  max-width: 630px;
+  height: auto;
+}
+
+.Document img,
+.project img,
+.core-code img,
+.Error-Resolution img {
+  max-width: 560px;  
+  width: 560px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.Introduction h3,
+.Document h1,
+.project h1,
+.core-code h1,
+.Error-Resolution h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.Introduction h3,
+.Document h3,
+.project h3,
+.core-code h2,
+.Error-Resolution h2 {
+  margin: 30px 0 10px;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.Introduction ul,
+.Document ul,
+.project ul,
+.core-code ul,
+.Error-Resolution ul {
+  margin: 0 0 1em 1.2em;
+  padding: 0;
+  list-style: disc;
+}
+
+img.zoomable {
+  cursor: zoom-in;
+  max-width: 100%; 
+  height: auto;
+  transition: 0.2s ease;
+}
+
+.img-mb-20 {
+  margin-bottom: 20px;
+}
+
+details {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+pre code {
+  background: #f4f4f4;
+  display: block;
+  padding: 10px;
+  border-left: 3px solid #0aa;
+  color: #555;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1em;
+  white-space: pre-wrap; 
+}
+
+.fa-star {
+  font-size: 1.2rem;
+  color: #ccc; 
+  margin-right: 2px;
+}
+.fa-star.checked {
+  color: #FFD700; 
+}
+
+.ReviewCount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ReviewCount .totalRiv {
+  margin: 0;
+}
+
+.totalscor {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.mt-5 {
+  margin-top: 2em;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+.profile-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    background-color: white;
+    border: 3px solid #70AD47;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #70AD47;
+    margin-top: -50px;
+}
+
+ .mainPage-card {
+     display: flex;
+     align-items: center;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     padding: 12px;
+     max-width: 500px;
+     font-family: Arial, sans-serif;
+     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .mainPage-card a {
+     text-decoration: none;
+     color: #70AD47;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+ }
+
+ .projectcode-card {
+     display: flex;
+     align-items: center;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     padding: 12px;
+     max-width: 500px;
+     font-family: Arial, sans-serif;
+     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .projectcode-card a {
+     text-decoration: none;
+     color: #70AD47;
+     font-weight: bold;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+ }
