@@ -24,6 +24,7 @@
 
 <details>
 <summary>SQL</summary>
+  
 - CRUD(Create, Read, Update, Delete) : 일반게시판, 공지사항, 메시지, 회원관리  
 - 제약조건 : primaryKey, not null, unique, foreign key, check  
 - DML : 데이터 (SELECT, INSERT, UPDATE, DELETE)  
@@ -32,6 +33,7 @@
 - JOIN : 여러 테이블 간 데이터 결합 (INNER JOIN, OUTER JOIN 등)  
 - Subqueries : 서브쿼리를 활용한 복잡한 데이터 조회 (SELECT, WHERE, FROM)  
 - Transaction : (COMMIT, ROLLBACK)
+- 
 </details>
 
 <details>
