@@ -55,6 +55,7 @@
 <details>
 <summary>JavaScript</summary>
 </details>
+
 ### Soft Skills
 
 <details>
