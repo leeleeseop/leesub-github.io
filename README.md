@@ -24,7 +24,6 @@
 
 <details>
 <summary>SQL</summary>
-
 - CRUD(Create, Read, Update, Delete) : 일반게시판, 공지사항, 메시지, 회원관리  
 - 제약조건 : primaryKey, not null, unique, foreign key, check  
 - DML : 데이터 (SELECT, INSERT, UPDATE, DELETE)  
@@ -33,21 +32,29 @@
 - JOIN : 여러 테이블 간 데이터 결합 (INNER JOIN, OUTER JOIN 등)  
 - Subqueries : 서브쿼리를 활용한 복잡한 데이터 조회 (SELECT, WHERE, FROM)  
 - Transaction : (COMMIT, ROLLBACK)
-
 </details>
 
 <details>
 <summary>Java</summary>
-
 - OOP(객체지향 프로그래밍)  
 - 예외 처리  
 - Spring MVC : `@Controller`, `@RestController`, `@RequestMapping`, `@GetMapping`, `@PostMapping`  
 - 스프링 의존성 주입 : `@Autowired`, `@Component`, `@Service`, `@Repository`  
 - Servlets  
 - JSP  
-
 </details>
 
+<details>
+<summary>HTML</summary>
+</details>
+
+<details>
+<summary>CSS</summary>
+</details>
+
+<details>
+<summary>JavaScript</summary>
+</details>
 ### Soft Skills
 
 <details>
