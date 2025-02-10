@@ -6,7 +6,7 @@ package ch07compare;
 // 변수 name과 add()를 가지고 있는 클래스
 public class Sub extends Super {
 
-	String name = "이영환";
+	String name = "이이섭";
 	
 	public void add() {
 		a ++;
