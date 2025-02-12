@@ -1,54 +1,56 @@
--- << íšŒì›ê´€ë¦¬ ìŠ¤í‚¤ë§ˆ >> --
--- 1. ê°ì²´ ì œê±°
+-- << È¸¿ø°ü¸® ½ºÅ°¸¶ >> --
+-- 1. °´Ã¼ Á¦°Å
 DROP TABLE member CASCADE CONSTRAINTS;
 DROP TABLE grade CASCADE CONSTRAINTS;
 
 
--- 2. ê°ì²´ ìƒì„±
+-- 2. °´Ã¼ »ı¼º
 create table grade(
 gradeNo number(2) primary key,
 gradeName varchar2(21) not null
 );
 
 CREATE TABLE member(
-  -- primary key(PK): not null + unique(ìœ ì¼í•œ, ì¤‘ë³µë˜ì§€ ì•ŠìŒ)(UK)
+  -- primary key(PK): not null + unique(À¯ÀÏÇÑ, Áßº¹µÇÁö ¾ÊÀ½)(UK)
   id VARCHAR2(20) PRIMARY KEY,
   pw VARCHAR2(20) NOT NULL,
   name VARCHAR2(30) NOT NULL,
-  -- varchar2 - ê°€ë³€ê¸¸ì´ ë°ì´í„°, char - ê³ ì • ê¸¸ì´ : char(6) - 'ìœ ' ->'ìœ    '
-  -- check ì œì•½ì¡°ê±´ (CK) - ë°ì´í„°ë¥¼ ì…ë ¥í•  ë•Œ ì…ë ¥ ê°€ëŠ¥í•œ ë°ì´í„° ì²´í¬í•´ì¤€ë‹¤.
-  -- not null(NN) : ë°ì´í„°ê°€ ë°˜ë“œì‹œ ì¡´ì¬í•´ì•¼ë§Œ í•œë‹¤.
-  gender CHAR(6) CHECK (gender = 'ë‚¨ì' or gender = 'ì—¬ì') NOT NULL,
+  -- varchar2 - °¡º¯±æÀÌ µ¥ÀÌÅÍ, char - °íÁ¤ ±æÀÌ : char(6) - 'À¯' ->'À¯   '
+  -- check Á¦¾àÁ¶°Ç (CK) - µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÒ ¶§ ÀÔ·Â °¡´ÉÇÑ µ¥ÀÌÅÍ Ã¼Å©ÇØÁØ´Ù.
+  -- not null(NN) : µ¥ÀÌÅÍ°¡ ¹İµå½Ã Á¸ÀçÇØ¾ß¸¸ ÇÑ´Ù.
+  gender CHAR(6) CHECK (gender = '³²ÀÚ' or gender = '¿©ÀÚ') NOT NULL,
   birth DATE NOT NULL,
   tel VARCHAR2(13),
   email VARCHAR2(50) NOT NULL,
   regDate DATE DEFAULT sysdate,
   conDate DATE DEFAULT sysdate,
-  --status CHAR(6)  DEFAULT 'ì •ìƒ' CHECK(status = 'ì •ìƒ' or status = 'ê°•í‡´' or status = 'íƒˆí‡´' or status = 'íœ´ë©´'),
-  status CHAR(6)  DEFAULT 'ì •ìƒ' CHECK(status in('ì •ìƒ', 'ê°•í‡´', 'íƒˆí‡´', 'íœ´ë©´')),
-  -- 1:ì¼ë°˜íšŒì›, 9:ê´€ë¦¬ì -> grade í…Œì´ë¸” ì°¸ì¡°
-  -- references : ì°¸ì¡°í‚¤(=ì™¸ë˜í‚¤) - Foriegn Key(FK) : ì°¸ì¡°í•˜ê³  ìˆëŠ” ë°ì´í„° + null ì‚¬ìš© ê°€ëŠ¥
-  gradeNo number(2)  DEFAULT 1 REFERENCES grade(gradeNo),
+  --status CHAR(6)  DEFAULT 'Á¤»ó' CHECK(status = 'Á¤»ó' or status = '°­Åğ' or status = 'Å»Åğ' or status = 'ÈŞ¸é'),
+  status CHAR(6)  DEFAULT 'Á¤»ó' CHECK(status in('Á¤»ó', '°­Åğ', 'Å»Åğ', 'ÈŞ¸é')),
+  -- 1:ÀÏ¹İÈ¸¿ø, 9:°ü¸®ÀÚ -> grade Å×ÀÌºí ÂüÁ¶
+  -- references : ÂüÁ¶Å°(=¿Ü·¡Å°) - Foriegn Key(FK) : ÂüÁ¶ÇÏ°í ÀÖ´Â µ¥ÀÌÅÍ + null »ç¿ë °¡´É
   newMsgCnt number default 0,
-  photo varchar2(100)
+  photo varchar2(100),
+  gradeNo number(2)  DEFAULT 1 REFERENCES grade(gradeNo) 
+  -- on DELETE CASCADE
+  -- ON DELETE SET null
 );
 
--- 3. ìƒ˜í”Œ ë°ì´í„° - ì¼ë°˜ì‚¬ìš©ì, ê´€ë¦¬ì
+-- 3. »ùÇÃ µ¥ÀÌÅÍ - ÀÏ¹İ»ç¿ëÀÚ, °ü¸®ÀÚ
 
 insert into grade
-values(1, 'ì¼ë°˜íšŒì›');
+values(1, 'ÀÏ¹İÈ¸¿ø');
 insert into grade
-values(9, 'ê´€ë¦¬ì');
+values(9, '°ü¸®ÀÚ');
 
 
--- ì¼ë°˜ì‚¬ìš©ì - íšŒì›ê°€ì…
+-- ÀÏ¹İ»ç¿ëÀÚ - È¸¿ø°¡ÀÔ
 INSERT INTO member(id, pw, name, gender, birth, tel, email)
-VALUES('test', '1111', 'í™ê¸¸ë™', 'ë‚¨ì', '1990-01-01', '010-1111-2222', 'hong@naver.com');
+VALUES('test', '1111', 'È«±æµ¿', '³²ÀÚ', '1990-01-01', '010-1111-2222', 'hong@naver.com');
 
 INSERT INTO member(id, pw, name, gender, birth, tel, email)
-VALUES('fest', '2222', 'ì½©ìˆœì´', 'ì—¬ì', '1987-01-01', '010-141-2282', 'kong@naver.com');
+VALUES('fest', '2222', 'Äá¼øÀÌ', '¿©ÀÚ', '1987-01-01', '010-141-2282', 'kong@naver.com');
 
--- ê´€ë¦¬ì - ë³„ë„ DB ì…ë ¥ - í•­ìƒ ì •ìƒ ì´ì—¬ì•¼ í•œë‹¤.
+-- °ü¸®ÀÚ - º°µµ DB ÀÔ·Â - Ç×»ó Á¤»ó ÀÌ¿©¾ß ÇÑ´Ù.
 INSERT INTO member(id, pw, name, gender, birth, tel, email, gradeNo)
-VALUES('admin', '1111', 'ê´€ë¦¬ì', 'ë‚¨ì', '1990-01-01', '010-1111-2222', 'admin@naver.com',9);
+VALUES('admin', '1111', '°ü¸®ÀÚ', '³²ÀÚ', '1990-01-01', '010-1111-2222', 'admin@naver.com',9);
 COMMIT;
