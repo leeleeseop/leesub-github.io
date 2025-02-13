@@ -50,10 +50,10 @@
 
 <details>
 <summary>HTML</summary>
-  - 기본태그: `&lt;div&gt;`, `&lt;span&gt;`, `&lt;p&gt;`, `&lt;h1&gt;` ~ `&lt;h6&gt;`, `&lt;a href="URL"&gt;`, `&lt;img src="이미지 경로"&gt;`, `&lt;button&gt;`
-  - 폼 요소: `&lt;form action="url" method="get/post"&gt;`, `&lt;textarea&gt;`, `&lt;select&gt;` & `&lt;option&gt;`
-  - 테이블 구조: `&lt;table&gt;`, `&lt;tr&gt;` `&lt;th&gt;`, `colspan`, `rowspan`
-  - 레이아웃 정렬: `&lt;div class="container"&gt;`, `&lt;div class="row"&gt;`, `class="float-right"`, `class="d-flex"`
+  - 기본태그: &lt;div&gt;, &lt;span&gt;, &lt;p&gt;, &lt;h1&gt; ~ &lt;h6&gt;, &lt;a href="URL"&gt;, &lt;img src="이미지 경로"&gt;, &lt;button&gt;
+  - 폼 요소: &lt;form action="url" method="get/post"&gt;, &lt;textarea&gt;, &lt;select&gt; & &lt;option&gt;
+  - 테이블 구조: &lt;table&gt;, &lt;tr&gt; &lt;th&gt;, colspan, rowspan
+  - 레이아웃 정렬: &lt;div class="container"&gt;, &lt;div class="row"&gt;, class="float-right", class="d-flex"
 </details>
 
 <details>
