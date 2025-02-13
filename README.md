@@ -50,7 +50,7 @@
 
 <details>
 <summary>HTML</summary>
-  - 기본태그: &lt;div&gt;, &lt;span&gt;, &lt;p&gt;, &lt;h1&gt; ~ &lt;h6&gt;,
+  - 기본태그: 'div'
 </details>
 
 <details>
