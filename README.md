@@ -56,18 +56,18 @@
 <details>
 <summary>CSS</summary>
 
-  - 기본 스타일링: margin, padding, border, display, width, height, background-color, text-align, font-size
-  - 레이아웃 & 정렬: display: flex, justify-content, align-items, gap, position: relative, absolute, float
+  - 기본 스타일링: `margin`, `padding`, `border`, `display`, `width`, `height`, `background-color`, `text-align`, `font-size`
+  - 레이아웃 & 정렬: `display: flex`, `justify-content`, `align-items`, `gap`, `position: relative`, `absolute, float`
 </details>
 
 <details>
 <summary>JavaScript</summary>
 
-  - 기본문법: let, const, function, if, for, each() 
-  - 이벤트 처리: .click(), .change(), .submit(), .on()
-  - DOM 조작: .text(), .html(), .val() .append(), .remove(), .hide(), .show(), .slideDown()
-  - AJAX & 비동기 처리: `$.ajax()`, $.getJSON(), .load()
-  - UI 인터랙션: .modal("show"), .modal("hide"), .slideDown(), .fadeIn(), .fadeOut()
+  - 기본문법: `let`,`const`, `function`, `if`, `for`, `each()` 
+  - 이벤트 처리: `.click()`, `.change()`, `.submit()`, `.on()`
+  - DOM 조작: `.text()`, `.html()`, `.val()`, `.append()`, `.remove()`, `.hide()`, `.show()`, `.slideDown()`
+  - AJAX & 비동기 처리: `$.ajax()`, `$.getJSON()`, `.load()`
+  - UI 인터랙션: `.modal("show")`, `.modal("hide")`, `.slideDown()`, `.fadeIn()`, `.fadeOut()`
 </details>
 
 ### Soft Skills
