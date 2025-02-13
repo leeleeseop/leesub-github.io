@@ -56,9 +56,8 @@
 <summary>CSS</summary>
 </details>
 
-<details>
-<summary>JavaScript</summary>
-</details>
+
+JavaScript
 
 ### Soft Skills
 
