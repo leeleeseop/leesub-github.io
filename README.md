@@ -25,13 +25,20 @@
 <details>
 <summary>SQL</summary>
   
-- CRUD(Create, Read, Update, Delete) : 일반게시판, 공지사항, 메시지, 회원관리  
-- 제약조건 : primaryKey, not null, unique, foreign key, check  
-- DML : 데이터 (SELECT, INSERT, UPDATE, DELETE)  
-- DDL : 테이블 생성/삭제 (CREATE, ALTER, DROP)  
-- DCL : 권한관리 (GRANT, REVOKE)  
-- JOIN : 여러 테이블 간 데이터 결합 (INNER JOIN, OUTER JOIN 등)  
-- Subqueries : 서브쿼리를 활용한 복잡한 데이터 조회 (SELECT, WHERE, FROM)  
+- CRUD(Create, Read, Update, Delete) : 일반게시판, 공지사항, 메시지, 회원관리
+
+- 제약조건 : primaryKey, not null, unique, foreign key, check
+
+- DML : 데이터 (SELECT, INSERT, UPDATE, DELETE)
+
+- DDL : 테이블 생성/삭제 (CREATE, ALTER, DROP)
+ 
+- DCL : 권한관리 (GRANT, REVOKE)
+
+- JOIN : 여러 테이블 간 데이터 결합 (INNER JOIN, OUTER JOIN 등)
+
+- Subqueries : 서브쿼리를 활용한 복잡한 데이터 조회 (SELECT, WHERE, FROM)
+  
 - Transaction : (COMMIT, ROLLBACK)
   
 </details>
@@ -39,11 +46,16 @@
 <details>
 <summary>Java</summary>
   
-- OOP(객체지향 프로그래밍)  
-- 예외 처리  
-- Spring MVC : `@Controller`, `@RestController`, `@RequestMapping`, `@GetMapping`, `@PostMapping`  
-- 스프링 의존성 주입 : `@Autowired`, `@Component`, `@Service`, `@Repository`  
-- Servlets  
+- OOP(객체지향 프로그래밍)
+
+- 예외 처리
+ 
+- Spring MVC : `@Controller`, `@RestController`, `@RequestMapping`, `@GetMapping`, `@PostMapping`
+
+- 스프링 의존성 주입 : `@Autowired`, `@Component`, `@Service`, `@Repository`
+
+- Servlets
+
 - JSP
   
 </details>
@@ -64,16 +76,21 @@
 <summary>CSS</summary>
 
   - 기본 스타일링: `margin`, `padding`, `border`, `display`, `width`, `height`, `background-color`, `text-align`, `font-size`
+
   - 레이아웃 & 정렬: `display: flex`, `justify-content`, `align-items`, `gap`, `position: relative`, `absolute, float`
 </details>
 
 <details>
 <summary>JavaScript</summary>
 
-  - 기본문법: `let`,`const`, `function`, `if`, `for`, `each()` 
+  - 기본문법: `let`,`const`, `function`, `if`, `for`, `each()`
+
   - 이벤트 처리: `.click()`, `.change()`, `.submit()`, `.on()`
+
   - DOM 조작: `.text()`, `.html()`, `.val()`, `.append()`, `.remove()`, `.hide()`, `.show()`, `.slideDown()`
+
   - AJAX & 비동기 처리: `$.ajax()`, `$.getJSON()`, `.load()`
+
   - UI 인터랙션: `.modal("show")`, `.modal("hide")`, `.slideDown()`, `.fadeIn()`, `.fadeOut()`
 </details>
 
@@ -82,7 +99,8 @@
 <details>
 <summary>소프트 스킬</summary>
 
-- 팀원 간 빠른 소통  
+- 팀원 간 빠른 소통
+
 - 효율적인 시간관리  
 
 </details>
@@ -92,9 +110,12 @@
 <details>
 <summary>언어</summary>
 
-- Java  
-- HTML  
-- CSS  
+- Java
+
+- HTML
+
+- CSS
+
 - JavaScript  
 
 </details>
@@ -102,10 +123,14 @@
 <details>
 <summary>IDE &amp; Tools</summary>
 
-- Eclipse  
-- STS  
-- Visual Studio Code  
-- GitHub  
+- Eclipse
+
+- STS
+
+- Visual Studio Code
+  
+- GitHub
+
 - ERwin  
 
 </details>
@@ -121,8 +146,10 @@
 <details>
 <summary>Libraries</summary>
 
-- Lombok  
-- jQuery  
+- Lombok
+
+- jQuery
+
 - MyBatis  
 
 </details>
