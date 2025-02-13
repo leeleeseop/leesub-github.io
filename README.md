@@ -50,6 +50,7 @@
 
 <details>
 <summary>HTML</summary>
+  
   - 기본태그: &lt;div&gt;, &lt;span&gt;, &lt;p&gt;, &lt;h1&gt; ~ &lt;h6&gt;, &lt;a href="URL"&gt;, &lt;img src="이미지 경로"&gt;, &lt;button&gt;
   
   - 폼 요소: &lt;form action="url" method="get/post"&gt;, &lt;textarea&gt;, &lt;select&gt; & &lt;option&gt;
