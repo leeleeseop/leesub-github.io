@@ -66,7 +66,7 @@
   - 기본문법: let, const, function, if, for, each() 
   - 이벤트 처리: .click(), .change(), .submit(), .on()
   - DOM 조작: .text(), .html(), .val() .append(), .remove(), .hide(), .show(), .slideDown()
-  - AJAX & 비동기 처리: &lt;$.ajax()&gt;, $.getJSON(), .load()
+  - AJAX & 비동기 처리: <pre>$.ajax()</pre>, $.getJSON(), .load()
   - UI 인터랙션: .modal("show"), .modal("hide"), .slideDown(), .fadeIn(), .fadeOut()
 </details>
 
