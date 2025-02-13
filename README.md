@@ -50,7 +50,7 @@
 
 <details>
 <summary>HTML</summary>
-  - 기본태그: &lt;div&gt;, <span>, <p>, <h1> ~ <h6>, <a href="URL">, <img src="이미지 경로"> <button>
+  - 기본태그: &lt;div&gt;, &lt;span&gt;, &lt;p&gt;, &lt;h1&gt; ~ &lt;h6&gt;,
 </details>
 
 <details>
