@@ -57,16 +57,39 @@ html, body {
 }
 
 /* 메인 컨텐츠 */
-.Study, .portfolio {
-    margin: 5% auto; /* 반응형: 중앙 정렬 */
-    max-width: 80%; /* 반응형: 화면 크기에 맞춤 */
+.portfolio {
+    margin: 5% auto; 
+    max-width: 80%; 
 }
 
-.Study img{
-    width: 100%; 
-    max-width: 50px; 
-    height: auto;
-    border-bottom: 1px solid #ddd;
+.study-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+}
+
+.study-category {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+.study-category img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.study-category a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.study-category a:hover {
+    color: blue;
 }
 
 .category-item {
