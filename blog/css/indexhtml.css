@@ -62,12 +62,11 @@ html, body {
     max-width: 80%; /* 반응형: 화면 크기에 맞춤 */
 }
 
-.study-category {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 0;
-    margin-top: 20px;
+.Study img{
+    width: 100%; 
+    max-width: 50px; 
+    height: auto;
+    border-bottom: 1px solid #ddd;
 }
 
 .category-item {
@@ -81,7 +80,7 @@ html, body {
 
 .project-card {
     display: flex;
-    flex-wrap: wrap; /* 반응형: 줄바꿈 허용 */
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
@@ -90,8 +89,8 @@ html, body {
 }
 
 .project-card img {
-    width: 100%; /* 반응형: 부모 요소에 맞춤 */
-    max-width: 300px; /* 최대 크기 설정 */
+    width: 100%; 
+    max-width: 300px; 
     height: auto;
     border-bottom: 1px solid #ddd;
 }
