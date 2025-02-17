@@ -46,8 +46,6 @@
 <details>
 <summary>Java</summary>
   
-- OOP(객체지향 프로그래밍)
-
 - 예외 처리
  
 - Spring MVC : `@Controller`, `@RestController`, `@RequestMapping`, `@GetMapping`, `@PostMapping`
