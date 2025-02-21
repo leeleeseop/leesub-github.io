@@ -73,7 +73,7 @@
 
 - Eclipse
 
-- STS
+- STS3
 
 - Visual Studio Code
   
