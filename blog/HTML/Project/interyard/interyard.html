@@ -8,13 +8,7 @@
   <link rel="stylesheet" href="indexhtml(Media  Query).css">
 </head>
 <body>
-
-  <div class="header-background">
-        <div class="profile-circle">
-            이
-        </div>
-  </div>
-
+  
   <!-- Introduction start-->
   <div class="container">
     <div class="header">
@@ -53,7 +47,8 @@
     <hr>
     
     <div class="Document">
-      <h1>📄문서작업</h1>
+      <details>
+       <summary class="summary-heading">📄문서작업</summary>
       <h3>요구사항 정의서</h3>
       <img src="../../../image/projects/interYard/인터야드 요구사항 정의서1.png" class="zoomable"/>
       <img src="../../../image/projects/interYard/인터야드 요구사항 정의서2.png" class="zoomable"/>
@@ -73,12 +68,14 @@
       <img src="../../../image/projects/interYard/인터야드 메뉴흐름도1.jpg" class="zoomable"/>
       <h4>2.댓글</h4>
       <img src="../../../image/projects/interYard/인터야드 메뉴흐름도2.jpg" class="zoomable"/>
+    </details>
     </div>
 
     <hr>
 
     <div class="project">
-      <h1>💻프로젝트 화면</h1>
+      <details>
+       <summary class="summary-heading">💻프로젝트 화면</summary>
       <h3>1.중고장터 리스트</h3>
       <img src="../../../image/projects/interYard/인터야드 중고장터 리스트.png" class="zoomable"/>
       <ul>
@@ -295,13 +292,15 @@
           <li><b>삭제:</b> (Reply Delete.do)</li>
           <li><b>취소:</b> (Close Modal)</li>
         </ul>
-      </details>   
+      </details>
+    </details>
     </div>
 
     <hr>
 
     <div class="core-code">
-      <h1>🔑핵심코드</h1>
+      <details>
+      <summary class="summary-heading">🔑핵심코드</summary>
       <h2>1.중고장터 리스트</h2>
       <img src="../../../image/projects/interYard/인터야드 중고장터 리스트(핵심코드).png" class="zoomable"/>
       <h3>usedgoods List.do Controller</h3>
@@ -715,13 +714,15 @@
           </ul>
           </li>
         </ul>
-      </details>              
+      </details> 
+      </details>
       </div >
         
       <hr>
               
     <div class="Error-Resolution">
-      <h1>🔧오류해결</h1>
+      <details>
+      <summary class="summary-heading">🔧오류해결</summary>
       <img src="../../../image/projects/interYard/인터야드 리스트에서 상세페이지 넘어갈 때 오류 1.png" class="zoomable"/ >
       <img src="../../../image/projects/interYard/인터야드 리스트에서 상세페이지 넘어갈 때 오류 2.png" class="zoomable"/ >
       <p><b>오류 설명:</b> 자바스크립트 변수가 ugno변수를 사용하려고 하지만 ugno가 정의되지 않아서 생긴 오류입니다.</p>
@@ -739,6 +740,7 @@
       <img src="../../../image/projects/interYard/인터야드 Oracle SQL 구문 오류 3.png" class="zoomable"/ > 
       <p><b>오류해결:</b> 괄호 내에 날짜 변환을 위한 함수가 필요했지만 함수 없이 괄호만 사용했기 떄문에 to_char()를 사용해 날짜를 변환하니 오류가 해결했습니다.  </p>      
     </div>
+    </details>
   </div>        
   <!-- 모달(확대된 이미지) -->
   <div class="modal" id="imageModal">
