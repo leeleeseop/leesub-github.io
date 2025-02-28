@@ -115,6 +115,7 @@ html, body {
 
 .card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 8px;
