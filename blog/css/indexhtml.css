@@ -22,6 +22,7 @@ html, body {
 .container {
     text-align: center; 
     margin-top: -100px; 
+    color: #FFFFFF; 
 }
 
 .page-title {
@@ -34,6 +35,7 @@ html, body {
     font-size: 16px;
     color: #FFFFFF; 
     margin-top: 30px;
+    text-align: center; 
 }
 
 .profile-circle {
