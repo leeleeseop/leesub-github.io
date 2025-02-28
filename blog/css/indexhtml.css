@@ -63,6 +63,7 @@ html, body {
 .Study, .portfolio {
     margin: 5% auto; 
     max-width: 80%;
+    text-align: center; 
 }
 
 .study-category {
@@ -86,6 +87,7 @@ html, body {
     display: flex;
     flex-wrap: wrap; 
     gap: 20px;
+    place-items: center;
 }
 
 .project-card a {
