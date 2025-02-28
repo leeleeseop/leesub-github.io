@@ -65,6 +65,12 @@ hr {
   margin-bottom: 20px;
 }
 
+.summary-heading {
+  font-size: 1.5em;  
+  font-weight: bold;
+  margin: 0;        
+}
+
 .Introduction h3,
 .Document h1,
 .project h1,
