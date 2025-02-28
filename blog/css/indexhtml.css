@@ -21,7 +21,7 @@ html, body {
 
 .container {
     text-align: center; 
-    margin-top: -50px; 
+    margin-top: -100px; 
 }
 
 .page-title {
@@ -58,8 +58,8 @@ html, body {
 
 /* 메인 컨텐츠 */
 .Study, .portfolio {
-    margin: 5% auto; /* 반응형: 중앙 정렬 */
-    max-width: 80%; /* 반응형: 화면 크기에 맞춤 */
+    margin: 5% auto; 
+    max-width: 80%;
 }
 
 .study-category {
@@ -81,7 +81,7 @@ html, body {
 
 .project-card {
     display: flex;
-    flex-wrap: wrap; /* 반응형: 줄바꿈 허용 */
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
@@ -90,8 +90,8 @@ html, body {
 }
 
 .project-card img {
-    width: 100%; /* 반응형: 부모 요소에 맞춤 */
-    max-width: 300px; /* 최대 크기 설정 */
+    width: 100%; 
+    max-width: 300px;
     height: auto;
     border-bottom: 1px solid #ddd;
 }
