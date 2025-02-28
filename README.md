@@ -113,7 +113,7 @@
 
 ## Projects
 
-### 세덱스(SedEx) 팀 프로젝트
+### 세덱스(SedEx) 
 스포츠 용품 쇼핑 서비스  
 
 <a href="https://leeleeseop.github.io/leesub-github.io/blog/HTML/Project/SedEex/SedEex.html">
@@ -122,7 +122,7 @@
 
 ---
 
-### 인터야드(interYard) 팀 프로젝트
+### 인터야드(interYard) 
 온라인 종합 플랫폼  
 
 <a href="https://leeleeseop.github.io/leesub-github.io/blog/HTML/Project/interyard/interyard.html">
@@ -131,7 +131,7 @@
 
 ---
 
-### 비트마켓(Beetmarket) 팀 프로젝트
+### 비트마켓(Beetmarket) 
 온라인 쇼핑 플랫폼  
 
 <a href="https://leeleeseop.github.io/leesub-github.io/blog/HTML/Project/Beetmarket/Beetmarket.html">
