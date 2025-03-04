@@ -120,7 +120,7 @@ html, body {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 12px;
-    max-width: 300px;
+    max-width: 260px;
     font-family: Arial, sans-serif;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -147,6 +147,6 @@ html, body {
     top: 50%;    
     left: 70%;   
     transform: translate(-50%, -50%); /* 이미지 중앙을 기준점으로 잡아주기 */
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
 }
