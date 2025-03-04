@@ -2,7 +2,7 @@ package com.memorit.util.login;
 
 import javax.servlet.http.HttpSession;
 
-import com.beetmarket.member.vo.LoginVO;
+import com.memorit.member.vo.LoginVO;
 
 public class LoginUtil {
 	/**
