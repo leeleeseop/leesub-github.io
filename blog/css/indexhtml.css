@@ -145,7 +145,7 @@ html, body {
 .card img{
     position: absolute; 
     top: 50%;    
-    left: 85%;   
+    left: 80%;   
     transform: translate(-50%, -50%); /* 이미지 중앙을 기준점으로 잡아주기 */
     width: 65px;
     height: 65px;
