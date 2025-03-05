@@ -82,10 +82,16 @@
 </details>
 
 <details>
-<summary>DB</summary>
+<summary>DBMS</summary>
 
-- Oracle  
-  - PL/SQL  
+- Oracle   
+
+</details>
+
+<details>
+<summary>SQL</summary>
+
+- PL/SQL  
 
 </details>
 
