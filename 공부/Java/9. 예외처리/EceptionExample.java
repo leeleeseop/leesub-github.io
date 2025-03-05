@@ -1,4 +1,4 @@
-package ch11exception;
+package ch09exception;
 
 public class EceptionExample {
 
