@@ -5,7 +5,13 @@ package test;
 public class ScoreTest {
 
 	public static void main(String[] args) {
+
+		// 정수형 변수 score를 선언하고 70으로 초기화
 		int score = 70;
+
+		// if-else를 사용하여 score가 60 이상인지 확인
+		// 60이상이면 "합격" 출력
+		// 그렇지 않으면 "불합격" 출력
 		if(score >= 60) System.out.println("합격");
 		else System.out.println("불합격");
 	}
