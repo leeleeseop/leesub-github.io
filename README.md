@@ -71,9 +71,7 @@
 <details>
 <summary>IDE &amp; Tools</summary>
 
-- Eclipse
-
-- STS3
+- Eclipse(STS3포함)
 
 - Visual Studio Code
   
