@@ -1,9 +1,8 @@
 package ch02var;
 
 public class LongExample {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		// 10 -> int 리터럴로 선언 -> long 타입 변수에 저장
 		//  : 타입이 서로 틀린 곳에 데이터는 전달하는 것을 캐스팅이라고 한다.
 		//  : 작(int) -> 큰(long) - 데이터 손실이 일어나지 않음. 자동캐스팅
@@ -21,5 +20,4 @@ public class LongExample {
 		System.out.println(var2);
 		System.out.println(var4);
 	}
-
 }
