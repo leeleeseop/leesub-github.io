@@ -11,12 +11,15 @@ public class ScannerExample {
 	public static void main(String[] args) {
 		// 데이터를 입력 받을 때 사용하는 객체(참조형) 변수 선언 + 생성해서 초기화
 		Scanner scanner = new Scanner(System.in);
-		
+
+		// int타입의 x값 입력 출력 후 입력받은 문자열을 strX에 저장
 		System.out.print("int 타입의 x 값 입력 : ");
 		String strX =  scanner.nextLine();
-		
+
+		// 입력받은 문자열을 정수로 변환하여 x에 저
 		int x = Integer.parseInt(strX);
-		
+
+		// 변환된 정수를 콘솔에 출력
 		System.out.println("입력한 int 숫자 : " + x);
 		
 		// ~( 조건을 만족하면 : true) 하는 동안 ( 실행해라 )
