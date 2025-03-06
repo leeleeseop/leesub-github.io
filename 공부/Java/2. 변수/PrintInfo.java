@@ -18,7 +18,8 @@ public class PrintInfo {
 		String phoneNumber = "010-1234-1234";
 		String admissionDate = "2024-04-11";
 		int age = 2024 - year;
-		
+
+		// 각 변수의 값을 콘솔에 출력
 		System.out.println("학번 : " + studentID);
 		System.out.println("이름 : " + name);
 		System.out.println("생년 : " + year);
