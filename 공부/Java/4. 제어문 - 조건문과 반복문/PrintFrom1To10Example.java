@@ -3,23 +3,23 @@ package ch04condition;
 public class PrintFrom1To10Example {
 
 	public static void main(String[] args) {
-		// 1 부터 10까지 출력하세요.
-		// 규칙은 + 1 ; 1 - 초기값, 10- 크면 멈춘다.
-		// for(초기 값; 반복 조건; 증감) 한개 처리;
-		// for( 1 ; 2 ; 4) 3
-		// i = 1, 2, 3, ... 9, 10, 11
-		// i++; -> i = i + 1, i += 1
+		
+		// 첫 번째 for반복문 1부터 10까지 숫자를 순차적으로 출력
+		// i=1: 1를 초기값
+		// i<=10: 10까지 출력하기 위한 조건
+		// i++: 1씩 증가
 		for(int i = 1; i <= 10; i++) System.out.println(i);
+		
 		// 홀수 출력 : 1 ~ 10 사이의 데이터 : 1 3 5 7 9 -> 초기값 :1, 증감 : +2
 		// 홀수 계산 if (i % 2 != 0)
 		for(int i = 1; i <= 10; i = i + 2) System.out.println(i);
+		
 		// 짝수 출력 : 2 ~ 10 사이의 데이터 : 2 4 6 8 10 -> 초기값 : 2, 증감 : +2
 		for(int i = 2; i <= 10; i = i + 2) System.out.println(i);
 		
 		// i++, ++i - 단독으로 사용되면 i = i + 1
 		
 		int num = 1;
-		
 		System.out.println(num++); // 1
 		System.out.println(num); // num = 2
 		
