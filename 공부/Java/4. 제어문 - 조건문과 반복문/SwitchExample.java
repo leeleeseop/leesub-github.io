@@ -6,10 +6,8 @@ public class SwitchExample {
 		
 		// 주사위를 던졌다. 1~6 중에 하나의 숫자가 랜덤으로 나타나게 된다.
 		// 0.0 * 6 - 0, 0.9 * 6 - 5.4 : 5 : 0~5 + 1 -> 1~6
-		// java - Math.random / Random
-		// System.out.println(Math.random());
 		System.out.println(((int)(Math.random()*6)) + 1);
-		
+                // 위와 동일한 방식으로 생성된 숫자를 변수 num에 저장
 		int num = ((int)(Math.random()*6)) + 1;
 		
 		// 조건 문에 의해서 처리해 보자. == 비교 : if / switch
