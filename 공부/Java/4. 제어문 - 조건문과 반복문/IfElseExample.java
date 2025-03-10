@@ -1,7 +1,6 @@
 package ch04;
 
 public class IfElseExample {
-
 	public static void main(String[] args) {
 
 		//변수 score를 85로 초기화
