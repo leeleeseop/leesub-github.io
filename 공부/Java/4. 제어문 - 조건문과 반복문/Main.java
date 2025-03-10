@@ -13,22 +13,23 @@ public class Main {
 		whileLoop:
 		while (true) {
 			// 메뉴 출력 - 메뉴 - 1. 게시판 2. 공지사항 3. 상품 4. 로그인 0. 종료
+			// 콘솔에 해당 번호를 입력하면 실행
 			System.out.println("1. 게시판  2. 공지사항  3. 상품");
 			System.out.println("4. 로그인  0. 종료");
 			// 메뉴 입력
 			String menu = scanner.nextLine();
 			// 입력한 내용을 처리
 			switch (menu) {
-			case "1":
+			case "1": // "1" 입력시 게시판 처리 
 				System.out.println("게시판을 처리하였습니다.");
 				break;
-			case "2":
+			case "2": // "2" 입력시 게시판 처리
 				System.out.println("공지사항을 처리하였습니다.");
 				break;
-			case "3":
+			case "3": // "3" 입력시 게시판 처리
 				System.out.println("상품을 처리하였습니다.");
 				break;
-			case "4":
+			case "4": // "4" 입력시 게시판 처리
 				System.out.println("로그인을 처리하였습니다.");
 				break;
 			case "0": // 프로그램 종료
