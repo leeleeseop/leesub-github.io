@@ -128,7 +128,7 @@
 온라인 종합 플랫폼  
 
 <a href="https://leeleeseop.github.io/leesub-github.io/blog/HTML/Project/interyard/interyard.html">
-  <img src="blog/image/projects/beetmarket/beetmarket사진.png" alt="interYard 프로젝트" width="560">
+   <img src="blog/image/projects/interYard/interYard사진.png" alt="beetmarket 프로젝트" width="560">
 </a>
 
 ---
@@ -137,7 +137,7 @@
 온라인 쇼핑 플랫폼  
 
 <a href="https://leeleeseop.github.io/leesub-github.io/blog/HTML/Project/Beetmarket/Beetmarket.html">
-  <img src="blog/image/projects/interYard/interYard사진.png" alt="beetmarket 프로젝트" width="560">
+  <img src="blog/image/projects/beetmarket/beetmarket사진.png" alt="interYard 프로젝트" width="560">
 </a>
 
 ---
