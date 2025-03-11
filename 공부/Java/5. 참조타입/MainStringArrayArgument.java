@@ -5,7 +5,11 @@ import java.util.Arrays;
 public class MainStringArrayArgument {
 
 	public static void main(String[] args) {
+
+		// args의 내용을 콘솔에 출력
 		System.out.println(Arrays.toString(args));
+
+		// argumet의 개수가 2개가 아니면 "프로그램 입력 값이 부족" 추력
 		if(args.length != 2) {
 			System.out.println("프로그램 입력 값이 부족");
 			// 프로그램 종료
