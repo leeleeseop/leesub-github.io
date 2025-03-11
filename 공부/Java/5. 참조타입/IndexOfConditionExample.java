@@ -3,6 +3,7 @@ package ch05ref;
 public class IndexOfConditionExample {
 
 	public static void main(String[] args) {
+		
 		String subject = "자바 프로그래밍 자바 프로그래밍 자바 프로그래밍";
 		
 		// indexOf(찾는글자) -> 앞에서 인덱스 정보를 저장한다. 없으면 -1이 된다.
