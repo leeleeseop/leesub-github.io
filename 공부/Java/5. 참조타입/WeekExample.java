@@ -5,23 +5,27 @@ import java.util.Calendar;
 public class WeekExample {
 
 	public static void main(String[] args) {
+		
 		// Week enum 안에 요일 변수들을 사용해야한다.
 		System.out.println(Week.MONDAY);
 		// 오늘의 요일을 구하자.
 		Week today = null;
-		
+
+		// 요일 이름을 저장하는 문자열 배열을 선언
 		String[] weekName = {"","일요일","월요일","화요일","수요일","목요일","금요일","토요일",};
 		
 		// 오늘 날짜와 시간 정보 객체 만들기 - Date, Calendar
 		Calendar cal = Calendar.getInstance();
 		System.out.println(cal);
+		
 		// 요일 정보를 꺼내 보자.
 		System.out.println("요일 정보의 위치 : " + Calendar.DAY_OF_WEEK);
 		int week = cal.get(Calendar.DAY_OF_WEEK);
+		
 		// 1 - 일, ... 5 - 목
 		System.out.println("요일 정보 : " + week);
 		
-		// today setting 하기
+		// switch문을 사용하여 week의 값에 따라 Calendar.DAY_OF_WEEK로부터 얻어음
 		switch (week) {
 		case 1: // 일요일
 			// today = "SUNDAY";
