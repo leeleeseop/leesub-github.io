@@ -3,9 +3,11 @@ package ch06class;
 public class NoticeExample {
 
 	public static void main(String[] args) {
+		
 		// 공지사항 데이터
 		// 번호 -101, 제목 - "데이터베이스 구현 평가", 작성일 - "2024.04.23"
 		NoticeVO vo = new NoticeVO();
+		
 		// 데이터 저장 - setter 사용
 		vo.setNo(101);
 		vo.setTitle("데이터베이스 구현 평가");
