@@ -4,9 +4,9 @@ package ch06class;
 public class NoticeVO {
 
 	// private 변수 선언.
-	private long no;
-	private String title;
-	private String writeDate;
+	private long no; // 공지사항 번호
+	private String title; // 공지사항 제목
+	private String writeDate; // 공지사항 작성일
 
 	// getter & setter
 	public long getNo() {
