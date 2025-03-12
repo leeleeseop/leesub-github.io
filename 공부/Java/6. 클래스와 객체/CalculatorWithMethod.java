@@ -6,20 +6,21 @@ public class CalculatorWithMethod {
 		
 		// result
 		// var1, var2 - 값을 가지고 5칙 연산 처리
-		// 값을 세팅
+		
+		// var1과 var2 선언 10과 3으로 초기화
 		int var1 = 10;
 		int var2 = 3;
 		
 		// 메서드의 호출 사용
-		add(var1, var2);
+		add(var1, var2); //덧셈
 		
-		minus(var1, var2);
+		minus(var1, var2); //뺄셈
 		
-		multi(var1, var2);
+		multi(var1, var2); //곱셈
 		
-		divide(var1, var2);
+		divide(var1, var2); //나눗셈
 		
-		remain(var1, var2);
+		remain(var1, var2); //나머지 연산
 		
 		// 더해라.
 		add(var1, var2);
