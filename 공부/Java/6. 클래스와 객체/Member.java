@@ -12,9 +12,9 @@ public class Member {
 	// sataic 변수 - 자동으로 올라간다. Member.className 로 사용
 	static String className;
 	// non-static 변수 - new 해서 올리다. Member m1 = new Member(); m1.id;
-	String id; // 기본 값 - null
-	String name; // 기본 값 - null
-	int age; // 기본 값 - 0
+	String id; // 회원 아이디 (기본 값 - null)
+	String name; // 회원 이름 (기본 값 - null)
+	int age; // 회원 나이 (기본 값 - null)
 	
 	// new Member();
 	// - 모든 클래스는 생성자를 만들지 않으면 컴파일할 때 자동으로 기본 생성자 - 클래스이름()를 만든다.
@@ -53,6 +53,4 @@ public class Member {
 	
 	// this - 자기 자신 객체, this.id -> 자기가 가지고 있는 id
 	// super - 부모의 객체
-	
-	
 }
