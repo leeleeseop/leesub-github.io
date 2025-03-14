@@ -8,8 +8,9 @@ public class Sub extends Super{
 	}
 	
 	// 상속 받은 final 메서드는 똑같은 형태로 정의(재정-override)할 수 없다.
-//	public void print() {
-//		
-//	}
+	// 아래와 같이 Super 클래스에서 final로 선언된 print() 메서드를 재정의할 수 없습니다.
+	// public void print() {
+		
+	// }
 	
 }
