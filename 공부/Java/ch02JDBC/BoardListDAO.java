@@ -55,16 +55,16 @@ public class BoardLisDAO {
 				//다음 데이터가 없으면 false를 리턴해 준다 while문 빠져나감 
 				System.out.println("번호/ 제목 / 작성자 / 작성일 / 조회수");
 				while(rs.next()) {
+					// 각 컬럼의 값을 출력
 					System.out.print(rs.getLong("no"));
-				System.out.print(" / " + rs.getString("title"));
-				System.out.print(" / " + rs.getString("writer"));
-				System.out.print(" / " + rs.getString("writeDate"));
-				System.out.println(" / " + rs.getLong("hit"));	
-				}// end of wrile
+					System.out.print(" / " + rs.getString("title"));
+					System.out.print(" / " + rs.getString("writer"));
+					System.out.print(" / " + rs.getString("writeDate"));
+					System.out.println(" / " + rs.getLong("hit"));	
+				}// end of wrile	
+		}//end of if	
+		System.out.println("6. 데이터 표시 성공");
 			
-		}//end of if
-			
-			System.out.println("6. 데이터 표시 성공");
 		} catch(ClassNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("1. 드라이버 확인 실패");
