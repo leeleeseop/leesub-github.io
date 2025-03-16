@@ -15,7 +15,8 @@ public class Execute {
 		
 		// 처리된 결과를 저장하는 변수 -> 리턴한다.
 		Object result = null;
-		
+
+		// 실행 로그 출력
 		System.out.println();
 		System.out.println("<<<----- 실행 로그 출력 ------>>");
 		System.out.println("-------------------------------------------------------");
