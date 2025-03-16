@@ -11,7 +11,6 @@ public class BoardViewDAO {
 		
 		// 필요한 객체 선언
 		// 오라클 접속 정보 - 드라이버, 서버URL, 아이디, 비밀번호,
-		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -20,22 +19,18 @@ public class BoardViewDAO {
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String id = "java";
 		String pw = "java";
-		
-		//데이터 정보
-		
+
+		// 조회할 게시글 번호
 		long no = 4;
 		try {
-			
-			
+		
 			//1. 드라이버 확인
 			Class.forName(driver);
 			System.out.println("1. 드라이버 확인");
 			
-			
 			//2. 연결
 			con = DriverManager.getConnection(url, id, pw);
 			System.out.println("2. 연결 성공");
-			
 			
 			//3. sql
 			String sql = "select no, title, content, writer, writeDate, hit"
@@ -43,12 +38,10 @@ public class BoardViewDAO {
 					+ " where no = ?";
 			System.out.println("sql - " + sql);
 			
-			
 			//4. 실행객체
 			pstmt = con.prepareStatement(sql);
 			pstmt.setLong(1, no);
 			System.out.println("4. 실행객체 생성완료");
-			
 			
 			//5. 실행
 			rs = pstmt.executeQuery();
@@ -65,14 +58,11 @@ public class BoardViewDAO {
 				
 			}
 			
-			
-			
 		}catch(Exception e) {
 			e.printStackTrace();
 		
 		} finally {
 			try {
-				
 				//7.닫기
 				if(con != null) con.close();
 				if(pstmt != null) pstmt.close();
@@ -80,8 +70,7 @@ public class BoardViewDAO {
 				System.out.println("7. 닫기 성공");
 			} catch (Exception e) {
 				e.printStackTrace();
-		}
-			
+		}	
 		}
 
 	}// end of main()
