@@ -3,12 +3,19 @@ package com.webjjang.board.vo;
 public class BoardVO {
 
 	//private 변수
+	// 글번호
 	private Long no;
+	// 제목
 	private String title;
+	// 내용
 	private String content;	
+	// 작성자
 	private String writer;
+	// 작성일
 	private String writeDate;
+	// 조회수
 	private Long hit;
+	// 비밀번호
 	private String pw;
 	
 	//setter, getter
