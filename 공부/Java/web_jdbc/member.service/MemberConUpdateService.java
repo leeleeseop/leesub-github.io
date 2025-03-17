@@ -10,7 +10,8 @@ public class MemberConUpdateService implements Service {
 
 	@Override
 	public Integer service(Object obj) throws Exception {
-		
+
+	// obj는 회원 아이디 String으로 캐스팅
         return new MemberDAO().updateConDate((String)obj);
 	}
 }
