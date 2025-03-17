@@ -6,6 +6,7 @@ import com.webjjang.board.dao.BoardDAO;
 import com.webjjang.board.vo.BoardVO;
 import com.webjjang.main.service.Service;
 
+// BoardUpdateService 클래스 게시글 수정 처리
 public class BoardUpdateService implements Service {
 
 	@Override
