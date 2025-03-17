@@ -3,9 +3,13 @@ package com.webjjang.board.vo;
 public class BoardIncreaseVO {
 
     // private variables
+
+    // 글번호
     private Long no;
+    // 조회수
     private Long hit;
 
+    
     // setter, getter
     public Long getNo() {
         return no;
