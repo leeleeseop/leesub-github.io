@@ -79,7 +79,8 @@ public class BoardController {
 				case "4":
 					System.out.println("4.일반게시판 글수정");
 					// 수정할 글번호를 받는다. - 데이터 수집
-					no = In.getLong("글번호");										// 수정할 데이터 가져오기 - 글보기 - BoardViewService
+					// 수정할 데이터 가져오기 - 글보기 - BoardViewService
+					no = In.getLong("글번호");										
 					BoardVO updateVO = (BoardVO) Execute.execute(new BoardViewService(),
 							new Long[] {no,0L});
 					// 가져온 데이터 수정하기 - 데이터 수집 
