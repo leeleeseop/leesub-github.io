@@ -11,7 +11,8 @@ public class Main {
 	//longin 변수 안에 데이터 있으면 (null이 아니면) 로그린 한 상태
 	//longin 변수 안에 데이터 없으면 (null이면) 로그린 안한 상태
 	public static LoginVO login = null;
-	
+
+	// 로그인 상태에 따라 로그인 정보를 출력력
 	public static void loginInto() {
 		System.out.println();
 		System.out.println("<<<--- Longin Infromation --->>>");
