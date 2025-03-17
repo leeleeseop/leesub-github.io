@@ -6,6 +6,7 @@ import com.webjjang.board.dao.BoardDAO;
 import com.webjjang.board.vo.BoardVO;
 import com.webjjang.main.service.Service;
 
+// BoardListService는 게시판의 리스트 데이터를 조회하는 서비스
 public class BoardListService implements Service {
 
 	@Override
