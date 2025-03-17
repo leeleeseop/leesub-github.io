@@ -4,6 +4,7 @@ import com.webjjang.board.dao.BoardDAO;
 import com.webjjang.board.vo.BoardVO;
 import com.webjjang.main.service.Service;
 
+// BoardWriterService: 게시글 등록 처리를 담당
 public class BoardWriterService implements Service {
 
 	@Override
