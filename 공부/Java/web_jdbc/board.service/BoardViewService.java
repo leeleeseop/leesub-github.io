@@ -6,6 +6,7 @@ import com.webjjang.board.dao.BoardDAO;
 import com.webjjang.board.vo.BoardVO;
 import com.webjjang.main.service.Service;
 
+// BoardViewService 게시글 상세보기 기능
 public class BoardViewService implements Service {
 
 	@Override
