@@ -4,6 +4,7 @@ import com.webjjang.board.dao.BoardDAO;
 import com.webjjang.board.vo.BoardVO;
 import com.webjjang.main.service.Service;
 
+// 게시판 글 삭제 처리를 담당
 public class BoardDeleteService implements Service {
 
 	@Override
