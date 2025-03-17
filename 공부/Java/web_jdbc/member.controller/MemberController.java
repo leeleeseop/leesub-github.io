@@ -61,9 +61,7 @@ public class MemberController {
 					// 가져온 데이텉 출력하기
 					new MemberPrint().print((List<MemberVO>) result);
 					break;
-				
-					
-				
+
 				case "2":
 					System.out.println("2.내 정보 보기");
 					if(Main.login == null ) throw new Exception("예외 발생 : 로그인이 필요합니다");
@@ -77,9 +75,7 @@ public class MemberController {
 					//게시판 글보기 출력 : NoticePrint
 					new MemberPrint().print((MemberVO)result);
 					break;
-				
-					
-				
+
 				case "3":
 					System.out.println("3.회원가입");			
 					// 데이터 수집 - 사용자 : 아이디, 비밀번호, 이름, 성별, 생년월일, 연락처, 이메일, 사진
@@ -106,8 +102,6 @@ public class MemberController {
 					result = Execute.execute(new MemberWriteService(), vo);
 					break;
 				
-				
-					
 				case "4":
 					System.out.println("4.회원정보 수정");
 					if(Main.login == null ) throw new Exception("예외 발생 : 로그인이 필요합니다");
@@ -122,7 +116,6 @@ public class MemberController {
 					//정보 수정과 DB처리
 					update(vo);
 					break;
-				
 				
 				case "5":
 					System.out.println("5.회원탈퇴 : 상태 - 탈퇴로 수정");
@@ -148,8 +141,6 @@ public class MemberController {
 					System.out.println("****************************************");
 					break;
 				
-					
-					
 				case "6"://로그인 또는 로그아웃
 					System.out.println("6. 로그인 / 로그아웃");
 					if(Main.login == null){//로그인을 해라
@@ -184,10 +175,7 @@ public class MemberController {
 					}
 					break;
 				
-				
-				
 				case "0":
-					
 					return;
 	
 				default:
@@ -254,13 +242,13 @@ public class MemberController {
 					System.out.println("**** 수정이 최소 되었습니다****");
 					return;
 				}
+					
 				case "0" : {
 					
 					//본인확인용 비밀번호 찾기	
 					vo.setPw(In.getStr("본인 확인용 비밀번호"));
 					Execute.execute(new MemberUpdateService(), vo);
 					return;
-					
 					
 				}
 				default:
@@ -271,9 +259,5 @@ public class MemberController {
 			}
 		}//end of while
 		// DB에 데이터 수정하기 - NoticeUpdateService
-
 	}
-
-		
-
 }//end of class
