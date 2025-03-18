@@ -7,5 +7,3 @@
 
  alert("outter.js 에 존재하는 처리문");
  alert("outter.js 에 존재하는 처리문2");
- 
- 
