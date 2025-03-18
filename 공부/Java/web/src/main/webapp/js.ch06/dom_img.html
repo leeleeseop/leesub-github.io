@@ -8,14 +8,17 @@
 	cursor: pointer;
 	opacity: 0.5;
 }
+	
 .btn, .btn > img {
 	float: left;
 	width: 80px; height: 80px;
 	margin: 10px;
 }
+	
 #disply, #disply > img {
 	width: 400px;
 }
+	
 hr {
 	clear: both;
 }
@@ -29,19 +32,24 @@ function changeImage(imgObj){
 </script>
 </head>
 <body>
-<div class="btn">
-	<img src="/img/cat01.jpg" onmouseover="changeImage(this)">
-</div>
-<div class="btn">
-	<img src="/img/cat02.jpg" onmouseover="changeImage(this)">
-</div>
-<div class="btn">
-	<img src="/img/cat03.jpg" onclick="changeImage(this)">
-</div>
-<div class="btn">
-	<img src="/img/cat04.jpg" onclick="changeImage(this)">
-</div>
-<hr>
-<div id = "disply"><img src="/img/cat01.jpg" id="bigImage"></div>
+	<div class="btn">
+		<img src="/img/cat01.jpg" onmouseover="changeImage(this)">
+	</div>
+	
+	<div class="btn">
+		<img src="/img/cat02.jpg" onmouseover="changeImage(this)">
+	</div>
+	
+	<div class="btn">
+		<img src="/img/cat03.jpg" onclick="changeImage(this)">
+	</div>
+	
+	<div class="btn">
+		<img src="/img/cat04.jpg" onclick="changeImage(this)">
+	</div>
+	
+	<hr>
+	
+	<div id = "disply"><img src="/img/cat01.jpg" id="bigImage"></div>
 </body>
 </html>
