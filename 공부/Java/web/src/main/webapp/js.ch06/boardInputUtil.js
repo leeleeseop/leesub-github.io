@@ -36,7 +36,6 @@ console.log("[boardInputUtil.js] 파일 loading .......... ");
 		// 공백을 제거한 데이터를 입력 객체에 다시 넣는다.
 		$(objName).val(str);
 	}
-	
 	let len = str.length;
 	if(len < min || len > max) {
 		alert(name + "은(는) "+ min+"자부터 "+max+"자까지 입력하셔야 합니다."); // 경고
@@ -44,12 +43,12 @@ console.log("[boardInputUtil.js] 파일 loading .......... ");
 		return true; // 비어있음(true)을 리턴한다.
 	} 
  } // lengthCheck() 길이 제한 함수의 끝
- 
+
+
  // body부분의 문서가 로딩이 끝나면 처리되는 부분
  $(function(){
 	
 	$(".cancelBtn").click(function(){
 		history.back();
-	});
-	
+	});	
  });
