@@ -8,32 +8,46 @@
 div{
 	border: 1px solid black;
 }
+
+	
 body {
 	margin: 0;
 	border : 1px dotted orange;
 }
+
+	
 .container {
 	width: 900px;
 	margin: 0 auto;
 }
+
+	
 h1{ /* h1 태그는 박스이면 허용되는 맨 왼쪽부터 맨 오른쪽까지 차지하는 태그 */
 	border: 1px dashed #444;
 	/* 박스 범위의 글자 정렬을 가운데로 */
 	text-align: center;
 }
+
+	
 #header, wrap, footer {
 	/* width: 800px; /* 테두리 안쪽의 너비 */
 	/* 반드시 width가 지정이 되어 있는 상태 창이 박스 태그 보다 더 커야 한다. - 가운데 정렬 */
 	/* margin: 0 auto; */
 }
+	
+	
 #header {
 	background: red; /* 배경색 */
 }
+	
+	
 #wrap, #aside {
 	/* 너비가 800px인 wrap 안에 데이터가 800px가 넘어가면 숨기자(표시하지 않는다.)
 	   text인 경우는 줄바꿈이 된다. 이미지나 박스 스타일의 너비가 800px를 넘는 경우 숨긴다. */
 	overflow: hidden;
 }
+	
+
 #aside {
 	width: 200px;
 	background: blue;
@@ -42,9 +56,13 @@ h1{ /* h1 태그는 박스이면 허용되는 맨 왼쪽부터 맨 오른쪽까�
 	 */
 	float: left;
 }
+
+	
 #content {
 	background: green;
 }
+
+	
 </style>
 </head>
 <body>
