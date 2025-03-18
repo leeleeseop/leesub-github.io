@@ -76,15 +76,13 @@ input, select, textarea {
 					class="textInput" maxlength="100"
 					pattern="^[^ .].{2,99}$"
 					title="맨앞에 공백문자 불가. 3~100자 입력"
-					placeholder="제목 입력 : 3자 이상 100자 이내"
-				>
+					placeholder="제목 입력 : 3자 이상 100자 이내">
 			</td>
 		</tr>
 		<tr>
 			<th>내용</th>
 			<td>
-				<textarea class="textInput" id="content" name="content"  required
-				rows="7" placeholder="첫글자는 공백문자나 줄바꿈을 입력할 수 없습니다."></textarea>
+				<textarea class="textInput" id="content" name="content"  required rows="7" placeholder="첫글자는 공백문자나 줄바꿈을 입력할 수 없습니다."></textarea>	
 			</td>
 		</tr>
 		<tr>
@@ -94,8 +92,7 @@ input, select, textarea {
 					class="textInput" maxlength="10"
 					pattern="^[a-zA-Z가-힣]{2,10}$"
 					title="한글과 영어만 입력. 2~10자 입력"
-					placeholder="이름은 영어와 한글만 가능"
-				>
+					placeholder="이름은 영어와 한글만 가능">
 			</td>
 		</tr>
 		<tr>
@@ -105,8 +102,7 @@ input, select, textarea {
 					class="textInput" maxlength="20"
 					pattern="^.{3,20}$"
 					title="3~20자 입력 가능"
-					placeholder="비밀번호를 입력하세요."
-				>
+					placeholder="비밀번호를 입력하세요.">
 			</td>
 		</tr>
 		<tr>
@@ -116,8 +112,7 @@ input, select, textarea {
 					class="textInput" maxlength="20"
 					pattern="^.{3,20}$"
 					title="3~20자 입력 가능"
-					placeholder="비밀번호 확인을 입력하세요."
-				>
+					placeholder="비밀번호 확인을 입력하세요.">	
 			</td>
 		</tr>
 		<tr>
