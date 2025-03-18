@@ -9,6 +9,7 @@
 <!-- 라이브러리 필요하다. 웹라이브러리(js 라이브러리)
 	1. 다운로드 : jquery.com : 내 서버에 파일을 둔다.
 	2. CDN(Content Delivery Network) - 배달 받는 방식 사용.(*) -->
+
 <!-- Boostrap(디자인의 표준화) : jquery(동작의 표준화) 포함. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -52,31 +53,37 @@ $(function(){
 <div class="container">
   <h2>일반게시판 글수정</h2>
   <form action="update.jsp" method="post" id="writeForm">
+
     <div class="form-group">
       <label for="no">번호</label>
       <input type="text" class="form-control" id="no" value="10" name="no"
        readonly>
     </div>
+
     <div class="form-group">
       <label for="title">제목</label>
       <input type="text" class="form-control" id="title" value="부트스트랩"
        placeholder="제목 입력" name="title">
     </div>
+
     <div class="form-group">
       <label for="content">내용</label>
       <textarea name="content" id="content" placeholder="내용 입력" rows="7"
        class="form-control">디자인 표준화</textarea>
     </div>
+
     <div class="form-group">
       <label for="writer">작성자</label>
       <input type="text" class="form-control" id="writer" value="이영환"
        placeholder="작성자 입력" name="writer">
     </div>
+
     <div class="form-group">
       <label for="pw">비밀번호</label>
       <input type="password" class="form-control" id="pw"
        placeholder="비밀번호 입력(본인 확인용)" name="pw">
     </div>
+
    <button type="submit" class="btn btn-primary">수정</button>
    <button type="reset" class="btn btn-secondary">다시입력</button>
    <button type="button" class="btn btn-success cancelBtn">취소</button>
