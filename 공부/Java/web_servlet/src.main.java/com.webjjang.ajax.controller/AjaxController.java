@@ -63,7 +63,7 @@ public class AjaxController {
 				jsp = "member/newMsgCnt";
 				
 				break;
-				
+		
 			default:
 				jsp="error/noModule_404";
 				break;
