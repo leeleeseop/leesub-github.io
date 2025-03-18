@@ -11,20 +11,25 @@ table{
 	margin: 0 auto;
 	width: 800px;
 }
+
 th, td {
 	border: 1px solid #888;
 	padding: 5px;
 }
+
 th {
 	background: black;
 	color: white;
 }
+
 input, select, textarea {
 	padding: 5px;
 }
+
 .textInput {
 	width: 98%;
 }
+
 td > label {
 	cursor: pointer;
 }
@@ -40,6 +45,7 @@ td > label {
 				<h1>회원 가입</h1>
 			</th>
 		</tr>
+
 		<tr>
 			<th>아이디</th>
 			<td>
@@ -55,6 +61,7 @@ td > label {
 				 placeholder="아이디 입력" maxlength="20" class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>비밀번호</th>
 			<td>
@@ -66,6 +73,7 @@ td > label {
 				 placeholder="비밀번호 입력" maxlength="20" class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>비밀번호 확인</th>
 			<td>
@@ -73,6 +81,7 @@ td > label {
 				 placeholder="비밀번호 확인 입력" maxlength="20" class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>이름</th>
 			<td>
@@ -84,6 +93,7 @@ td > label {
 				 placeholder="한글 10자 이내" maxlength="10" class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>성별</th>
 			<td>
@@ -103,6 +113,7 @@ td > label {
 				</label>
 			</td>
 		</tr>
+
 		<tr>
 			<th>생년월일</th>
 			<td>
@@ -116,6 +127,7 @@ td > label {
 				 class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>연락처</th>
 			<td>
@@ -145,6 +157,7 @@ td > label {
 				</div>
 			</td>
 		</tr>
+
 		<!-- 이메일, 우편번호, 기본 주소, 상세 주소, 사진, 관심 상품  -->
 		<tr>
 			<th>이메일</th>
@@ -159,6 +172,7 @@ td > label {
 				 class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>우편번호</th>
 			<td>
@@ -168,6 +182,7 @@ td > label {
 				 class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>기본 주소</th>
 			<td>
@@ -177,6 +192,7 @@ td > label {
 				 class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>상세 주소</th>
 			<td>
@@ -186,6 +202,7 @@ td > label {
 				 class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>사진</th>
 			<td>
@@ -197,6 +214,7 @@ td > label {
 				 class="textInput">
 			</td>
 		</tr>
+
 		<tr>
 			<th>관심 상품</th>
 			<td>
@@ -226,6 +244,7 @@ td > label {
 				</label>
 			</td>
 		</tr>
+
 		<tr>
 			<td colspan="2">
 				<button>가입</button>
