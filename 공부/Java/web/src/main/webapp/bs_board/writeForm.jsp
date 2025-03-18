@@ -9,6 +9,7 @@
 <!-- 라이브러리 필요하다. 웹라이브러리(js 라이브러리)
 	1. 다운로드 : jquery.com : 내 서버에 파일을 둔다.
 	2. CDN(Content Delivery Network) - 배달 받는 방식 사용.(*) -->
+
 <!-- Boostrap(디자인의 표준화) : jquery(동작의 표준화) 포함. -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -84,26 +85,30 @@ $(function(){ // == $(document).ready(function(){~});
 	    <input type="text" class="form-control"
 	     placeholder="제목 입력" id="title" name="title">
 	  </div>
-		<div class="form-group">
-		  <label for="content">내용</label>
-		  <textarea class="form-control" rows="7" id="content"
-		   name="content" placeholder="내용 입력"></textarea>
-		</div>	  
+
+	  <div class="form-group">
+	  	<label for="content">내용</label>
+	  	<textarea class="form-control" rows="7" id="content" name="content" placeholder="내용 입력"></textarea>
+	  </div>
+
 	  <div class="form-group">
 	    <label for="writer">작성자</label>
 	    <input type="text" class="form-control"
 	     placeholder="작성자 입력" id="writer" name="writer">
 	  </div>
+
 	  <div class="form-group">
 	    <label for="pw">비밀번호</label>
 	    <input type="password" class="form-control" 
 	     placeholder="비밀번호 입력" id="pw" name="pw">
 	  </div>
+
 	  <div class="form-group">
 	    <label for="pw2">비밀번호 확인</label>
 	    <input type="password" class="form-control" 
 	     placeholder="비밀번호 확인 입력" id="pw2">
 	  </div>
+
 	  	<!-- 등록 버튼을 클릭하면 1. click-btn. 2. submit-form 이벤트로 처리 가능하다. -->
 		<button type="submit" class="btn btn-primary"
 			id="writeBtn">등록</button>
