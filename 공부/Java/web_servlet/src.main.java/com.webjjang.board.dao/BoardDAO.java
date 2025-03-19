@@ -20,7 +20,6 @@ public class BoardDAO extends DAO{
 	public List<BoardVO> list(PageObject pageObject) throws Exception{
 		// 결과를 저장할 수 있는 변수 선언.
 		List<BoardVO> list = null;
-		
 		try {
 			// 1. 드라이버 확인 - DB
 			// 2. 연결
@@ -49,7 +48,6 @@ public class BoardDAO extends DAO{
 					vo.setWriter(rs.getString("writer"));
 					vo.setWriteDate(rs.getString("writeDate"));
 					vo.setHit(rs.getLong("hit"));
-					
 					// vo -> list
 					list.add(vo);
 				} // end of while
@@ -65,6 +63,8 @@ public class BoardDAO extends DAO{
 		// 결과 데이터를 리턴해 준다.
 		return list;
 	} // end of list()
+
+	
 	// 1-2. 전체 데이터 개수 처리
 	// BoardController - (Execute) - BoardListService - [BoardDAO.getTotalRow()]
 	public Long getTotalRow(PageObject pageObject) throws Exception{
@@ -96,6 +96,7 @@ public class BoardDAO extends DAO{
 		// 결과 데이터를 리턴해 준다.
 		return totalRow;
 	} // end of getTotalRow()
+
 	
 	// 2-1. 글보기 조회수 1증가 처리
 	// BoardController - (Execute) - BoardViewService - [BoardDAO.increase()]
@@ -131,6 +132,7 @@ public class BoardDAO extends DAO{
 		// 결과 데이터를 리턴해 준다.
 		return result;
 	} // end of increase()
+
 	
 	// 2-2. 글보기 처리
 	// BoardController - (Execute) - BoardListService - [BoardDAO.view()]
@@ -169,6 +171,7 @@ public class BoardDAO extends DAO{
 		// 결과 데이터를 리턴해 준다.
 		return vo;
 	} // end of view()
+
 	
 	// 3. 글등록 처리
 	// BoardController - (Execute) - BoardViewService - [BoardDAO.increase()]
@@ -282,6 +285,7 @@ public class BoardDAO extends DAO{
 		return result;
 	} // end of delete()
 	
+
 	
 	// 실행할 쿼리를 정의해 놓은 변수 선언.
 	
@@ -325,7 +329,7 @@ public class BoardDAO extends DAO{
 		return sql;
 		
 	}
-	
+
 	// 검색 쿼리의 ? 데이터를 세팅하는 메서드
 	private int setSearchData(PageObject pageObject, 
 			PreparedStatement pstmt, int idx) throws SQLException {
