@@ -23,7 +23,7 @@ select DISTINCT writer from board;
 
 -- 한글의 길이 : length(writer)
 
-update board set writer = '이영환' where no = 83;
+update board set writer = '이이섭' where no = 83;
 
 commit;
 
@@ -67,7 +67,7 @@ insert into board(no, title, content, writer, pw)
 
 values((select max(no) + 1 nextNo from board)
 
-, 'kiost', '무인 주문', '이영환', '1111');
+, 'kiost', '무인 주문', '이이섭', '1111');
 
 commit;
 
