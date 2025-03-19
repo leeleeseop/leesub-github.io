@@ -45,6 +45,7 @@ public class BoardController {
 				// /WEB-INF/views/ + board/list + .jsp
 				jsp = "board/list";
 				break;
+					
 			case "/board/view.do":
 				System.out.println("2.일반게시판 글보기");
 				// 1. 조회수 1증가(글보기), 2. 일반게시판 글보기 데이터 가져오기 : 글보기, 글수정
@@ -71,10 +72,12 @@ public class BoardController {
 				
 				jsp = "board/view";
 				break;
+					
 			case "/board/writeForm.do":
 				System.out.println("3-1.일반게시판 글등록 폼");
 				jsp="board/writeForm";
 				break;
+					
 			case "/board/write.do":
 				System.out.println("3.일반게시판 글등록 처리");
 				
@@ -90,7 +93,7 @@ public class BoardController {
 				vo.setContent(content);
 				vo.setWriter(writer);
 				vo.setPw(pw);
-				
+
 				// [BoardController] - BoardWriteService - BoardDAO.write(vo)
 				Execute.execute(Init.get(uri), vo);
 				
@@ -98,34 +101,29 @@ public class BoardController {
 				// 아니면 jsp로 forward로 시킨다.
 				jsp = "redirect:list.do?perPageNum=" 
 						+ request.getParameter("perPageNum");
-				
 				break;
+					
 			case "/board/updateForm.do":
 				System.out.println("4-1.일반게시판 글수정 폼");
-				
 				// 사 -> 서버 : 글번호
 				no = Long.parseLong(request.getParameter("no"));
-				
 				// no맞는 데이터 DB에서 가져온다. BoardViewService
 				result = Execute.execute(Init.get("/board/view.do"),
 						new Long[]{no, 0L});
 				// 가져온 데이터를 JSP로 보내기 위해서 request에 담는다.
 				request.setAttribute("vo", result);
-				
 				// jsp 정보
 				jsp = "board/updateForm";
-				
 				break;
+					
 			case "/board/update.do":
 				System.out.println("4-2.일반게시판 글수정 처리");
-				
 				// 데이터 수집(사용자->서버 : form - input - name)
 				no = Long.parseLong(request.getParameter("no"));
 				title = request.getParameter("title");
 				content = request.getParameter("content");
 				writer = request.getParameter("writer");
 				pw = request.getParameter("pw");
-				
 				// 변수 - vo 저장하고 Service
 				vo = new BoardVO();
 				vo.setNo(no);
@@ -133,16 +131,17 @@ public class BoardController {
 				vo.setContent(content);
 				vo.setWriter(writer);
 				vo.setPw(pw);
-				
 				// DB 적용하는 처리문 작성. BoardUpdateservice
 				Execute.execute(Init.get(uri), vo);
-				
+					
 				// 페이지 정보 받기 & uri에 붙이기
 				pageObject = PageObject.getInstance(request);
+					
 				// 글보기로 자동 이동 -> jsp 정보를 작성해서 넘긴다.
 				jsp = "redirect:view.do?no=" + no + "&inc=0"
 						+ "&" + pageObject.getPageQuery();
 				break;
+					
 			case "/board/delete.do":
 				System.out.println("5.일반게시판 글삭제");
 				// 데이터 수집 - DB에서 실행에 필요한 데이터 - 글번호, 비밀번호 - BoardVO
@@ -163,7 +162,6 @@ public class BoardController {
 				
 				jsp = "redirect:list.do?perPageNum=" 
 						+ request.getParameter("perPageNum");
-				
 				break;
 				
 			default:
@@ -171,15 +169,11 @@ public class BoardController {
 				break;
 			} // end of switch
 		} catch (Exception e) {
-			// TODO: handle exception
 			// e.printStackTrace();
-			
 			// 예외객체를 jsp에서 사용하기 위해 request에 담는다.
 			request.setAttribute("e", e);
-			
 			jsp = "error/500";
 		} // end of try~catch
 		return jsp;
 	} // end of execute()
-	
 } // end of class
