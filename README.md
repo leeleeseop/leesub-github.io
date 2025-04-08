@@ -64,7 +64,9 @@
 
 - CSS
 
-- JavaScript  
+- JavaScript
+
+- jQuery 
 
 </details>
 
@@ -97,8 +99,6 @@
 <summary>Libraries</summary>
 
 - Lombok
-
-- jQuery
 
 - MyBatis  
 
